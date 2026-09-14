@@ -33,33 +33,14 @@ Ask: "Can you log in to GoHighLevel?" The programme buys the Starter plan in Ses
 
 Look at the tools available to you. A GoHighLevel connection gives tools whose names end in things like `social-media-posting_get-account`, `locations_get-location` and `contacts_get-contacts`.
 
-**If there are none,** walk them through connecting it, one step at a time:
+**If there are none,** walk them through connecting it. GoHighLevel is a connector on their Claude account: they sign in, and there is nothing to paste.
 
 1. In the Claude desktop app, open **Settings**, then **Connectors**.
-2. Look for **HighLevel** or **GoHighLevel** in the list of connectors and connect it.
-3. **If it is not in the list,** follow GoHighLevel's own guide, which is kept current: https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server
+2. Find **HighLevel** and connect it. It opens GoHighLevel's sign-in.
+3. Sign in, and choose the business's **sub-account** when asked, not the agency. A connection made at agency level does not reach their business.
+4. If the sign-in lists permissions to grant, accept what it needs, but **do not grant sending messages or conversations** if it lets you leave those out. Nothing in Launchhouse ever sends a message from their account. If it cannot connect without them, carry on, and do the Never allow step in section 3 before anything else.
 
-**If their guide asks for a Private Integration token,** these are the steps founders found hard, so walk them slowly:
-
-1. **Find Private Integrations.**
-   - When we last looked, it was under Settings, then Private Integrations. Menus move.
-   - If it is not there, search the page for the word Private: Ctrl and F, or Command and F on a Mac.
-   - The Starter plan does carry this screen.
-   - If they cannot find it at all, do not let them buy an upgrade. Record `needs a hand`, and send them to the Slack channel with what their Settings menu lists.
-2. **Do it inside the sub-account, not at agency level.** A token made at agency level does not reach their business.
-3. **Tick the permissions GoHighLevel's guide asks for.** At the least, the connector needs:
-   - View and Edit Social Media Posts
-   - View Social Media Accounts
-   - View Social Media Statistics
-   - View and Edit Contacts
-   - View Locations
-   - View and Edit Email Templates, only if they want the email template shortcut at the clinic
-
-   Copy each name rather than typing it. One typed at 10pm comes out slightly wrong.
-
-   **Do not tick anything under Conversations or Conversation Messages.** Those let a tool send messages from their account, which nothing in Launchhouse ever does. If GoHighLevel's guide says the connector will not work without them, tick them, and make the next section's Never allow step on the sending tool before doing anything else.
-4. **The token is shown once.** Keep that tab open until the connection works.
-5. **The Location ID** is on the business profile. When we last looked, that was under Settings, then Business Profile, near the top. It looks like a password and is not one: it is more like a house number.
+**If HighLevel is not in the list,** follow GoHighLevel's own guide, which is kept current: https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-setup-and-use-the-highlevel-mcp-server. If they are still stuck after that, record `needs a hand` and send them to the Slack channel.
 
 When they have connected it, the new tools may need a fresh conversation to appear. If you still cannot see them, ask them to start a new conversation in this folder and say "check my connections".
 
@@ -91,9 +72,9 @@ Do not tick a box. Read their own account back to them, which a broken connectio
 
 | What happened | Say |
 |---|---|
-| Not authorised | The connection did not accept the token. The usual reason is that only part of it got copied, or it was made at agency level instead of inside the sub-account. Make a new one. |
-| Wrong location | The token works, but not for that sub-account. One of the two came from a different place. |
-| A permission refused | The connection works, but one permission was not ticked. Name the one the failing call needed. |
+| Not authorised | The connection has lapsed or was made at agency level. Reconnect HighLevel in Settings, Connectors, and choose the sub-account. |
+| Wrong location | The connection works, but for a different sub-account. Reconnect and choose the business's own sub-account. |
+| A permission refused | The connection works, but did not get that permission. Reconnect and accept what the sign-in asks for. |
 | Too many requests | GoHighLevel is asking us to slow down. Nothing is wrong. Try again in a minute. |
 | No answer | That is GoHighLevel's side, not theirs. Try again shortly. |
 
