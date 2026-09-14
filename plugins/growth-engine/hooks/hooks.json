@@ -1,0 +1,41 @@
+{
+  "description": "Launchhouse: folder context at the start of a session, the rules on every file written into growth-engine, and a hard stop on the vendor tools that send or buy.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/context.sh\"" }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/context.sh\" --compact" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/guard-pre.sh\"" }
+        ]
+      },
+      {
+        "matcher": "mcp__.*(conversations_send-a-new-message|apollo_emailer_messages_send_now|apollo_emailer_messages_create|apollo_emailer_campaigns_approve|apollo_email_account_purchase_create)",
+        "hooks": [
+          { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/deny-mcp.sh\"" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "sh \"${CLAUDE_PLUGIN_ROOT}/scripts/guard-post.sh\"" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+.DS_Store
+/dist/
+/runs/
+growth-engine/
+!plugins/growth-engine/

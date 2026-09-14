@@ -1,0 +1,192 @@
+# track|expect|sentence
+# expect: HOLD must be held. PASS must not be held. CATCH should be held by the
+# hook but may fall through to the rules-reviewer agent; the run reports the rate.
+# Sentences are from Launchhousev2 src/server/rules/*.test.ts, kept word for word.
+
+# --- must still be held (confidence.test.ts MUST_STILL_BE_HELD, hook-checkable rows)
+b2c|HOLD|We can automate your Instagram DMs so you never send one by hand.
+b2c|HOLD|Set up a bot to send the 25 cold DMs overnight while you sleep.
+b2c|HOLD|Build your ICP, then run the Apollo export.
+
+# --- the six that used to pass (no-dm-automation.test.ts)
+b2c|HOLD|Automate your Instagram DMs so every new follower gets a message.
+b2c|HOLD|Set up a bot to send automated Instagram DMs to every follower.
+b2c|HOLD|We can automate the Instagram DMs for you.
+b2c|HOLD|Use a scheduler to send Instagram DMs to your followers automatically.
+b2c|HOLD|Connect a tool that sends Instagram DMs on your behalf.
+b2c|HOLD|Set up automated direct messages on Instagram.
+
+# --- offers to automate (OFFERS_TO_AUTOMATE)
+b2c|CATCH|We can automate DMs for you overnight.
+b2c|CATCH|Use a tool that sends cold DMs at scale.
+b2c|CATCH|Schedule the DMs so they go out while you sleep.
+b2c|CATCH|Automate your DMs instead of sending them by hand.
+b2c|CATCH|We can automate DMs for you, in bulk, on a schedule.
+b2c|CATCH|Automate the DMs on whichever platform you like.
+b2c|CATCH|The DMs are sent automatically to everyone who follows you.
+b2c|CATCH|Your Instagram DMs can be automated.
+b2c|CATCH|The DMs get handled by a bot.
+b2c|CATCH|Direct messages are fired off automatically to each new follower.
+b2c|CATCH|Cold DMs are handled by the scheduler.
+b2c|CATCH|Instagram DMs are sent on your behalf once the integration is live.
+b2c|CATCH|Install an app that DMs everyone who likes the post.
+b2c|CATCH|Set up automation so the DMs go out to your list every morning.
+b2c|CATCH|Configure the workflow to blast DMs to your prospects.
+b2c|CATCH|Hook up a Zap so every new follower gets a DM.
+b2c|CATCH|Add a chatbot to your account so it answers new followers with a DM.
+b2c|CATCH|Run the DM sequence in bulk overnight.
+b2c|CATCH|Use Sendly to send Instagram DMs to your followers.
+b2c|CATCH|Connect Postbox and it will DM every new follower for you.
+b2c|CATCH|Try Reachy, it sends the direct messages for you.
+b2c|CATCH|If you want, we can set up automated DMs to your target accounts.
+b2c|CATCH|Some founders use a bot for their Instagram DMs.
+b2c|CATCH|You could automate the direct messages and let it run.
+b2c|CATCH|It might be worth automating your Instagram DMs at this volume.
+b2c|CATCH|Turn on automatic DMs for new followers.
+b2c|CATCH|Let the software handle the DMs from here.
+b2c|CATCH|A DM bot will keep the pipeline warm.
+b2c|CATCH|Point an automation at your Instagram inbox so it opens conversations for you.
+b2c|CATCH|The DMs can go out on a drip, twenty a day, without you touching it.
+b2c|CATCH|Queue up the DMs and let them fire on a timer.
+b2c|CATCH|Batch send the direct messages to your saved audience.
+b2c|CATCH|Have the assistant DM everyone on the hashtag list.
+b2c|CATCH|Automating your Instagram outreach means the DMs land while you focus elsewhere.
+b2c|CATCH|Once it is wired up, Instagram DMs are delivered to each new follower with no work from you.
+b2c|CATCH|Set the tool to message 50 accounts a day on Instagram.
+b2c|CATCH|Bulk DM the people who liked your reel.
+b2c|CATCH|An Instagram DM automation is the fastest way to fill the calendar.
+b2c|CATCH|Schedule Instagram direct messages to your target list.
+b2c|CATCH|We will hook the CRM up so it DMs your followers automatically.
+b2c|CATCH|Use an outreach platform to send the first DM for you.
+b2c|CATCH|Nothing stops you automating the first DM.
+b2c|CATCH|Use an AI agent to open conversations with your target accounts on Instagram.
+b2c|CATCH|Set up an autoresponder for people you have not spoken to yet.
+b2c|CATCH|Load the 25 openers into the tool and let it work through them.
+b2c|CATCH|Fire the opener at everyone who views your story.
+b2c|CATCH|Have something else write and send the first message on Instagram.
+b2c|CATCH|Point the agent at your follower list and it handles the openers.
+b2c|CATCH|The openers go out overnight without you.
+b2c|CATCH|Warm up the list with an automated first touch on Instagram.
+b2c|CATCH|An agent can handle Instagram outreach end to end.
+b2c|CATCH|Let it work through the list of handles on Instagram.
+b2c|CATCH|Once configured, new story viewers get the opener.
+b2c|CATCH|The sequence handles the Instagram side too.
+b2c|CATCH|Give the tool your handles and it takes it from there.
+b2c|CATCH|Put the DMs on a schedule so you are not doing them one by one.
+
+# --- inbound automation the product sells (INBOUND_AUTOMATION): never held
+b2c|PASS|Comment to DM. The founder posts, the caption invites a comment keyword, and Instagram fires an automatic DM because the user initiated.
+b2c|PASS|Write the trigger keyword, the auto-DM message, and the follow-up.
+b2c|PASS|The automated DM goes out after they message you first.
+b2c|PASS|A workflow that answers every DM from someone who messaged you first is fine.
+b2c|PASS|The auto DM is triggered by the comment, so the messaging window is open.
+b2c|PASS|Set up the workflow to send the DM in reply to their comment.
+b2c|PASS|The bot answers anyone who dms you, and only them.
+b2c|PASS|Automate the reply to inbound DMs, never the first message.
+
+# --- manual or explaining (MANUAL_OR_EXPLAINING): never held
+b2c|PASS|When somebody comments the keyword, the workflow replies to them. They messaged you first.
+b2c|PASS|Send the 25 DMs by hand, from your own account, spread across the afternoon.
+b2c|PASS|25 DMs fired in a rapid burst can trigger Instagram action blocks.
+b2c|PASS|Write the DM openers for you to send by hand tomorrow.
+b2c|PASS|We can write the DM openers for you.
+b2c|PASS|Answer the DM they sent you, in your own words, when you get to it.
+b2c|PASS|Two sentences maximum. Long DMs do not get read.
+b2c|PASS|There is no DM automation here. Cold DMs are manual, twenty five of them, spread out.
+b2c|PASS|Automated cold DMs on Instagram get accounts restricted or banned.
+b2c|PASS|Any tool that claims to send unsolicited DMs at volume is scraping the interface, and it puts the account at risk.
+b2c|PASS|Do not build, recommend, or write copy for volume DM automation.
+b2c|PASS|The automation lives entirely on the inbound side, where it is fully supported.
+b2c|PASS|The inbound machine answers the DM within a minute of them writing in.
+b2c|PASS|GoHighLevel fires the workflow when the comment keyword lands, and the DM goes out then.
+b2c|PASS|The comment keyword is the trigger. Nothing goes out before somebody uses it.
+b2c|PASS|Qualify the inbound DM in three steps, then route to the booking link.
+b2c|PASS|Reply to every comment on the post by hand for the first week.
+b2c|PASS|Paste the handle and one detail, and we will draft the DM opener.
+b2c|PASS|Number the 25 DM openers so you can tick them off as you send.
+b2c|PASS|Your Instagram account needs to be Business or Creator before the inbound DM flow works.
+b2c|PASS|The DM openers file is yours to edit before Saturday.
+b2c|PASS|Read the DM they sent, then answer it in your own voice.
+b2c|PASS|A workflow triggered by a customer action is allowed. A workflow that starts the conversation is not.
+b2c|PASS|Never automate the first DM. Automate the reply to one you were sent.
+b2c|PASS|Send them spread across the Saturday afternoon, a few at a time with gaps.
+b2c|PASS|The auto responder only runs for people who opted in.
+b2c|PASS|You have to send the 25 DMs yourself.
+b2c|PASS|You have to send each DM from your own phone.
+b2c|PASS|Get your DM openers ready to send on Saturday.
+b2c|PASS|Add the handle to the list, then send the DM when you are ready.
+b2c|PASS|Use the opener you wrote to send a DM to that one account.
+b2c|PASS|Let the founder decide which DM to send first.
+b2c|PASS|Run through the 25 DMs and send the ones you are happy with.
+
+# --- the product's own disclaimers (THE_PRODUCT_OWN_DISCLAIMER): never held
+b2c|PASS|Automated cold DMs are not something we do. They get accounts restricted.
+b2c|PASS|Automating your Instagram DMs is a bad idea. The account gets restricted.
+b2c|PASS|Automated cold DMs are against the Instagram terms.
+b2c|PASS|DM automation is not something this toolkit does.
+b2c|PASS|Automating Instagram DMs is a bug, not a feature.
+b2c|PASS|Automating the DMs will get the account restricted, so we do not.
+b2c|PASS|Bulk DM tools scrape the interface. They put the account at risk.
+
+# --- twenty ordinary founder sentences (TWENTY_ORDINARY): the hook holds none
+b2c|PASS|I started this business in my kitchen 4 years ago.
+b2c|PASS|Last week I spoke to 6 operations leads and every one of them said the same thing.
+b2c|PASS|I read 12 job posts this morning and none of them mentioned the actual problem.
+b2c|PASS|There are 25 people on my list.
+b2c|PASS|I have written 30 posts this quarter and the best one took 20 minutes.
+b2c|PASS|The average reply rate people quote is 3 percent.
+b2c|PASS|We saved a client 11 hours a week on their month end.
+b2c|PASS|My first job was on a site in Leeds and I stayed 9 years.
+b2c|PASS|Most of my work comes from 2 referrals a month.
+b2c|PASS|A typical kitchen takes 5 days to fit.
+b2c|PASS|I charge 2,500 GBP for a full survey.
+b2c|PASS|We groomed 340 dogs last year.
+b2c|PASS|I have 3 children and a van.
+b2c|PASS|The workshop holds 8 people comfortably.
+b2c|PASS|Our busiest month is October, roughly 40 bookings.
+b2c|PASS|It took me 18 months to get the first paying customer.
+b2c|PASS|I have 1,200 followers and most of them are local.
+b2c|PASS|The old software cost 89 GBP a month and did half of this.
+b2c|PASS|I want to get to 10 clients by Christmas.
+b2c|PASS|Two thirds of my enquiries come in on a Sunday night.
+
+# --- rule 3, reply promises (prose.test.ts)
+b2b|HOLD|We guarantee a reply.
+b2b|HOLD|This is not a volume machine. Send these and we guarantee a reply.
+b2b|HOLD|We do not automate anything and we guarantee a reply.
+b2b|PASS|Nothing here promises a reply.
+b2b|PASS|Nothing in this plan guarantees a reply.
+b2b|PASS|It would be wrong to promise a reply.
+b2b|PASS|No part of this guarantees a response.
+b2b|PASS|This sequence never promises a reply.
+b2b|PASS|Nobody can promise a reply.
+b2b|PASS|We do not promise a reply.
+b2b|PASS|None of this guarantees a reply.
+b2b|PASS|Neither the plan nor the sequence promises a reply.
+b2b|PASS|At no point does this guarantee a reply.
+b2b|PASS|Nowhere does it promise a reply.
+b2b|PASS|There is no way to guarantee a reply.
+b2b|PASS|No sequence guarantees a reply.
+b2b|PASS|It is not our place to guarantee a reply.
+b2b|PASS|You cannot promise a reply and you should not try.
+b2b|PASS|Rather than promise a reply, say what the work is.
+b2b|PASS|Say what the work is instead of promising a reply.
+b2b|PASS|Avoid anything that would promise a reply.
+b2b|PASS|Refuse to promise a reply, however the founder asks.
+b2b|PASS|Stop before you promise a reply.
+b2b|PASS|It is dishonest to guarantee a reply.
+b2b|PASS|The line is wrong if it promises a reply.
+b2b|PASS|Nothing about 25 messages guarantees a reply.
+b2b|PASS|Do not promise a reply.
+b2b|PASS|Never promise replies. Replies depend on list quality, timing and offer.
+
+# --- rule 1, other-track words (track.test.ts shapes)
+b2c|HOLD|Set up SPF, DKIM and DMARC on the sending domain before the sequence starts.
+b2c|HOLD|Paste the LinkedIn URLs of your best prospects here.
+b2c|HOLD|Write the outreach sequence next.
+b2c|PASS|Our SPF 50 moisturiser is the one people come back for.
+b2c|PASS|Follow us on LinkedIn for the studio news.
+b2b|HOLD|Add these to your hook bank.
+b2b|HOLD|Convert to a Business account and link a Facebook Page.
+b2b|PASS|Most of our buyers found us through a LinkedIn post.
+b2b|PASS|Write the email sequence for the 25 accounts.
