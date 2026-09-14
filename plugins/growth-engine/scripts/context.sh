@@ -13,13 +13,11 @@ ge="$root/growth-engine"
 
 if ! lh_active; then
   # The single most common failure: Claude opened one folder up or one down.
-  for cand in "$root"/*/growth-engine/.launchhouse "$root/../growth-engine/.launchhouse"; do
-    if [ -f "$cand" ]; then
-      where=$(cd "$(dirname "$cand")/.." 2>/dev/null && pwd)
-      printf 'Launchhouse: this is not the founder folder. Their Launchhouse folder is %s. Before doing any Launchhouse work, tell the founder in one sentence to open that folder instead, because files written here will not be found later.\n' "$where"
-      exit 0
-    fi
-  done
+  where=$(lh_near)
+  if [ -n "$where" ]; then
+    printf 'Launchhouse: this is not the founder folder. Their Launchhouse folder is %s. Before doing any Launchhouse work, tell the founder in one sentence to open that folder instead, because files written here will not be found later.\n' "$where"
+    exit 0
+  fi
   if [ -f "$root/growth-engine/founder-brain.md" ] || [ -f "$root/growth-engine/README-your-files.md" ]; then
     printf 'Launchhouse: this folder has Launchhouse files but has not been set up. If the founder wants to work on Launchhouse, start with /growth-engine:start.\n'
   fi
@@ -65,7 +63,11 @@ leftovers=""
 [ -f "$ge/README-your-files.md" ] && leftovers=1
 [ -d "$ge/growth-engine" ] && leftovers=1
 grep -q '/tmp/ge/' "$ge/.state/HOME" 2>/dev/null && leftovers=1
-ls "$root"/*.zip "$ge"/*.zip >/dev/null 2>&1 && leftovers=1
+if [ ! -f "$ge/.state/imported.md" ]; then
+  for z in "$root"/*.zip "$ge"/*.zip; do
+    [ -f "$z" ] && leftovers=1
+  done
+fi
 
 if [ -n "$leftovers" ]; then
   next="bring their work across from the app (/growth-engine:import)"

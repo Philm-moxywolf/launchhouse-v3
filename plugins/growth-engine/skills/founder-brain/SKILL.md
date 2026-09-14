@@ -34,7 +34,14 @@ It is the one change that costs a founder work, so it takes one honest exchange 
 
 **Ask what changed.** Not to talk them out of it. "I picked wrong in session 1" is answered differently from "I want to serve schools as well as parents". The second one usually wants `hybrid: true` and the same track, and that distinction is worth thirty seconds of asking.
 
-**If they confirm, do it.** Rewrite the Track line in the file that is already there. Then reopen only the parts that fork on it, which are the audience capture and the channel question. Both are asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
+**If they confirm, do it.** Reopen only the parts that fork on the track: the audience capture and the channel questions. Both are asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
+
+Then change the file **in one write**:
+- the Track line, and the Model line (add it for B2C, remove it for B2B)
+- `## Audience` and `## Channels`, from the new answers
+- any line elsewhere, most often in `## Flags`, that names the old track's method: the sending domain, SPF, DKIM, DMARC, cold email, an ICP or firmographics for B2B, or the Instagram account type for B2C. Rewrite it for the new track, or mark it resolved.
+
+The Launchhouse checks read the whole Brain against its Track line, so a Brain that says b2c but still describes cold email is held and put back. One write with everything changed is what saves.
 
 **Then say what to expect.** Their old track's files stay where they are and stop appearing in their list, because the list only shows the track they are on. The new track's gates start empty. Name which files they now need and which session covers each.
 

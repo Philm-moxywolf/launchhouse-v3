@@ -28,7 +28,7 @@ description: Produce the founder's gate submission, a short plain-text block to 
 
 For each self-reported item in that gate:
 - If `growth-engine/.state/gate-answers.md` has no answer for it, ask.
-- Record each new answer as a dated line in that file, then commit it: `git commit -am "Gate answers"`.
+- Record each new answer as a dated line in that file, then save it: `git add growth-engine/.state/gate-answers.md` and `git commit -m "Gate answers"`.
 
 ## 4. The block
 

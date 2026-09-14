@@ -2,7 +2,7 @@
 
 The engines for Launchhouse Atlanta founders, run from Claude in your own folder. Claude asks you the questions and writes your Founder Brain and everything built on it. It publishes to GoHighLevel and builds your Apollo sequence when you say yes, and saves everything with git.
 
-It holds back anything that invents a number or offers to automate cold DMs.
+It holds back anything that offers to automate cold DMs, says replies are certain, or uses the other track's material. A reviewer checks every figure against what you told it before the work is called done.
 
 There is no app to set up, no key to paste and no database. You need the Claude desktop app and your own copy of the founder folder.
 
@@ -44,13 +44,13 @@ Plain words work for everything. The commands below are there if you prefer them
 
 | Part | What it is |
 |---|---|
-| `skills/` | Eighteen skills, one per job above, plus `outreach-b2b` and `audience-b2c`, which engine 2 picks between by track |
+| `skills/` | Eighteen skills, including `outreach-b2b` and `audience-b2c`, which engine 2 picks between by track |
 | `commands/` | The short names above, each pointing at its skill |
 | `agents/rules-reviewer` | Reads what was written for invented proof, cold DM offers, reply promises and the other track's material |
 | `agents/voice-reviewer` | Checks writing sounds like the founder, against their own samples |
 | `agents/status-checker` | Reads the folder against the gates and reports what the files prove |
 | `agents/file-ingester` | Converts one supplied file into readable text with a note of where it came from |
-| `hooks/` | Tell Claude where you are up to at the start of a session. Put back any file that breaks a rule. Stop the GoHighLevel and Apollo tools that send, activate or buy |
+| `hooks/` | Tell Claude where you are up to at the start of a session. Put back any file that breaks a rule. Stop the GoHighLevel and Apollo tools that send, activate or buy. Ask the founder again before anything that spends credits, publishes or adds people to a sequence |
 | `references/` | The folder contract, the gates, and the media lists every skill works to |
 | `routines/` | Five routine prompts: Monday plan, content top-up, what worked, sequence health, countdown |
 
@@ -60,7 +60,7 @@ Plain words work for everything. The commands below are there if you prefer them
 2. **No Instagram DM automation.** An offer to automate cold DMs is held before it stays on disk, and GoHighLevel's send-message tool is stopped.
 3. **25 B2B messages, and no promised replies.** A line promising replies is held. Apollo sequences are built paused, and starting one is the founder's button.
 4. **Everything lives in `growth-engine/`.** A Launchhouse file written anywhere else is refused.
-5. **No invented proof.** The reviewer checks every figure against the Brain as it was before the work, and against what the founder said.
+5. **No invented proof.** The rules reviewer checks every figure against the Brain as it was before the work, and against what the founder said, before any engine calls the work done.
 6. **Your voice.** Voice comes only from the founder's own writing.
 
 ## For maintainers

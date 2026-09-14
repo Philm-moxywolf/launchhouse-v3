@@ -16,6 +16,20 @@ lh_active() {
   [ -f "$(lh_root)/growth-engine/.launchhouse" ]
 }
 
+# The path of a Launchhouse folder near the opened one: one folder down, the
+# parent, or the home folder. Empty if none. Used when the founder opened the
+# wrong folder, which is the most common failure of all.
+lh_near() {
+  r=$(lh_root)
+  for cand in "$r"/*/growth-engine/.launchhouse "$r/../growth-engine/.launchhouse" "${HOME:-/nonexistent}/growth-engine/.launchhouse"; do
+    if [ -f "$cand" ]; then
+      (cd "$(dirname "$cand")/.." 2>/dev/null && pwd)
+      return 0
+    fi
+  done
+  return 0
+}
+
 # Read one JSON string value by key from the hook input (stdin, passed as $2).
 # Handles the escapes a path can carry. Only ever used for short values.
 lh_json_get() {

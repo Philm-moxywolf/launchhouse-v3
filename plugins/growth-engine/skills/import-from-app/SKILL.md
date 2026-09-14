@@ -28,7 +28,9 @@ If you cannot find anything, ask them to download everything again. In the app: 
 
 **Unpack a zip into a holding folder, never straight into growth-engine:**
 - Make `.lh-import/`.
-- Run `unzip -o <zip> -d .lh-import`. If `unzip` is not available, run `tar -xf <zip> -C .lh-import`.
+- Run `unzip -o <zip> -d .lh-import`.
+- If `unzip` is not available (usual on Windows), run `powershell -NoProfile -Command Expand-Archive -Path '<zip>' -DestinationPath .lh-import -Force`.
+- If neither works, ask the founder to right-click the zip, choose Extract All, and tell you when it is done.
 - The app's zip has a `growth-engine/` folder at its top. Use that folder's contents.
 
 **Before moving anything,** list what came across to the founder, grouped:
@@ -42,11 +44,17 @@ If you cannot find anything, ask them to download everything again. In the app: 
 
 ## 2. Move it into place
 
-Move the app's files into `growth-engine/`, keeping their paths. Use `cp -R` from the holding folder, then remove `.lh-import/`. Leave the zip where it is: `.gitignore` keeps zips out of git.
+Move the app's files into `growth-engine/`, keeping their paths. Use `cp -R` from the holding folder, then remove `.lh-import/`.
+
+Then tidy up the copies that came with it, so nothing is found twice:
+- remove a nested `growth-engine/growth-engine/` once its files are in place
+- remove loose copies of Launchhouse files left in the folder they opened
+- leave the zip where it is. `.gitignore` keeps zips out of git, and step 3 records that the import is done.
 
 When a file exists in both places:
 
 - **Starting files from the template** (`ledger.md`, `memory.md`, `ops-log.md`, `people/README.md`, `.launchhouse`): the app's version wins, except `.launchhouse`, which stays.
+- **If this is a second import** (`growth-engine/.state/imported.md` exists): the folder's own `ledger.md`, `memory.md` and `ops-log.md` win, because they hold approvals, posts and notes made since. Only bring across files that are new or that the founder names.
 - **Anything the founder already made in this folder**, such as a new Brain: stop and ask which to keep. Show both Locked dates and the first lines. Never merge two Brains yourself.
 
 Then clear out what only the app needed:
@@ -61,6 +69,8 @@ Then clear out what only the app needed:
 Run `git add -A` then `git commit -m "Your work from the app, as it was"`.
 
 This is the undo point for everything after. If git needs a name and email, follow step 4 of the `start` skill first.
+
+Then write `growth-engine/.state/imported.md` in the shape in the contract, with the zip or folder name and today's date, and commit it with the same save.
 
 ## 4. Adjust to the current format
 
@@ -97,7 +107,7 @@ If more than two things are missing, say so, and offer the full `founder-brain` 
 
 ### B2B first lines
 
-If `outreach-firstlines.csv` has a fifth `status` column, rewrite it with only `email,first_name,company,first_line`.
+If `outreach-firstlines.csv` has a `status` column, or quotes around every field, rewrite it with the unquoted header `email,first_name,company,first_line`, quoting only fields that hold a comma or a quote. Keep every row. This file stays out of git, because it holds real people's details.
 
 ### Refill archives
 
@@ -114,9 +124,12 @@ Search the files for:
 
 List any lines found, and ask once whether to remove them. Change nothing else.
 
-### memory.md
+### The bookkeeping headers
 
-If its fourth line mentions `ge remember`, replace that one line with: "Add one line per entry inside the marked blocks, dated. Anything under Notes is the founder's own."
+The app wrote these files through a tool that no longer exists, and their headers say not to edit them by hand. Every engine now edits them, so replace only those header lines:
+- **memory.md:** if a line mentions `ge remember`, replace it with "Add one line per entry inside the marked blocks, dated. Anything under Notes is the founder's own."
+- **ledger.md:** replace the line mentioning `ge ledger` with the two header lines from the start skill's scaffold. Keep every `C|` row.
+- **ops-log.md:** replace the line mentioning `ge log` with the header line from the start skill's scaffold. Keep every entry.
 
 **If a change is held by the Launchhouse checks,** the hook tells you which line and why. Do not try to force the change through. That is the check finding something already in their work. Note it for step 5 and move on.
 

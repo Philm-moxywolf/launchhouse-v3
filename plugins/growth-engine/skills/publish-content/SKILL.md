@@ -53,7 +53,7 @@ The founder may have edited pieces by hand since they were written. Use the `rul
 
 ## 3. Choose where and when
 
-1. **Get the accounts.** Call the tool ending `social-media-posting_get-account`, and match each piece to the right accounts by its `platform` in `content-30.csv`.
+1. **Get the accounts.** Call the tool ending `social-media-posting_get-account`, and match each piece to the right accounts by its `platform` in the matching sheet: `content-30.csv` for a plain id, `content-30-<suffix>.csv` for an archived one.
    - B2B pieces usually go to LinkedIn.
    - B2C pieces go to Instagram and the Facebook Page.
    - If a platform is not connected, say so, and do not post that piece there.

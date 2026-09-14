@@ -74,6 +74,6 @@ Twenty five messages, low volume, to a list the founder built and can explain. N
 | Inbound scripts exist | file-backed | `inbound-scripts.md` is not nearly empty |
 | The workflow is built | file-backed | `ops-workflow.md` names the bottleneck and the snapshot, and holds the copy |
 | The account is Business or Creator, linked to a Page | self-reported, or read from GoHighLevel | `.state/setup.md` if the connector read it, otherwise ask |
-| The messages have been sent | file-backed, or asked | people at `status: sent`, otherwise ask |
+| The messages have been sent | at the event, not counted at Gate C | people at `status: sent`, `replied`, `booked` or `no_reply`, from Saturday 26 September |
 
-**The sends.** The 25 go by hand, from the founder's own phone, spread out. When the founder says they have sent one, set that person's status to `sent` and add a touch line. That is what turns a send into evidence.
+**The sends.** The 25 go by hand, from the founder's own phone, spread out, on the Saturday in Atlanta. So they are not due at Gate C, and nothing reports them missing before then. When the founder says they have sent one, set that person's status to `sent` and add a touch line. That is what turns a send into evidence.

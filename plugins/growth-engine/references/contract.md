@@ -18,7 +18,8 @@ Every file a founder's `growth-engine/` folder can hold, and the shape each one 
 | `ops-workflow.md` | both | C | ghl-workflows |
 | `90-day-plan.md` | both | none | growth-plan |
 | `playbook-insert.md` | both | none | playbook-export |
-| `content-30-YYYY-MM.md` | both | none | content-engine, refill archive |
+| `content-30-YYYY-MM.md`, `content-30-YYYY-MM.csv` | both | none | content-engine, refill archive. A second archive in one month adds `-2` |
+| `playbook-insert.pdf` | both | none | playbook-export |
 | `ledger.md` | both | B evidence | content-engine, publish-content |
 | `memory.md` | both | none | any skill |
 | `ops-log.md` | both | none | any skill |
@@ -29,9 +30,12 @@ Every file a founder's `growth-engine/` folder can hold, and the shape each one 
 | `.state/profile.md` | both | none | start |
 | `.state/setup.md` | both | none | connect-tools |
 | `.state/gate-answers.md` | both | none | status, gate |
+| `.state/imported.md` | both | none | import-from-app, once the app's work is in |
 | `.state/index.md` | both | none | rebuilt automatically after every write |
 
 A founder never has the other track's files. If an import brings some, leave them in place, do not list them, and mention them once.
+
+**Kept off GitHub on purpose.** `people/`, `outreach-firstlines.csv` and `dm-openers.md` hold real people's names, emails or handles. The folder's `.gitignore` keeps them out of git, so they live on this computer only and routines never see them. Never paste them anywhere public, and never copy a person's details into any other file.
 
 Nothing is ever written outside `growth-engine/`. The Launchhouse checks refuse a Launchhouse file anywhere else, and refuse a file at the top of `growth-engine/` that is not in this table.
 
@@ -292,6 +296,7 @@ Where each connection stands. One row per check, rewritten in place when a check
 | GoHighLevel connector | done | 2026-09-21 | read back location: Lumen Skin |
 | GoHighLevel accounts to post to | done | 2026-09-21 | Instagram: lumenskin, Facebook: Lumen Skin |
 | GoHighLevel contacts | done | 2026-09-21 | contacts readable |
+| GoHighLevel sending tool blocked | done | 2026-09-21 | set to never allow by the founder |
 | Instagram Business or Creator | done | 2026-09-21 | Instagram connected in Social Planner |
 | Apollo connector | done | 2026-09-21 | signed in as sam@northfield.io |
 | Apollo sending mailbox | not started | 2026-09-21 | no mailbox connected in Apollo |
@@ -300,6 +305,19 @@ Where each connection stands. One row per check, rewritten in place when a check
 **State** is one of: `not started`, `in progress`, `done`, `not needed yet`, `needs a hand`.
 
 **Evidence** is what was actually read back from the tool, never what the founder said. The two Apollo rows exist for B2B only, and the Instagram row for B2C only.
+
+## .state/imported.md
+
+Written once by import-from-app, after the app's work is saved.
+
+```markdown
+# Imported
+
+- **From:** <the zip or folder name>
+- **On:** YYYY-MM-DD
+```
+
+While it exists, a leftover zip in the folder is not taken as new app work.
 
 ## drafts/
 

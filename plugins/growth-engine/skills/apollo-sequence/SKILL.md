@@ -19,7 +19,6 @@ Takes the founder's outreach engine into their own Apollo account.
    - If it does not exist, the sequence and criteria come first: `/growth-engine:outreach`.
    - If it records the manual route (Microsoft 365 or other), stop. Their route is by hand, and `outreach-firstlines.csv` is their checklist. Offer to switch routes only if their work email has changed to Google.
 4. **Check Apollo is connected.** You need tools whose names end in `apollo_mixed_people_api_search` and `apollo_sequences_create`. If not, run `/growth-engine:connect`.
-5. **Check the mailbox.** Call the tool ending `apollo_email_accounts_index`. If no mailbox is connected, stop and tell them to connect the one they will send from in Apollo. Nothing can go into a sequence without it.
 
 **Credits.** Whenever a tool's response includes an `mcp_credits` block, tell the founder the estimated cost before the spend, and the credits used and balance after. Always, unprompted.
 
@@ -72,12 +71,14 @@ Use the `rules-reviewer` agent on `outreach-firstlines.csv` before loading anyth
 
 ## 4. Load into Apollo
 
+**Check the mailbox first.** Call the tool ending `apollo_email_accounts_index`. If no mailbox is connected, stop here and tell them to connect the one they will send from in Apollo. Nothing can go into a sequence without it. Everything so far is saved, so they carry on from this step once it is connected.
+
 Before each call, read the tool's own parameters and use them as they are. **Never guess at a field it does not list.** If a tool cannot do what a step needs, stop, tell the founder the one thing to do by hand in Apollo, and carry on from there.
 
 ### The first line field
 
 1. Call the tool ending `apollo_fields_index`, and look for a contact custom field called `first_line`.
-2. If there is none, ask the founder to create it: in Apollo settings, custom fields, a new contact field named exactly `first_line`, type text. Wait until they say it is done, then check again.
+2. If there is none, ask the founder to create it: in Apollo settings, custom fields, a new contact field named exactly `first_line`, as long text. Wait until they say it is done, then check again.
 3. Say why the name matters: the CSV column, the Apollo field and the sequence variable all read `first_line`, and a mismatch fails silently.
 
 ### Contacts
@@ -88,13 +89,14 @@ Only contacts go into sequences.
 2. **Wait for a yes.**
 3. **Create.** Use the tool ending `apollo_contacts_bulk_create`, or `apollo_contacts_create` one at a time, with de-duplication on if the tool offers it.
    - Set `first_line` on each contact.
-   - **If the tool cannot set a custom field,** tell the founder to import `outreach-firstlines.csv` in Apollo and map the `first_line` column to the field. Wait until they have.
+   - **If the create tool cannot set a custom field,** set it afterwards on each contact with the tool ending `apollo_contacts_update`.
+   - **If neither can,** tell the founder to import `outreach-firstlines.csv` in Apollo and map the `first_line` column to the field. Wait until they have.
 4. **Label them.** With the tools ending `apollo_labels_create` and `apollo_labels_add_entity_ids_to_label_names`, add a label `Launchhouse 25`, so the list is easy to find.
 5. **Record the ids.** Write each `apollo_contact_id` into the person file.
 
 ### The sequence
 
-1. **Read the copy.** Read the touches from `outreach-sequence.md`: subject lines, bodies with the `{{contact.first_name}}`, `{{account.name}}` and `first_line` variables, wait intervals, and the same-thread decisions.
+1. **Read the copy.** Read the touches from `outreach-sequence.md`: subject lines, bodies with the `{{contact.first_name}}`, `{{account.name}}` and `{{first_line}}` variables, wait intervals, and the same-thread decisions. The personal line goes into touch 1 as `{{first_line}}`, exactly.
 2. **Pick the schedule.** Call the tool ending `apollo_emailer_schedules_index`, and choose a weekday business-hours schedule in the founder's timezone. Confirm it with them.
 3. **Show the plan.** Say: "I will create the sequence <name>, paused, with <n> touches, sending from <mailbox> on <schedule>. Nothing sends until you press start in Apollo."
 4. **Wait for a yes.**

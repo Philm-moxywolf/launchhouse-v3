@@ -24,6 +24,6 @@ Do this:
 3. If no Apollo read tools are available to you, stop without writing anything.
 4. Find the founder's Launchhouse sequence and read its activity since the last working day.
 5. If nothing happened, stop without writing anything.
-6. Write growth-engine/drafts/sequence-<today>.md: how many sent, bounced, opted out and replied since the last working day, and a list headed "Asked to be left alone, stop them in Apollo" of anyone whose reply asks to stop, named only by first name and company. Put the bounced addresses under "Check these addresses".
+6. Write growth-engine/drafts/sequence-<today>.md: how many sent, bounced, opted out and replied since the last working day, and a list headed "Asked to be left alone, stop them in Apollo" of anyone whose reply asks to stop, named only by first name and company. For bounces, give the count and each person's first name and company only. Never write an email address, a surname or a phone number into this file, because it is saved to GitHub.
 7. Commit only that file with the message "Sequence health draft" and push.
 ```

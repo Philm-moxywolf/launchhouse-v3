@@ -58,7 +58,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **Inbound scripts.** `inbound-scripts.md` is not nearly empty.
 - **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots.
 - **Business or Creator account.** Done if `.state/setup.md` has the Instagram row at `done`. Otherwise self-reported.
-- **Messages sent.** Count the targets at `status: sent`, `replied` or `booked`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
+- **Messages sent.** Before Saturday 26 September 2026 the state is `not due`: the 25 go out at the event. From then, count the targets at `status: sent`, `replied`, `booked` or `no_reply`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
 
 ## What you return
 
@@ -75,4 +75,4 @@ Flags open: <the unresolved flag bullets, or none>
 Other files: <any file at the top of growth-engine/ that is not on the lists above, or none>
 ```
 
-**State** is one of `done`, `nearly empty`, `not done`, `ask`. **Evidence** is a short fact from the file, with a count where there is one.
+**State** is one of `done`, `nearly empty`, `not done`, `ask`, `not due`. **Evidence** is a short fact from the file, with a count where there is one.

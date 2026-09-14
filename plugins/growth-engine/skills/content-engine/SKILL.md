@@ -48,7 +48,7 @@ When they agree, add one line to the Decisions block of `growth-engine/memory.md
 
 **Ask before you write, and ask once.** A founder gets 30 pieces they cannot publish if you plan a shot list they never agreed to.
 
-Say it plainly: what clips and photos have you got, and where are they? The pre-work asked them to put everything in their GoHighLevel Media Library, so that is the first place to ask about. What each track was asked to collect is in `../../references/media.md`. If they have things elsewhere, or nothing, take that answer and carry on.
+Say it plainly: what clips and photos have you got, and where are they? The pre-work asked them to collect them from Session 1, and to move them into their GoHighLevel Media Library once GoHighLevel is set up in Session 2, so ask about both places. What each track was asked to collect is in `../../references/media.md`. If they have things elsewhere, or nothing, take that answer and carry on.
 
 Hold on to the answer. Step 4 uses it.
 
@@ -186,7 +186,7 @@ When the founder says they have read and approve pieces:
 1. Confirm which numbers, in one line, if it is not obvious.
 2. Set those rows in `ledger.md` to `approved`. Only rows at `draft` or already `approved` change.
 3. If they changed a piece after it was approved, set it back to `draft` and say it needs approving again, because approval is of the words as they read now.
-4. Commit: `git commit -am "Approved pieces <numbers>"`.
+4. Save: `git add growth-engine/ledger.md` and `git commit -m "Approved pieces <numbers>"`.
 5. Say how many are approved out of 30, and that publishing is `/growth-engine:publish` once GoHighLevel is connected.
 
 Never approve a piece the founder has not named.

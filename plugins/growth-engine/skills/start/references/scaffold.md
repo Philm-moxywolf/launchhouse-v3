@@ -77,12 +77,78 @@ Add any of these lines that are missing. Keep whatever else is there.
 
 ```
 # Real people's details. Never in git.
-growth-engine/people/*
+**/people/*
 !growth-engine/people/README.md
+growth-engine/outreach-firstlines.csv
+growth-engine/dm-openers.md
+# A copy unzipped in the wrong place, or twice.
+growth-engine/growth-engine/
+growth-engine */
 # Working copies the Launchhouse checks keep for a moment.
 growth-engine/.state/.pre/
 # Downloads from the app, once brought across.
 *.zip
 .lh-import/
 .DS_Store
+```
+
+## .claude/settings.json, in the folder the founder opened
+
+Create this only when the file does not exist. It turns the Launchhouse plugin on for this folder, and lets Claude save work and run the commands the engines need without asking every time. If the file exists, leave it alone and tell a mentor if the founder is being asked permission for everything.
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "launchhouse-v3": {
+      "source": {
+        "source": "github",
+        "repo": "Philm-moxywolf/launchhouse-v3"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "growth-engine@launchhouse-v3": true
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git show:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git remote -v)",
+      "Bash(git pull --no-rebase)",
+      "Bash(git fetch)",
+      "Bash(git branch -r)",
+      "Bash(git restore:*)",
+      "Bash(git mv:*)",
+      "Bash(git merge --abort)",
+      "Bash(git init)",
+      "Bash(git config user.name:*)",
+      "Bash(git config user.email:*)",
+      "Bash(date:*)",
+      "Bash(readlink /etc/localtime)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(unzip:*)",
+      "Bash(tar -xf:*)",
+      "Bash(textutil:*)",
+      "Bash(sips:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(cp:*)",
+      "Bash(rm -rf .lh-import)",
+      "Bash(rm -rf growth-engine/growth-engine)",
+      "Bash(rm -rf growth-engine/.state/snapshots)",
+      "Bash(rm growth-engine/drafts/:*)",
+      "Bash(rm growth-engine/README-your-files.md)",
+      "Bash(rm growth-engine/.state/HOME)",
+      "Bash(rm growth-engine/.gitignore)",
+      "Bash(powershell -NoProfile -Command Expand-Archive:*)"
+    ]
+  }
+}
 ```

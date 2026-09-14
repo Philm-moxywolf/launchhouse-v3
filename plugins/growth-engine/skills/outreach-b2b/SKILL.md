@@ -95,7 +95,7 @@ Four to five touches over two to three weeks.
 
 **On the Apollo route only.**
 - Apollo uses `{{contact.first_name}}` and `{{account.name}}`. The older `{{first_name}}` and `{{company}}` still work.
-- The personalised opening line is not one of those. It is a custom field on the contact called `first_line`, holding a different sentence for every person, referenced in the template by its own name. So the sequence has one body, and each recipient reads a line written for them.
+- The personalised opening line is not one of those. It is a custom field on the contact called `first_line`, holding a different sentence for every person, written into touch 1 as `{{first_line}}`. So the sequence has one body, and each recipient reads a line written for them.
 
 **On the manual route there are no merge variables at all.** Write all 25 messages out in full, finished, with the name and detail already in the text. There is nothing to substitute and nothing to go wrong.
 
@@ -209,10 +209,12 @@ This is a cold list, so it never goes into GoHighLevel's email tool. GoHighLevel
 
 ## Gate
 
-- route chosen and recorded
-- sequence approved, with opt-out lines and wait intervals
-- list criteria defined
-- list built to 35 and cut to 25
-- first lines written for all 25
+Gate C for B2B, from `../../references/gates.md`:
+- the route is chosen and the sequence written, with an opt-out line in every touch
+- the list criteria are written down, tight, medium and broad
+- the list is built: 25 prospects not at `cut`
+- first lines exist for the 25
+- the operations workflow is built (`/growth-engine:ops`)
+- domain set up and sending started, which the founder confirms
 
 Tell the founder which of these are done and which one to do next.

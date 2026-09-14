@@ -53,8 +53,11 @@ Look at the tools available to you. A GoHighLevel connection gives tools whose n
    - View Social Media Statistics
    - View and Edit Contacts
    - View Locations
+   - View and Edit Email Templates, only if they want the email template shortcut at the clinic
 
    Copy each name rather than typing it. One typed at 10pm comes out slightly wrong.
+
+   **Do not tick anything under Conversations or Conversation Messages.** Those let a tool send messages from their account, which nothing in Launchhouse ever does. If GoHighLevel's guide says the connector will not work without them, tick them, and make the next section's Never allow step on the sending tool before doing anything else.
 4. **The token is shown once.** Keep that tab open until the connection works.
 5. **The Location ID** is on the business profile. When we last looked, that was under Settings, then Business Profile, near the top. It looks like a password and is not one: it is more like a house number.
 
@@ -139,6 +142,8 @@ There is no tool that reads SPF, DKIM and DMARC here. Ask whether Apollo, or the
 
 ## 3. Tool permissions
 
+**One step is required, not optional.** If their GoHighLevel connector offers a tool whose name ends `conversations_send-a-new-message`, set that tool to **Never allow** in the connector's settings, now. The Launchhouse checks stop it inside this folder, but not in Cowork on another folder or in an ordinary Claude chat. When it is set, record `GoHighLevel sending tool blocked | done | <date> | set to never allow by the founder`. If the settings do not offer per-tool choices, record `needs a hand` and tell a mentor.
+
 **The Launchhouse checks already stop these tools in this folder:**
 - GoHighLevel sending a message
 - Apollo sending, starting a sequence, or buying a mailbox
@@ -148,7 +153,7 @@ There is no tool that reads SPF, DKIM and DMARC here. Ask whether Apollo, or the
 | Setting | Tools |
 |---|---|
 | **Never allow** | GoHighLevel `conversations_send-a-new-message`; Apollo `apollo_emailer_messages_send_now`, `apollo_emailer_campaigns_approve`, `apollo_email_account_purchase_create` |
-| **Ask each time** | anything that creates, edits or adds, and Apollo enrichment (`apollo_people_match`, `apollo_people_bulk_match`), which spends credits |
+| **Ask each time** | anything that creates, edits or adds, including Apollo `apollo_sequences_create` and `apollo_sequences_update`, which could switch a sequence on, and Apollo enrichment (`apollo_people_match`, `apollo_people_bulk_match`), which spends credits |
 | **Always allow** | tools that only read |
 
 If their settings do not offer this, say the Launchhouse checks cover it in this folder, and move on.

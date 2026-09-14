@@ -18,7 +18,8 @@ path=$(lh_json_get file_path "$input") || exit 0
 [ -n "$path" ] || exit 0
 
 rel=$(lh_rel "$path")
-base=${rel##*/}
+full=$(printf '%s' "$path" | tr '\\' '/')
+base=${full##*/}
 
 case $rel in
   growth-engine/*) ;;

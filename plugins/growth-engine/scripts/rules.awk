@@ -5,7 +5,7 @@
 #   HOLD|NOTE <tab> line <tab> code <tab> quote <tab> message
 #
 # Ported from Launchhousev2 src/server/rules. The app's codes and outcomes are
-# kept (see references/rules.md). This is the fast first layer: exact and
+# kept (the outcomes table in Launchhousev2 rules/confidence.ts). This is the fast first layer: exact and
 # near-exact shapes. The rules-reviewer agent reads for meaning and is the
 # authority on DM offers and on proof, which a regex cannot judge.
 #

@@ -30,6 +30,7 @@ Create only what is missing, and never overwrite a file that exists. The folder 
 - `growth-engine/people/README.md`
 - `growth-engine/uploads/`, `growth-engine/voice-samples/`, `growth-engine/drafts/`, each with an empty `.gitkeep`
 - a `.gitignore` in the folder they opened, containing the lines in the scaffold reference
+- `.claude/settings.json` in the folder they opened, only if it does not exist
 
 Do not create `founder-brain.md`. The Founder Brain makes it.
 
@@ -72,10 +73,9 @@ The folder is saved with git, so every change can be seen and undone, and so it 
 
 Check for work from the app. Any of these means the founder has brought files across:
 - `growth-engine/README-your-files.md`
-- a `.zip` file in the folder, or in `growth-engine/`
 - a folder called `growth-engine` inside `growth-engine`
 - `growth-engine/.state/HOME` mentioning `/tmp/ge/`
-- a `founder-brain.md` that was not made in this conversation
+- a `.zip` file in the folder, or in `growth-engine/`, **unless** `growth-engine/.state/imported.md` exists, which means the import already happened
 
 **If there is app work,** say: "I can see your work from the app. I will bring it across and tidy it for the new setup. Nothing you wrote gets rewritten." Then follow the `import-from-app` skill.
 

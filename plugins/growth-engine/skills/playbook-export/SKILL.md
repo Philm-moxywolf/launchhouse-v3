@@ -27,7 +27,7 @@ Produces the four to six page personalised insert that goes with the printed gen
    - B2C: the hook bank and inbound scripts.
    - Never include the people list or anyone's details.
 5. **Your ops.** Bottleneck, snapshot, and message copy.
-6. **Your 90 days.** The plan, the number, Monday's three actions, kill criteria.
+6. **Your 90 days.** The plan, the number, Monday's three actions, kill criteria. The plan is built in Atlanta on the Sunday, so at Session 3 this section is left out. Say so, and offer to compile the insert again after the Sunday.
 
 ## Output
 

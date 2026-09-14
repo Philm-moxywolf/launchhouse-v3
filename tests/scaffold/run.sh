@@ -21,5 +21,6 @@ check "growth-engine/memory.md" "growth-engine/memory.md"
 check "growth-engine/ops-log.md" "growth-engine/ops-log.md"
 check "growth-engine/people/README.md" "growth-engine/people/README.md"
 check ".gitignore, in the folder the founder opened" ".gitignore"
+check ".claude/settings.json, in the folder the founder opened" ".claude/settings.json"
 [ $fail = 0 ] && printf 'scaffold: ok\n'
 exit $fail

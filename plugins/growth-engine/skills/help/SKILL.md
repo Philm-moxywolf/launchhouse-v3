@@ -102,10 +102,9 @@ Do not edit the Track line yourself outside that flow.
 2. Then run `git log --oneline -10 -- growth-engine`, which shows every save.
 3. Any earlier version can be brought back with `/growth-engine:save`.
 
-**"It said a file was held."** The Launchhouse checks found a line that invents a figure, offers to automate cold DMs, promises replies, or uses the other track's material. The file was put back as it was, so nothing is lost.
-- The message names the line.
-- If a figure is real, it goes in the Proof section of the Founder Brain first.
-- Otherwise the line gets rewritten.
+**"It said a file was held."** The Launchhouse checks found a line that offers to automate cold DMs, promises replies, or uses the other track's material. The file was put back as it was, so nothing is lost. The message names the line, and the line gets rewritten.
+
+**"It said a figure was worth a look."** The rules reviewer checks every figure against what the founder has told it. If the figure is real, it goes in the Proof section of the Founder Brain first. Otherwise the line gets rewritten.
 
 It is a backstop, not a guarantee. They still read their own work before it goes out.
 
@@ -113,7 +112,7 @@ It is a backstop, not a guarantee. They still read their own work before it goes
 
 **"It will not send my Apollo sequence."** Also correct. Sequences are built paused, and starting one is a button the founder presses in Apollo, having read it.
 
-**"It is asking permission for everything."** Their folder's settings let Claude save work without asking. If they opened a folder that was not made from the Launchhouse template, the settings are missing. Offer `/growth-engine:start`, and tell a mentor.
+**"It is asking permission for everything."** Their folder's settings let Claude save work without asking. If they opened a folder that was not made from the Launchhouse template, the settings are missing. `/growth-engine:start` creates them when they are missing. Some things always ask, on purpose: publishing, spending Apollo credits, and adding people to a sequence.
 
 **"I cannot get any of this working."** Do not keep troubleshooting past two failed attempts. Send them to the Slack channel.
 

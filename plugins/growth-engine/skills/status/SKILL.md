@@ -56,7 +56,7 @@ Check the Brain's Flags section and surface anything unresolved. These two items
 
 When the founder asks "am I ready", or a gate is being checked this week, ask each self-reported item that is not yet answered. Ask one question at a time.
 
-Record each answer as a new dated line in `growth-engine/.state/gate-answers.md`, in the shape in `../../references/contract.md`. Then commit: `git commit -am "Gate answers"`.
+Record each answer as a new dated line in `growth-engine/.state/gate-answers.md`, in the shape in `../../references/contract.md`. Then save it: `git add growth-engine/.state/gate-answers.md` and `git commit -m "Gate answers"`.
 
 Otherwise, do not pester them with questions they did not ask for.
 

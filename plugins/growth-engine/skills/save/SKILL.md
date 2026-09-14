@@ -24,7 +24,7 @@ Any of those can lose work, and none of them is ever needed here.
 2. Say in one line what is being saved, in words: "your content file and 3 new writing samples".
 3. Run `git add -A`.
    - `.gitignore` keeps `people/` and downloaded zips out.
-   - If `git status` shows a person file or a zip about to be added, stop. Fix `.gitignore` from the start skill's scaffold before saving.
+   - If `git status` shows a person file, a zip, `outreach-firstlines.csv`, `dm-openers.md`, or any `.csv` with an email column about to be added, stop. Run `git restore --staged` on it, fix `.gitignore` from the start skill's scaffold, and only then save.
 4. Commit with a short plain message that says what the work was: `git commit -m "<what changed>"`.
 5. **Push.**
    - If `git remote -v` shows a remote, run `git push`.
@@ -48,7 +48,7 @@ Any of those can lose work, and none of them is ever needed here.
 4. **Ask for a yes.**
 5. **Save first.** If there are unsaved changes to that file, save them, so nothing is lost by going back.
 6. **Restore the file.** Run `git restore --source <hash> -- growth-engine/<file>`.
-7. **Save it.** Run `git commit -am "Brought back <file> from <date>"`. The newer version stays in the history, so they can change their mind.
+7. **Save it.** Run `git add -- growth-engine/<file>` and `git commit -m "Brought back <file> from <date>"`. The newer version stays in the history, so they can change their mind.
 
 If the file was deleted, find the last save that had it with `git log --diff-filter=D --format="%h %ad" -- growth-engine/<file>`. Restore from the save before that one.
 

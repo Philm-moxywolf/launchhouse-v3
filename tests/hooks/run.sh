@@ -90,6 +90,26 @@ expect_deny "Apollo sequence activation is denied" "$out"
 out=$(printf '{"tool_name":"mcp__d09f__apollo_mixed_people_api_search","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
 expect_quiet "Apollo search is allowed" "$out"
 
+# Activating a sequence is denied, building one paused is not.
+out=$(printf '{"tool_name":"mcp__d09f__apollo_sequences_update","tool_input":{"id":"x","active":true}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
+expect_deny "switching a sequence on is denied" "$out"
+out=$(printf '{"tool_name":"mcp__d09f__apollo_sequences_create","tool_input":{"name":"x","active":false}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
+expect_quiet "creating a sequence paused is allowed" "$out"
+
+# Spending and publishing always ask.
+out=$(printf '{"tool_name":"mcp__d09f__apollo_people_bulk_match","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/ask-mcp.sh")
+case $out in *'"permissionDecision":"ask"'*) ok "enrichment asks every time" ;; *) bad "enrichment asks every time" "$out" ;; esac
+out=$(printf '{"tool_name":"mcp__e03a__social-media-posting_create-post","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/ask-mcp.sh")
+case $out in *'"permissionDecision":"ask"'*) ok "publishing asks every time" ;; *) bad "publishing asks every time" "$out" ;; esac
+
+# The send tool is stopped even from the wrong folder next door.
+mkdir -p "$proj/elsewhere"
+out=$(printf '{"tool_name":"mcp__e03a__conversations_send-a-new-message","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj/elsewhere" HOME=/nonexistent $SH "$S/deny-mcp.sh")
+expect_deny "the send tool is stopped from a folder next to the founder folder" "$out"
+
+# A Launchhouse file written outside the project is refused too.
+expect_deny "a Brain written outside the project" "$(pre "/tmp/somewhere/founder-brain.md")"
+
 # Context at session start.
 printf '# Profile\n\n- **Founder:** Sam Okoye\n- **Timezone:** Europe/London\n' > "$proj/growth-engine/.state/profile.md"
 out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
@@ -99,6 +119,15 @@ out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
 case $out in *growth-engine:import*) ok "app leftovers point at the importer" ;; *) bad "app leftovers point at the importer" "$out" ;; esac
 mkdir -p "$proj/outer"; out=$(CLAUDE_PROJECT_DIR="$proj/outer" $SH "$S/context.sh")
 case $out in *"not the founder folder"*) ok "the wrong folder is named" ;; *) bad "the wrong folder is named" "$out" ;; esac
+
+# Once imported, a leftover zip is not new app work.
+rm -f "$proj/growth-engine/README-your-files.md"; : > "$proj/growth-engine.zip"
+out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
+case $out in *growth-engine:import*) ok "a zip before import points at the importer" ;; *) bad "a zip before import points at the importer" "$out" ;; esac
+printf '# Imported\n' > "$proj/growth-engine/.state/imported.md"
+out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
+case $out in *growth-engine:import*) bad "a zip after import is left alone" "$out" ;; *) ok "a zip after import is left alone" ;; esac
+rm -f "$proj/growth-engine.zip"
 
 # Drafts waiting are mentioned.
 mkdir -p "$proj/growth-engine/drafts"; : > "$proj/growth-engine/drafts/week-2026-39.md"; rm -f "$proj/growth-engine/README-your-files.md"

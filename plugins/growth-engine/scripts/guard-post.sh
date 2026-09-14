@@ -62,7 +62,7 @@ if [ -n "$holds" ]; then
   more=$(printf '%s\n' "$findings" | grep -c '^HOLD')
   extra=""
   [ "$more" -gt 3 ] && extra=" There are $((more - 3)) more held lines in this file."
-  msg="HELD, NOT SAVED: growth-engine/$inner. $how $reason$extra Fix those lines and write the file again. If a figure is real, it belongs in the Founder Brain first. Tell the founder in one plain sentence what was held and why, never as an error code."
+  msg="HELD, NOT SAVED: growth-engine/$inner. $how $reason$extra Fix those lines and write the file again. Tell the founder in one plain sentence what was held and why, never as an error code."
   printf '{"decision":"block","reason":"%s"}\n' "$(lh_json_escape "$msg")"
   sh "$here/index.sh" >/dev/null 2>&1
   exit 0
