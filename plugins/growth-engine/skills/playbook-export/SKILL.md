@@ -1,6 +1,6 @@
 ---
 name: playbook-export
-description: Compile the founder's personalised playbook insert from their own files, four to six pages, delivered as a PDF alongside the generic Growth Engine playbook body. Session 3 homework. Trigger on "generate my playbook", "playbook insert", "print my playbook", "make my playbook PDF".
+description: Compile the founder's personalised playbook insert from their own files, four to six pages, delivered as a PDF alongside the generic Growth Engine playbook body. Made after Session 3, and again after the Sunday plan. Trigger on "generate my playbook", "playbook insert", "print my playbook", "make my playbook PDF".
 ---
 
 # Playbook Export

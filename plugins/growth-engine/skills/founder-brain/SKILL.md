@@ -1,6 +1,6 @@
 ---
 name: founder-brain
-description: Build or update the Founder Brain, the single locked record of a founder's business, audience, offer, proof, and writing voice. Use at the very start of the Launchhouse programme, before any content, outreach, audience, or operations work. Trigger on "build my founder brain", "set up my brain", "build my brain", "update my brain", "change my track", or whenever another engine reports that no founder-brain.md exists. If the folder has not been set up yet, run the start skill first.
+description: Build or update the Founder Brain, the single locked record of a founder's business, audience, offer, proof, and writing voice. Every other engine reads it, so it comes before any content, outreach, audience, or operations work. Trigger on "build my founder brain", "set up my brain", "build my brain", "update my brain", "change my track", or whenever another engine reports that no founder-brain.md exists. If the folder has not been set up yet, run the start skill first.
 ---
 
 # Founder Brain
@@ -15,15 +15,15 @@ Output is a single file at `./growth-engine/founder-brain.md` in the founder's L
 
 ## Before starting
 
-Check the session context at the top of the conversation. If it says this is not the founder folder, stop and tell them which folder to open instead. If the folder is not set up, run the `start` skill first.
+1. **Check the folder.** Read the session context at the top of the conversation. If it says this is not the founder folder, stop and tell them which folder to open instead. If the folder is not set up, run the `start` skill first.
+2. **Check for an existing Brain.** Look for `./growth-engine/founder-brain.md`. Most founders already have one, built in Session 1 and brought across from the Launchhouse app.
+   - **It does not exist:** run the full intake below.
+   - **It exists and they asked to update it:** go straight to the part they want to change. Never re-run the full intake for an update.
+   - **It exists and they asked to build a new one:** show a three-line summary of the one they have, and ask whether to update it or start again.
+   - **They asked to change track:** follow the section below.
+3. **In any update, check the Brain has what the gates and engines read:** a Locked date, a Track line, `## Thesis`, `## Voice` and `## Numbers`. If one is missing, say so and offer to add it in the same sitting. A missing Thesis fails Gate A. For `## Numbers`, fill each line from what the Brain already says in Proof, Stage and Goal, and ask only for what is not there.
 
-Then check whether `./growth-engine/founder-brain.md` already exists. If it came across from the app and the founder wants changes, treat it as an update: go straight to what they want to change and never re-run the full intake.
-
-**In any update, check the Brain has what the gates and engines read:** a Locked date, a Track line, `## Thesis`, `## Voice` and `## Numbers`. If one is missing, say so and offer to add it in the same sitting. A missing Thesis fails Gate A. For `## Numbers`, fill each line from what the Brain already says in Proof, Stage and Goal, and ask only for what is not there.
-
-- If it exists and the founder asked to build a new one, show them the current summary and ask whether to update it or start again.
-- If it exists and they asked to update, go straight to the section they want to change.
-- If it does not exist, run the full intake below.
+**The Locked date** is the day the Brain was first written. An update keeps it.
 
 
 ### If they ask to change the track
@@ -47,7 +47,7 @@ Then read the Thesis, Offer and Proof back to them in one message and ask whethe
 
 The Launchhouse checks read the whole Brain against its Track line, so a Brain that says b2c but still describes cold email is held and put back. One write with everything changed is what saves.
 
-**Then say what to expect.** Their old track's files stay where they are and stop appearing in their list, because the list only shows the track they are on. The new track's gates start empty. Name which files they now need and which session covers each. Their 30 content pieces were written for the old buyer, so offer to rebuild them for the new one with the content engine's refill mode, which keeps the old batch as an archive.
+**Then say what to expect.** Their old track's files stay in the folder, but nothing reads, lists or builds on them any more. The new track's gates start empty. Name which files they now need and which session covers each. Their 30 content pieces were written for the old buyer, so offer to rebuild them for the new one with the content engine's refill mode, which keeps the old batch as an archive.
 
 If they are hesitating, leave it where it is. They can come back to it, and a track changed twice costs more than a track changed once.
 
@@ -55,16 +55,9 @@ If they are hesitating, leave it where it is. They can come back to it, and a tr
 
 Ask these in small groups, not all at once. Three or four questions per turn. Reflect back what you heard before moving on. This should feel like a conversation with a sharp consultant, not a form.
 
-**Say where they are, every single turn.** Open each group by naming the stage
-and the count, like `Part 2 of 6: the track fork`. The six are the business, the
-track fork, the audience, the offer and proof, the channels, then the voice.
-When you finish the last one, say you are writing the file.
+**Say where they are, every single turn.** Open each group by naming the stage and the count, like `Part 2 of 6: the track fork`. The six are the business, the track fork, the audience, the offer and proof, the channels, then the voice. When you finish the last one, say you are writing the file.
 
-This is not decoration. A founder who cannot see the end of a conversation does
-not know whether to give you a quick answer or a careful one, and the ones who
-guess wrong give you thin answers early and then run out of patience at the
-voice, which is the part everything else is built on. Knowing they are two
-thirds of the way through costs you one line and changes what they give you.
+A founder who cannot see the end of a conversation does not know whether to give a quick answer or a careful one. The ones who guess wrong give thin answers early, then run out of patience at the voice, which everything else is built on. One line per turn fixes that.
 
 ### Group 1: the business
 
@@ -120,7 +113,7 @@ Proof matters more than founders expect. It is the raw material for every post a
 
 ### The thesis
 
-From their Group 4 answers, compose one sentence: who they serve, the problem in the customer's own words, and why them rather than the obvious alternative. Read it back and adjust until they would say it out loud to a stranger. This is the thesis. It goes in the Brain, it is pressure-tested in Session 1, and it is part of their Gate 1 submission.
+From their Group 4 answers, compose one sentence: who they serve, the problem in the customer's own words, and why them rather than the obvious alternative. Read it back and adjust until they would say it out loud to a stranger. This is the thesis. It goes in the Brain, and it is part of their Gate A submission.
 
 ### Group 5: channels
 
@@ -128,7 +121,7 @@ From their Group 4 answers, compose one sentence: who they serve, the problem in
 - Which channels do you have accounts on but do not use?
 - **If track is B2C**: is your Instagram a personal account, or Business or Creator? If personal, tell them to convert it now, because publishing and inbound capture will not work without it, and it takes two minutes.
 - **If track is B2B**: which provider is their work email on, Google (Gmail or Google Workspace), Microsoft 365, or something else? This decides how they send their 25 messages later, so record it plainly. It is not a technical question to them: "what do you open your work email in" gets the answer.
-- **If track is B2B**: do you have a business domain with real email sending history, or will you need a fresh domain? A fresh domain needs SPF, DKIM and DMARC configured now, plus ten to twenty real messages a day between now and the event. At 25 messages, correct setup matters more than months of warmup, but it cannot be crammed into the last week, so flag it as a start-today item.
+- **If track is B2B**: do you have a business domain with real email sending history, or will you need a fresh domain? A fresh domain needs SPF, DKIM and DMARC configured now, plus ten to twenty real messages a day between now and Atlanta. At 25 messages, correct setup matters more than months of warmup, but it cannot be crammed into the last week, so flag it as a start-today item.
 
 ## Voice capture
 
@@ -241,7 +234,7 @@ If a write is held by the Launchhouse checks while you are writing the file, the
 
 1. Show the founder a short summary and confirm it is right.
 2. Tell them the Brain is now locked and every other engine reads from it. Locked means nothing rewrites it behind their back. It does not mean it can never change, and if they ask later they are not being difficult.
-3. Give them their gate submission line: track, business name, the thesis, and confirmation the file exists.
+3. For a new Brain, tell them their Gate A submission is ready whenever they want it: `/growth-engine:gate`.
 4. Tell them what happens next, based on track:
    - **B2B**: if the domain is fresh, set up SPF, DKIM and DMARC today and start sending ten to twenty real messages a day. Correct setup beats long warmup at 25-message volume, but it needs the weeks between now and Atlanta, not the last one.
    - **B2C**: convert Instagram to Business or Creator today, and link it to a Facebook Page.

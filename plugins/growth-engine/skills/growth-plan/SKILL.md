@@ -41,7 +41,7 @@ The Sunday deliverable. It sequences everything built over the weekend into one 
 
 **Kill criteria.** What result at day 30 means stop. Founders never write these, and it is why they persist with things that are not working. Push for a real number.
 
-**Realistic numbers.** Base projections on their actual list size, audience size and conversion assumptions. Do not use the marketing numbers from the landing page. If the maths says a modest outcome, say so.
+**Realistic numbers.** Base projections on their actual list size, audience size and conversion assumptions, never on figures from a promotional page or somebody else's results. If the maths says a modest outcome, say so.
 
 Every number in this plan is either one the founder gave you, or an assumption:
 - **Label assumptions** in the text, with the word assume.

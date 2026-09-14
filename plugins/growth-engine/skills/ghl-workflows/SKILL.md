@@ -1,15 +1,15 @@
 ---
 name: ghl-workflows
-description: Build the operations engine. Runs a bottleneck diagnostic, picks one GoHighLevel snapshot from the library of six, and writes all the copy that goes inside it, ready to load at the clinic. Both tracks. Trigger on "build my ops engine", "which workflow should I automate", "my bottleneck", "pick a snapshot", "operations engine", or Session 2 homework.
+description: Build the operations engine. Runs a bottleneck diagnostic, picks one GoHighLevel snapshot from the library of six, and writes all the copy that goes inside it, ready to load at the clinic. Both tracks. Trigger on "build my ops engine", "which workflow should I automate", "my bottleneck", "pick a snapshot", "operations engine".
 ---
 
 # Operations Engine
 
-Delivers the page promise: one workflow running on the founder's live business before they leave Atlanta.
+One workflow running on the founder's own business before they leave Atlanta.
 
 **The workflow is a pre-built GoHighLevel snapshot,** loaded in one click at the clinic on Wednesday 23 September. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
 
-**Founders do not build workflows.** If a founder starts describing a bespoke automation, bring them back to the library. Bespoke is what fails at 130.
+**Founders do not build workflows.** If a founder starts describing a bespoke automation, bring them back to the library. A custom build cannot be loaded and tested in one clinic session; a snapshot can.
 
 **Who is reading.** A founder who does not use a terminal. Never ask them to run a command.
 
@@ -90,7 +90,7 @@ Keep waits realistic. Chasing someone four times in two days annoys them.
 
 Only if the data lives outside GoHighLevel: Stripe to a spreadsheet, Shopify to Airtable, a legacy system, multi-API orchestration.
 
-Roughly one founder in six needs this. If the founder does not clearly need it, do not raise it. If they do, note the requirement in the output file and flag it for one-to-one support rather than trying to solve it here.
+Most founders do not need this. If the founder does not clearly need it, do not raise it. If they do, note the requirement in the output file and flag it for one-to-one support rather than trying to solve it here.
 
 ## Step 5: export
 

@@ -1,6 +1,6 @@
 # The folder contract
 
-Every file a founder's `growth-engine/` folder can hold, and the shape each one must have. These are the same files the Launchhouse app produced, so work brought across fits without being rewritten.
+Every file a founder's `growth-engine/` folder can hold, the shape each one must have, and which skill writes it. Work brought across from the Launchhouse app already has these shapes, so it fits without being rewritten.
 
 ## Files, by track
 

@@ -1,6 +1,6 @@
 # Pictures, clips and writing samples
 
-What founders were asked to collect in the pre-work.
+What founders were asked to collect before the sessions, and where it goes.
 
 ## Where media goes
 

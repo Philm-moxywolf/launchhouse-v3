@@ -1,6 +1,6 @@
 ---
 name: content-engine
-description: Build the content engine. Defines content pillars from the Founder Brain, then writes 30 posts (B2B) or 30 short-form scripts, carousels and captions (B2C) in the founder's captured voice, as a file to read, a sheet for publishing, and a ledger of what is approved. Also refills it monthly and records approvals. Trigger on "build my content engine", "generate my posts", "write my content", "content pillars", "my 30 posts", "refill my content", "approve pieces", or Session 1 homework.
+description: Build the content engine. Defines content pillars from the Founder Brain, then writes 30 posts (B2B) or 30 short-form scripts, carousels and captions (B2C) in the founder's captured voice, as a file to read, a sheet for publishing, and a ledger of what is approved. Also refills it monthly and records approvals. Trigger on "build my content engine", "generate my posts", "write my content", "content pillars", "my 30 posts", "refill my content", "approve pieces".
 ---
 
 # Content Engine
@@ -48,7 +48,7 @@ When they agree, add one line to the Decisions block of `growth-engine/memory.md
 
 **Ask before you write, and ask once.** A founder gets 30 pieces they cannot publish if you plan a shot list they never agreed to.
 
-Say it plainly: what clips and photos have you got, and where are they? The pre-work asked them to collect them from Session 1, and to move them into their GoHighLevel Media Library once GoHighLevel is set up in Session 2, so ask about both places. What each track was asked to collect is in `../../references/media.md`. If they have things elsewhere, or nothing, take that answer and carry on.
+Say it plainly: what clips and photos have you got, and where are they? They were asked to collect them from Session 1, and to move them into their GoHighLevel Media Library once GoHighLevel is set up in Session 2, so ask about both places. What each track was asked to collect is in `../../references/media.md`. If they have things elsewhere, or nothing, take that answer and carry on.
 
 Hold on to the answer. Step 4 uses it.
 
@@ -174,9 +174,9 @@ Write the files, in the shapes in the contract:
    - Do this at most twice. Anything still held gets shown to the founder to decide.
 3. **Save.** Run `git add growth-engine` then `git commit -m "Content engine: 30 pieces"`. If `git remote -v` shows a remote, run `git push`. If the push fails, say the work is saved on this computer and move on.
 
-## Step 8: the check, and how approval works
+## Step 8: reading, and how approval works
 
-Tell the founder their homework is to read all 30 and edit anything that does not sound like them. Not to approve them unread.
+Tell the founder the next job is theirs: read all 30 and change anything that does not sound like them. Not approve them unread.
 
 **The gate is 30 approved, not 30 generated.** Say that plainly.
 
@@ -188,7 +188,7 @@ When the founder says they have read and approve pieces:
 
 1. Confirm which numbers, in one line, if it is not obvious.
 2. Set those rows in `ledger.md` to `approved`. Only rows at `draft` or already `approved` change.
-3. If they changed a piece after it was approved, set it back to `draft` and say it needs approving again, because approval is of the words as they read now.
+3. If a piece was changed after it was approved, by them or by you at their request, set it back to `draft` and say it needs approving again, because approval is of the words as they read now.
 4. Save: `git add growth-engine` and `git commit -m "Approved pieces <numbers>"`.
 5. Say how many are approved out of 30, and that publishing is `/growth-engine:publish` once GoHighLevel is connected.
 
@@ -206,11 +206,12 @@ If `content-30.md` already exists and they want a new batch:
    - If that name is taken, add `-2`.
    - Keep the old CSV out of the way: rename it the same way with `.csv`.
 3. **Update the ledger.** A row's id says which file its words are in: a plain number is `content-30.md`, and `<suffix>-<n>` is `content-30-<suffix>.md`.
-   - Rename every old-batch row's id from `<n>` to `<suffix>-<n>`, where the suffix is the archive's, such as `2026-09` or `2026-09-2`.
+   - Rename every row whose id is a plain number from `<n>` to `<suffix>-<n>`, where the suffix is the new archive's, such as `2026-09` or `2026-09-2`. Rows that already carry a suffix belong to an older archive and keep their ids.
    - Rows at `draft` become `archived`.
    - Rows at `approved`, `scheduled` or `posted` keep their status, so approved pieces can still be published from the archive.
 4. **Carry forward.** Copy the `## New proof` list into the new file, then add anything new to the Brain's Proof section only with the founder's yes.
-5. **Write the new 30.** Run Steps 3, 4, 6 and 7 again. The new rows use plain numbers 1 to 30, because their words are in the new `content-30.md`.
+5. **Ask about media again.** New clips and photos may have arrived since the last batch. Ask Step 2's question once.
+6. **Write the new 30.** Run Steps 3, 4, 6 and 7 again, on the same pillars unless they want to change one. The new rows use plain numbers 1 to 30, because their words are in the new `content-30.md`.
 
 ## How these get published
 
@@ -218,4 +219,4 @@ If `content-30.md` already exists and they want a new batch:
 
 **The CSV is the second way in, and it stays.** A founder who has not connected anything yet, or who would rather do it by hand, has a table they can import or work down. It is also the copy they keep if they ever leave.
 
-Do not tell a founder the exact import columns GoHighLevel expects. That format changes, nobody here has checked it lately, and a confident wrong answer costs them an afternoon.
+Do not tell a founder the exact import columns GoHighLevel expects. That format changes, and a confident wrong answer costs them an afternoon.

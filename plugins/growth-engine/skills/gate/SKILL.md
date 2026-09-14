@@ -12,10 +12,8 @@ description: Produce the founder's gate submission, a short plain-text block to 
 ## 1. Which gate
 
 - If they named a gate, use it.
-- Otherwise use the next one due. The dates are in `../../references/gates.md`:
-  - **Gate A** until the Brain is locked.
-  - **Gate B** until Session 2.
-  - **Gate C** until Session 3.
+- Otherwise use the first gate that is not complete, checked in order A, B, C. The dates are in `../../references/gates.md`.
+- If every gate is complete, say so, and ask which one they want a block for.
 - If it is unclear, ask in one line.
 
 ## 2. Check the files

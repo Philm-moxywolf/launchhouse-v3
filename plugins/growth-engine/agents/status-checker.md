@@ -40,7 +40,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 
 ### Gate B
 - **Thirty pieces written.** The index count for `content-30.md` is 30 pieces or more.
-- **Upload sheet exported.** `content-30.csv` starts with the header `content,platform,scheduled_date,media_note` (Grep its first line), and the index count is 30 rows or more.
+- **Posting sheet written.** `content-30.csv` starts with the header `content,platform,scheduled_date,media_note` (Grep its first line), and the index count is 30 rows or more.
 - **Refill source list.** `rss-feeds.md` is not nearly empty.
 - **Thirty approved.** The index count for `ledger.md` shows 30 or more approved.
 - **Sounds like the founder.** Self-reported.
@@ -58,7 +58,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **Targets recorded.** The index count for `people/` shows 25 or more targets.
 - **Hook bank with offer tests.** `hook-bank.md` has its category headings and an `Offer tests` heading.
 - **Inbound scripts.** `inbound-scripts.md` is not nearly empty.
-- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request).
+- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request), and is not nearly empty.
 - **Business or Creator account.** Done if `.state/setup.md` has the Instagram row at `done`. Otherwise self-reported.
 - **Messages sent.** Before Saturday 26 September 2026 the state is `not due`: the 25 go out at the event. From then, use the sent count in the index row for `people/`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
 

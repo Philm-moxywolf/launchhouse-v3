@@ -1,6 +1,6 @@
 ---
 name: audience-b2c
-description: Build the B2C audience engine. Defines who to reach, records 25 real target accounts, writes 25 manual DM openers the founder sends by hand, builds a hook bank with offer tests, and writes the inbound comment-to-DM and conversion scripts that run in GoHighLevel. Also records sends. B2C track only. Trigger on "build my audience engine", "instagram outreach", "DM scripts", "my hooks", "comment to DM", "I sent the DMs", or Session 2 homework for B2C founders.
+description: Build the B2C audience engine. Defines who to reach, records 25 real target accounts, writes 25 manual DM openers the founder sends by hand, builds a hook bank with offer tests, and writes the inbound comment-to-DM and conversion scripts that run in GoHighLevel. Also records sends. B2C track only. Trigger on "build my audience engine", "instagram outreach", "DM scripts", "my hooks", "comment to DM", "I sent the DMs".
 ---
 
 # Audience Engine, B2C
@@ -64,7 +64,7 @@ Engagement-based, not firmographic. Build a list of 25 real accounts from:
 - local accounts, if the business is location-based
 - followers of adjacent, non-competing accounts
 
-Write the method as a repeatable instruction, not a one-off list. The founder builds the 25 as homework in about an hour.
+Write the method as a repeatable instruction, not a one-off list. The founder builds the 25 in about an hour.
 
 **As they give you each account,** record it as a person file in `growth-engine/people/`, named by the slug of `ig:<handle>`, in the target shape in the contract:
 - `kind: target`
@@ -165,11 +165,12 @@ When someone replies, set them to `replied`. When they book, set them to `booked
 
 ## Gate
 
-- audience defined
+Gate C for B2C, from `../../references/gates.md`:
 - 25 target accounts recorded
 - 25 DM openers written
 - hook bank complete, with offer tests
 - inbound scripts written
-- Instagram converted to Business or Creator
+- the operations workflow built (`/growth-engine:ops`)
+- Instagram converted to Business or Creator, linked to a Facebook Page
 
-Tell the founder which are done and which one to do next.
+The 25 sends happen at the event, so they are not part of Gate C. Tell the founder which items are done and which one to do next.

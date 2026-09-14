@@ -1,6 +1,6 @@
 ---
 name: outreach-b2b
-description: Build the B2B outreach engine. Chooses how the 25 messages will be sent, turns the ICP into Apollo search criteria, writes a four to five touch sequence in the founder's voice, records the list of 25, and writes a personalised first line for every person on it. B2B track only. Trigger on "build my outreach", "write my sequence", "apollo filters", "cold email", "first lines", "I sent the emails", or Session 2 homework for B2B founders.
+description: Build the B2B outreach engine. Chooses how the 25 messages will be sent, turns the ICP into Apollo search criteria, writes a four to five touch sequence in the founder's voice, records the list of 25, and writes a personalised first line for every person on it. B2B track only. Trigger on "build my outreach", "write my sequence", "apollo filters", "cold email", "first lines", "I sent the emails".
 ---
 
 # Outreach Engine, B2B
@@ -97,7 +97,7 @@ Four to five touches over two to three weeks.
 - Apollo uses `{{contact.first_name}}` and `{{account.name}}`. The older `{{first_name}}` and `{{company}}` still work.
 - The personalised opening line is not one of those. It is a custom field on the contact called `first_line`, holding a different sentence for every person, written into touch 1 as `{{first_line}}`. So the sequence has one body, and each recipient reads a line written for them.
 
-**On the manual route there are no merge variables at all.** Write all 25 messages out in full, finished, with the name and detail already in the text. There is nothing to substitute and nothing to go wrong.
+**On the manual route there are no merge variables at all.** Touch 1 is written out in full for each of the 25, finished, with the name and detail already in the text, in Step 4. The later touches stay as one text in `outreach-sequence.md`, with the name to change marked `[first name]`. There is nothing else to substitute.
 
 ### Stop on reply
 
@@ -151,6 +151,8 @@ For each person not at `cut`, write one opening line specific to that company or
 
 **Work in batches of 5 to 10**, so the founder can check quality as it goes. For each person, write the line inside the Opener block of their person file.
 
+**On the manual route,** the Opener block holds that person's whole touch 1, finished, under 120 words, opening with their first line and ending with the opt-out line. It stays in their person file, which never goes to GitHub, and the first line of the block is what goes into the CSV.
+
 ## Step 5: deliverability brief
 
 Cover this even though it is not copy, because it decides whether any of it works.
@@ -195,7 +197,7 @@ Write `./growth-engine/outreach-firstlines.csv`:
 
 ### On the manual route
 
-The CSV is a checklist, not an import. It is the founder's running sheet for the Saturday: who, what the opening line is, and what has gone.
+The CSV is a checklist, not an import. It is the founder's running sheet for the Saturday: who, and what the opening line is. Each person's finished touch 1 is in their person file, ready to copy into their own email.
 
 When they say they have sent to someone:
 - set that person's `status` to `contacted_ok`

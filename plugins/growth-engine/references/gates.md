@@ -1,17 +1,17 @@
 # The gates
 
-Three gates. Each is checked at the start of the next session, so homework is looked at while there is still time to fix it. They exist so nobody arrives in Atlanta unable to build.
+Three gates. Each is checked at the start of the next session, so the work done between sessions is looked at while there is still time to fix it. They exist so nobody arrives in Atlanta unable to build.
 
 | Gate | What | Built | Checked |
 |---|---|---|---|
 | A | The Founder Brain | Session 1, Mon 7 or Tue 8 September | End of Session 1 |
-| B | The content engine | Session 1 homework | Session 2, Mon 14 or Tue 15 September |
-| C | Engine 2 and the operations workflow | Session 2 homework | Session 3, Mon 21 or Tue 22 September |
+| B | The content engine | After Session 1 | Session 2, Mon 14 or Tue 15 September |
+| C | Engine 2 and the operations workflow | After Session 2 | Session 3, Mon 21 or Tue 22 September |
 
 Also in the programme, with no gate:
 - **The clinic,** Wed 23 September: the one GoHighLevel snapshot loaded, and the Brain proved to work in Claude.
 - **The 90 day plan:** built in Atlanta on the Sunday.
-- **The playbook insert:** Session 3 homework.
+- **The playbook insert:** made after Session 3, and again after the Sunday plan.
 
 ## How an item is proved
 
@@ -44,7 +44,7 @@ The flag that matters most:
 | Item | Proved by | How |
 |---|---|---|
 | Thirty pieces are written | file-backed | `content-30.md` is not nearly empty, and holds 30 pieces |
-| The upload sheet is exported | file-backed | `content-30.csv` has the header `content,platform,scheduled_date,media_note` and 30 rows |
+| The posting sheet is written | file-backed | `content-30.csv` has the header `content,platform,scheduled_date,media_note` and 30 rows |
 | A source list for the refill exists | file-backed | `rss-feeds.md` is not nearly empty |
 | The pieces have been read and approved | file-backed | at least 30 `C|` rows in `ledger.md` at `approved`, `scheduled` or `posted` |
 | The pieces sound like the founder | self-reported | ask |

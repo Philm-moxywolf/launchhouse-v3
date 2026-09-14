@@ -77,7 +77,7 @@ This is the undo point for everything after. If git needs a name and email, foll
 
 ## 4. Adjust to the current format
 
-Work through `../../references/contract.md`. Change only what is listed there. Keep every word the founder wrote.
+Change only what is listed below, so each file matches its shape in `../../references/contract.md`. Keep every word the founder wrote.
 
 ### The Founder Brain
 

@@ -92,7 +92,9 @@ Check for work from the app. Any of these means the founder has brought files ac
 
 **If there is app work,** say: "I can see your work from the app. I will bring it across and tidy it for the new setup. Nothing you wrote gets rewritten." Then follow the `import-from-app` skill.
 
-**If the founder says their work is still in the app,** tell them how to get it:
+**If there is no app work in the folder, ask once:** "Did you build anything in the Launchhouse app, like your Founder Brain?" Most founders did, in Session 1.
+
+**If their work is still in the app,** tell them how to get it:
 1. In the app, open Files and press the button that downloads everything.
 2. Drag the downloaded file into this folder, or tell you where it saved.
 
