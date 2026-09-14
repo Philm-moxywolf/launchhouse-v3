@@ -11,7 +11,7 @@ The founder built their Brain, and maybe their content and engines, in the Launc
 
 **Who is reading.** No terminal. Run commands yourself, then say in plain words what you did.
 
-The full format every file should end up in is in `references/contract.md` next to this file. Read it before step 4.
+The full format every file should end up in is in `../../references/contract.md`, relative to this skill. Read it before step 4.
 
 ## 1. Find what they brought
 
@@ -64,7 +64,7 @@ This is the undo point for everything after. If git needs a name and email, foll
 
 ## 4. Adjust to the current format
 
-Work through `references/contract.md`. Change only what is listed there. Keep every word the founder wrote.
+Work through `../../references/contract.md`. Change only what is listed there. Keep every word the founder wrote.
 
 ### The Founder Brain
 

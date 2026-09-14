@@ -68,23 +68,23 @@ grep -q '/tmp/ge/' "$ge/.state/HOME" 2>/dev/null && leftovers=1
 ls "$root"/*.zip "$ge"/*.zip >/dev/null 2>&1 && leftovers=1
 
 if [ -n "$leftovers" ]; then
-  next="bring their work across from the app (/growth-engine:import-from-app)"
+  next="bring their work across from the app (/growth-engine:import)"
 elif [ ! -f "$ge/.state/profile.md" ]; then
   next="set the folder up (/growth-engine:start)"
 elif [ ! -f "$ge/founder-brain.md" ]; then
-  next="build the Founder Brain (/growth-engine:founder-brain)"
+  next="build the Founder Brain (/growth-engine:brain)"
 elif [ -z "$track" ]; then
-  next="finish the Founder Brain, which has no track yet (/growth-engine:founder-brain)"
+  next="finish the Founder Brain, which has no track yet (/growth-engine:brain)"
 elif [ ! -f "$ge/content-30.md" ]; then
-  next="build the content engine (say: build my content engine)"
+  next="build the content engine (/growth-engine:content)"
 elif [ "$track" = b2b ] && [ ! -f "$ge/outreach-sequence.md" ]; then
-  next="build the outreach engine (say: build my outreach)"
+  next="build the outreach engine (/growth-engine:outreach)"
 elif [ "$track" = b2c ] && [ ! -f "$ge/dm-openers.md" ]; then
-  next="build the audience engine (say: build my audience engine)"
+  next="build the audience engine (/growth-engine:audience)"
 elif [ ! -f "$ge/ops-workflow.md" ]; then
-  next="build the operations engine (say: build my ops engine)"
+  next="build the operations engine (/growth-engine:ops)"
 elif [ ! -f "$ge/90-day-plan.md" ]; then
-  next="build the 90 day plan (say: build my 90 day plan)"
+  next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
 else
   next="ask where they are up to, and pick up from there"
 fi
@@ -101,6 +101,8 @@ fi
 printf 'Today: %s.\n' "$today"
 printf 'Made:%s\n' "${present:- nothing yet}"
 [ -n "$absent" ] && printf 'Not made yet:%s\n' "$absent"
+drafts=$(ls "$ge/drafts" 2>/dev/null | grep -vc '^\.gitkeep$' | tr -d ' ')
+[ "${drafts:-0}" -gt 0 ] && printf 'Drafts waiting for the founder to read in growth-engine/drafts/: %s.\n' "$drafts"
 printf 'Most likely next step: %s.\n' "$next"
 printf 'The founder does not use a terminal. Never ask them to run a command; offer the plain words or the /growth-engine: name instead.\n'
 

@@ -37,6 +37,9 @@ expect_quiet "drafts are allowed" "$(pre "$proj/growth-engine/drafts/week-2026-3
 expect_deny "a folder that is not ours" "$(pre "$proj/growth-engine/misc/a.md")"
 expect_deny "climbing out of the folder" "$(pre "$proj/growth-engine/../x/founder-brain.md")"
 expect_quiet "a refill archive name" "$(pre "$proj/growth-engine/content-30-2026-09.md")"
+expect_quiet "a second archive in one month" "$(pre "$proj/growth-engine/content-30-2026-09-2.md")"
+expect_quiet "the playbook PDF" "$(pre "$proj/growth-engine/playbook-insert.pdf")"
+expect_quiet "gate answers in .state" "$(pre "$proj/growth-engine/.state/gate-answers.md")"
 
 # A new file that offers DM automation: held, and removed.
 brain b2c
@@ -93,9 +96,14 @@ out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
 case $out in *"Track: b2b"*"Europe/London"*"outreach"*) ok "context names the track, the day and the next step" ;; *) bad "context names the track, the day and the next step" "$out" ;; esac
 : > "$proj/growth-engine/README-your-files.md"
 out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
-case $out in *import-from-app*) ok "app leftovers point at the importer" ;; *) bad "app leftovers point at the importer" "$out" ;; esac
+case $out in *growth-engine:import*) ok "app leftovers point at the importer" ;; *) bad "app leftovers point at the importer" "$out" ;; esac
 mkdir -p "$proj/outer"; out=$(CLAUDE_PROJECT_DIR="$proj/outer" $SH "$S/context.sh")
 case $out in *"not the founder folder"*) ok "the wrong folder is named" ;; *) bad "the wrong folder is named" "$out" ;; esac
+
+# Drafts waiting are mentioned.
+mkdir -p "$proj/growth-engine/drafts"; : > "$proj/growth-engine/drafts/week-2026-39.md"; rm -f "$proj/growth-engine/README-your-files.md"
+out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
+case $out in *"Drafts waiting"*) ok "drafts waiting are mentioned" ;; *) bad "drafts waiting are mentioned" "$out" ;; esac
 
 # Nothing happens outside a Launchhouse folder.
 rm -f "$proj/growth-engine/.launchhouse"

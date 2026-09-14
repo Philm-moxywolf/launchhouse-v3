@@ -60,7 +60,7 @@ case $inner in
       track=$(lh_track)
       case $track in
         b2b|b2c) ;;
-        *) lh_deny_pre "Not written: $inner is for one track only, and the Founder Brain does not have a track yet. Build or finish the Founder Brain first (/growth-engine:founder-brain)." ;;
+        *) lh_deny_pre "Not written: $inner is for one track only, and the Founder Brain does not have a track yet. Build or finish the Founder Brain first (/growth-engine:brain)." ;;
       esac
       if [ "$track" != "$ftrack" ]; then
         other=$(printf '%s' "$ftrack" | tr 'bc' 'BC')

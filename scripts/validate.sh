@@ -54,6 +54,33 @@ for f in $P/agents/*.md; do
   frontmatter "$f" "$(basename "$f" .md)"
   awk 'NR>1 && /^---$/ {exit} /^tools:/ {found=1} END {exit !found}' "$f" || err "$f does not list its tools"
 done
+agents=""
+for f in $P/agents/*.md; do [ -f "$f" ] && agents="$agents $(basename "$f" .md)"; done
+commands=""
+for f in $P/commands/*.md; do
+  [ -f "$f" ] || continue
+  c=$(basename "$f" .md); commands="$commands $c"
+  [ "$(sed -n 1p "$f")" = "---" ] || err "$f does not open with ---"
+  awk 'NR>1 && /^---$/ {exit} /^description:[[:space:]]*[^[:space:]]/ {found=1} END {exit !found}' "$f" || err "$f has no description"
+  case " $skills " in *" $c "*) err "command $c has the same name as a skill" ;; esac
+done
+
+# Every skill, agent and file a skill, command or routine names must exist.
+for f in $(find $P/skills $P/commands $P/routines $P/agents -name '*.md'); do
+  for n in $(grep -Eo '(the|a|Use the|use the) `?[a-z0-9-]+`? skill' "$f" | sed -E 's/.* `?([a-z0-9-]+)`? skill/\1/' | grep -vx 'calling\|same\|full\|right' | sort -u); do
+    case " $skills " in *" $n "*) ;; *) err "$f names the $n skill, which does not exist" ;; esac
+  done
+  for n in $(grep -Eo '`[a-z0-9-]+` agent' "$f" | sed -E 's/`([a-z0-9-]+)` agent/\1/' | sort -u); do
+    case " $agents " in *" $n "*) ;; *) err "$f names the $n agent, which does not exist" ;; esac
+  done
+  dir=$(dirname "$f")
+  for r in $(grep -Eo '`(\.\./)+[a-z0-9/_.-]+\.md`|`references/[a-z0-9_.-]+\.md`' "$f" | tr -d '`' | sort -u); do
+    [ -f "$dir/$r" ] || err "$f points at $r, which does not exist"
+  done
+done
+for f in $P/routines/*.md; do
+  n=$(grep -c '^```' "$f"); [ $((n % 2)) = 0 ] || err "$f has an unclosed code block"
+done
 
 # ---------------------------------------------------------------- hooks and scripts
 for s in $(grep -o 'scripts/[a-z-]*\.sh' $P/hooks/hooks.json | sort -u); do
@@ -67,7 +94,7 @@ grep -n 'shell: *true\|eval ' $P/scripts/*.sh >/dev/null 2>&1 && err "a hook scr
 # ---------------------------------------------------------------- founder-facing prose
 # Everything a founder or Claude reads as instructions. rules.awk and the corpus
 # spell out the banned shapes on purpose, so they are exempt from those checks.
-prose=$(find README.md $P/skills $P/agents -type f \( -name '*.md' \) 2>/dev/null)
+prose=$(find README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
 msgs=$(find $P/scripts -name '*.sh' 2>/dev/null)
 
 for f in $prose $msgs; do
@@ -88,12 +115,12 @@ for f in $prose; do
 done
 
 # Commands: always namespaced, and every one must exist.
-for f in $prose README.md; do
-  grep -Eo '(^|[^:a-z-])/(start|founder-brain|import-from-app|brain|content|engine2|ops|plan|playbook|status|setup|doctor|gate|help)([^a-z-]|$)' "$f" 2>/dev/null \
-    | grep -v '/growth-engine' >/dev/null && err "$f names a bare command. Write /growth-engine:<name>"
+names="start|brain|import|add-files|content|engine2|outreach|audience|ops|plan|playbook|status|gate|connect|publish|sequence|routines|save|help|doctor|setup|founder-brain|import-from-app"
+for f in $prose README.md $msgs; do
+  sed -E 's#https?://[^ )>`]*##g' "$f" | grep -Eo "(^|[^:a-z./_-])/($names)([^a-z-]|\$)" >/dev/null 2>&1 && err "$f names a bare command. Write /growth-engine:<name>"
   for c in $(grep -Eo '/growth-engine:[a-z0-9-]+' "$f" 2>/dev/null | sort -u); do
     n=${c#/growth-engine:}
-    case " $skills " in *" $n "*) ;; *) err "$f names $c, and there is no skill called $n" ;; esac
+    case " $skills $commands " in *" $n "*) ;; *) err "$f names $c, and there is no skill or command called $n" ;; esac
   done
 done
 
@@ -106,6 +133,25 @@ for f in $tracked; do
   [ -f "$f" ] || continue
   grep -Eqi 'MASTERPLAN|RUNBOOK|AUDIT\.md|TASKS\.md|spike-findings|our retainer|hourly rate' "$f" 2>/dev/null && err "$f mentions internal planning material"
 done
+
+# ---------------------------------------------------------------- the founder template, when it sits alongside
+T=${LH_TEMPLATE:-../launchhouse-founder-template}
+if [ -d "$T" ]; then
+  json_ok "$T/.claude/settings.json" || err "template settings.json is not valid JSON"
+  grep -q '"growth-engine@launchhouse-v3": true' "$T/.claude/settings.json" || err "template does not enable growth-engine@launchhouse-v3"
+  grep -q '"repo": "Philm-moxywolf/launchhouse-v3"' "$T/.claude/settings.json" || err "template does not name the marketplace repo"
+  sh tests/scaffold/run.sh "$T" >/dev/null 2>&1 || { err "template seed files differ from the start skill's scaffold"; sh tests/scaffold/run.sh "$T"; }
+  for f in "$T/CLAUDE.md" "$T/START-HERE.md" "$T/README.md"; do
+    grep -n '—\|–' "$f" >/dev/null 2>&1 && err "$f contains an em or en dash"
+    grep -Eni "$banned" "$f" >/dev/null 2>&1 && err "$f uses marketing language"
+    for c in $(grep -Eo '/growth-engine:[a-z0-9-]+' "$f" | sort -u); do
+      n=${c#/growth-engine:}
+      case " $skills $commands " in *" $n "*) ;; *) err "$f names $c, and there is no skill or command called $n" ;; esac
+    done
+  done
+else
+  warn "the founder template is not at $T, so it was not checked"
+fi
 
 # ---------------------------------------------------------------- tests
 sh tests/rules/run.sh >/tmp/lh-validate-rules.$$ 2>&1 || { err "tests/rules failed"; cat /tmp/lh-validate-rules.$$; }

@@ -110,7 +110,7 @@ lh_file_track() {
     founder-brain.md|content-30.md|content-30.csv|rss-feeds.md|ops-workflow.md|90-day-plan.md|playbook-insert.md|ledger.md|memory.md|ops-log.md|.launchhouse) printf both ;;
     outreach-sequence.md|outreach-firstlines.csv) printf b2b ;;
     dm-openers.md|hook-bank.md|inbound-scripts.md) printf b2c ;;
-    content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9].md) printf both ;;
+    content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9].md|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9].md|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9].csv|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9].csv|playbook-insert.pdf) printf both ;;
     *) printf '' ;;
   esac
 }
@@ -118,7 +118,7 @@ lh_file_track() {
 # Deliverables the rules read. Bookkeeping files and founder-written folders are not judged.
 lh_is_judged() {
   case $1 in
-    ledger.md|memory.md|ops-log.md|.launchhouse) return 1 ;;
+    ledger.md|memory.md|ops-log.md|.launchhouse|*.pdf) return 1 ;;
     people/*|uploads/*|voice-samples/*|.state/*) return 1 ;;
     drafts/*) return 0 ;;
   esac
