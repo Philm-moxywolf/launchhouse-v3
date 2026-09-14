@@ -1,20 +1,28 @@
 # Launchhouse growth engine
 
-The engines for Launchhouse Atlanta founders, run from Claude in your own folder. Claude asks you the questions and writes your Founder Brain and everything built on it. It publishes to GoHighLevel and builds your Apollo sequence when you say yes, and saves everything with git.
+The engines for Launchhouse Atlanta founders, run from the Claude desktop app in their own folder.
 
-It holds back anything that offers to automate cold DMs, says replies are certain, or uses the other track's material. A reviewer checks every figure against what you told it before the work is called done.
+Claude asks the founder the questions, writes their Founder Brain and everything built on it, and saves it as it goes. It puts posts into GoHighLevel and builds an Apollo sequence when the founder says yes. It holds back anything that offers to automate cold DMs, says replies are certain, or uses the other track's material. A reviewer checks every figure before the work is called done.
 
-There is no app to set up, no key to paste and no database. You need the Claude desktop app and your own copy of the founder folder.
+There is no app to host, no key to paste, no database and no terminal. Founders need the Claude desktop app, GitHub Desktop, and their own copy of the founder folder.
+
+This repository is the plugin marketplace `launchhouse-v3`, holding one plugin, `growth-engine`. The folder founders work in is a separate template: [Philm-moxywolf/launchhouse-founder-template](https://github.com/Philm-moxywolf/launchhouse-founder-template).
 
 ## For founders
 
-1. Make your own private copy of the founder folder. On GitHub, open `Philm-moxywolf/launchhouse-founder-template`, press **Use this template**, and choose **Private**.
-2. Open it in the Claude desktop app, in **Code**, and accept the Launchhouse plugin when it is offered.
-3. Say **"start launchhouse"**.
+The full guide, with what you will see at each step, is `START-HERE.md` in your copy of the founder folder. In short:
 
-**If you built work in the Launchhouse app:** download everything from its Files screen, drag the file into your folder, and say **"bring my work across"**.
-
-**To install the plugin by hand:** in the Claude desktop app, press **+** next to the message box, choose **Plugins**, add the marketplace `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**.
+1. **Install the apps.**
+   - The Claude desktop app and GitHub Desktop, signed in.
+   - On a Windows PC, also Git for Windows from git-scm.com, pressing Next on every screen.
+2. **Make your own copy.** Open the founder template on GitHub, press **Use this template**, and choose **Private**.
+3. **Put it on your computer.** On your copy, press **Code**, then **Open with GitHub Desktop**, then **Clone**.
+4. **Open it in Claude.** In the Claude app, choose **Code**, pick the folder, and accept the Launchhouse plugin.
+   - If it is not offered: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**.
+5. **Start.** Say **"start launchhouse"**.
+6. **Bring your work across.** If you built work in the Launchhouse app, download everything from its Files screen, drag the file into your folder, and say **"bring my work across"**.
+7. **Connect your tools.** In **Settings**, then **Connectors**, connect HighLevel, and Apollo if you sell to businesses. Then say **"connect my tools"**.
+8. **Check.** Say **"where am I up to"**.
 
 Plain words work for everything. The commands below are there if you prefer them.
 
@@ -22,14 +30,14 @@ Plain words work for everything. The commands below are there if you prefer them
 
 | Say | Or | What happens |
 |---|---|---|
-| start launchhouse | `/growth-engine:start` | Sets your folder up: your name, your timezone, saving |
+| start launchhouse | `/growth-engine:start` | Checks your computer, asks your name and where you are, sets the folder up |
 | bring my work across | `/growth-engine:import` | Brings your work over from the app and tidies it, without rewriting what you wrote |
 | build my founder brain | `/growth-engine:brain` | The record of your business every other engine reads. Change your track here too |
 | add my writing samples | `/growth-engine:add-files` | Adds old posts, documents, decks and photos, so the engines can read them |
 | build my content engine | `/growth-engine:content` | Four pillars and 30 pieces in your voice. Also refills monthly, and records what you approve |
 | build my outreach or audience engine | `/growth-engine:engine2` | B2B: sequence, list and 25 first lines. B2C: 25 openers, hooks and inbound scripts |
 | build my ops engine | `/growth-engine:ops` | One GoHighLevel workflow and all its copy, ready for the clinic |
-| connect my tools | `/growth-engine:connect` | Connects GoHighLevel, and Apollo for B2B, and proves each works |
+| connect my tools | `/growth-engine:connect` | Checks GoHighLevel, and Apollo for B2B, by reading your own account back |
 | publish my posts | `/growth-engine:publish` | Puts approved pieces into GoHighLevel, after showing you exactly what and when |
 | build my Apollo sequence | `/growth-engine:sequence` | B2B: finds your 25, then builds the sequence paused, for you to start |
 | where am I up to | `/growth-engine:status` | Your gates, what is missing, and the one thing to do next |
@@ -38,30 +46,43 @@ Plain words work for everything. The commands below are there if you prefer them
 | generate my playbook | `/growth-engine:playbook` | Your personalised playbook insert |
 | set up a routine | `/growth-engine:routines` | Scheduled drafts: your Monday plan, a content top-up, the countdown to Atlanta |
 | save my work | `/growth-engine:save` | Saves, shows what changed, and brings back an earlier version |
-| help | `/growth-engine:help` | Checks your setup and sorts common problems |
+| help | `/growth-engine:help` | Checks your setup and sorts common problems. `/growth-engine:doctor` does the same |
 
-## What is in the plugin
+## What the rules do
 
-| Part | What it is |
+The six programme rules are built in, in three layers.
+- **Checks on every file.** Hooks check each file as Claude writes it into `growth-engine/`.
+- **A reviewer.** An agent reads each piece of work for meaning before it is called done.
+- **The skills.** The same rules are written into the skills themselves.
+
+| Stopped | Waits for the founder's yes | Just happens |
+|---|---|---|
+| Offering to automate cold Instagram DMs | Putting a post into GoHighLevel | Writing and editing their files |
+| Promising replies | Replying to someone who wrote first | Saving each finished piece of work |
+| Writing the other track's files or material | Spending Apollo credits | Reading their GoHighLevel and Apollo accounts |
+| Starting an Apollo sequence, or sending from Apollo | Adding people to Apollo or a paused sequence | Free Apollo searches |
+| Buying anything on their accounts | Marking content approved | Adding their documents |
+| Launchhouse files written outside their folder | Bringing back an earlier version | Showing where they are up to |
+
+When a file is held, it is put back exactly as it was, and Claude tells the founder the line and why, in plain words.
+
+## Where founder work lives
+
+Everything is in `growth-engine/` inside the founder's own folder. Most of it is backed up to their private GitHub copy.
+- **People's details stay off GitHub.** Three things hold real people's names, emails or handles: `people/`, `outreach-firstlines.csv` and `dm-openers.md`. The folder's `.gitignore` keeps them on the founder's computer only.
+- **The full contract** of files, formats and gates is in [`plugins/growth-engine/references/`](plugins/growth-engine/references).
+
+## What is in this repository
+
+| Path | What it is |
 |---|---|
-| `skills/` | Eighteen skills, including `outreach-b2b` and `audience-b2c`, which engine 2 picks between by track |
-| `commands/` | The short names above, each pointing at its skill |
-| `agents/rules-reviewer` | Reads what was written for invented proof, cold DM offers, reply promises and the other track's material |
-| `agents/voice-reviewer` | Checks writing sounds like the founder, against their own samples |
-| `agents/status-checker` | Reads the folder against the gates and reports what the files prove |
-| `agents/file-ingester` | Converts one supplied file into readable text with a note of where it came from |
-| `hooks/` | Tell Claude where you are up to at the start of a session. Put back any file that breaks a rule. Stop the Apollo tools that start sending or buy. Ask the founder again before a GoHighLevel reply, and before anything that spends credits, publishes or adds people to a sequence |
-| `references/` | The folder contract, the gates, and the media lists every skill works to |
-| `routines/` | Five routine prompts: Monday plan, content top-up, what worked, sequence health, countdown |
-
-## The rules, in code
-
-1. **Two tracks.** B2B or B2C, chosen once in the Brain. The other track's files cannot be written, and its material is held.
-2. **No Instagram DM automation.** An offer to automate cold DMs is held before it stays on disk. GoHighLevel's send tool only replies to people who wrote first, with the founder's yes each time.
-3. **25 B2B messages, and no promised replies.** A line promising replies is held. Apollo sequences are built paused, and starting one is the founder's button.
-4. **Everything lives in `growth-engine/`.** A Launchhouse file written anywhere else is refused.
-5. **No invented proof.** The rules reviewer checks every figure against the Brain as it was before the work, and against what the founder said, before any engine calls the work done.
-6. **Your voice.** Voice comes only from the founder's own writing.
+| `.claude-plugin/marketplace.json` | The marketplace, `launchhouse-v3` |
+| `plugins/growth-engine/` | The plugin. Its own [README](plugins/growth-engine/README.md) lists every skill, agent, command, hook and routine |
+| `scripts/validate.sh` | The one check. Run it before every commit |
+| `tests/rules/` | 197 real sentences the rules must hold or leave alone, taken from the Launchhouse app's own tests and from founder simulations |
+| `tests/hooks/` | Builds a throwaway founder folder and drives the hooks the way Claude does |
+| `tests/scaffold/` | Checks the founder template matches what the start skill creates |
+| `.github/workflows/validate.yml` | Runs all of it on every push, under sh, dash and bash with two awks, and on Windows |
 
 ## For maintainers
 
@@ -71,19 +92,27 @@ Run the check before every commit:
 sh scripts/validate.sh
 ```
 
-**What it checks.**
-- The manifests.
-- Every skill, command and agent, and that each skill, agent and reference file they name exists.
-- The hook scripts.
-- House style in everything a founder or Claude reads.
-- Commands are namespaced.
-- The founder template, when it sits alongside this repo.
+**Validation checks**
+- the manifests
+- every skill, command and agent, and that every skill, agent and reference file named anywhere exists
+- that no command shares a name with a skill
+- that the hook scripts parse
+- house style in everything a founder or Claude reads: no em or en dashes, no marketing words, no promised replies, commands always namespaced
+- that no internal planning material is committed
+- the founder template, when it sits next to this repository at `../launchhouse-founder-template`
 
-**What it runs.** Three suites:
-- `tests/rules` holds the rules to the sentences the app's own tests used.
-- `tests/hooks` builds a throwaway founder folder and drives the hooks as Claude Code does.
-- `tests/scaffold` checks the template matches the start skill.
+It then runs all three test suites.
 
-CI runs them under sh, dash and bash, with mawk and gawk, and on Windows.
+**Working rules**
+- **Fix the skill, not the output.** A generic post means the skill is not reading the Brain's voice. Editing the post hides that.
+- **Every rules change adds sentences to `tests/rules/corpus.txt`:**
+  - `PASS` for ordinary wording that must never be held
+  - `HOLD` for shapes that always must be held
+  - `CATCH` for offers the hook should catch, which the reviewer covers when it does not
+- **Keep the hook scripts portable.** They are POSIX sh and awk on purpose, with no node, python or jq, so they run on a Mac, on Windows through Git for Windows, and in Cowork. Each does nothing outside a folder carrying `growth-engine/.launchhouse`, and lets the write through if it cannot work out what is happening.
+- **Keep the scaffold and the template in step.** The start skill's scaffold (`skills/start/references/scaffold.md`) and the founder template must match; `tests/scaffold` fails when they do not.
+- **Releasing an update.** Bump `version` in both `plugins/growth-engine/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, then push. Founders update from **+**, then **Plugins**, in the Claude app.
 
-**How the hooks are built.** The hook scripts are POSIX sh and awk on purpose, with no node, python or jq. That way they run on a founder's Mac, on Windows through Git for Windows, and in Cowork. Each does nothing outside a folder carrying `growth-engine/.launchhouse`, and lets the write through if it cannot work out what is happening.
+## Licence
+
+See [LICENSE](LICENSE). Provided to participants of Oneday Launchhouse Atlanta for use on their own businesses.
