@@ -1,0 +1,45 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate the plugin and run both suites
+        run: sh scripts/validate.sh
+
+  shells:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        shell: [sh, dash, bash]
+        awk: [mawk, gawk]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the shell and awk under test
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq dash mawk gawk
+      - name: Point awk at ${{ matrix.awk }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          ln -sf "$(command -v ${{ matrix.awk }})" "$RUNNER_TEMP/bin/awk"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Rules corpus
+        run: ${{ matrix.shell }} tests/rules/run.sh
+      - name: Hooks end to end
+        run: SHELL_UNDER_TEST=${{ matrix.shell }} ${{ matrix.shell }} tests/hooks/run.sh
+
+  windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rules corpus under Git for Windows
+        run: sh tests/rules/run.sh
+      - name: Hooks end to end under Git for Windows
+        run: sh tests/hooks/run.sh
