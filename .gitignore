@@ -1,5 +1,5 @@
 .DS_Store
 /dist/
 /runs/
-growth-engine/
-!plugins/growth-engine/
+# A founder folder must never be committed here.
+/growth-engine/
