@@ -96,6 +96,14 @@ previous_row() {
   grep -F "| $1 |" "$old" | head -1
 }
 
+# The files kept off GitHub were seen here, so this is the founder's own computer,
+# not a cloud copy: from now on a missing one really is missing. The marker lives
+# in .state/.pre/, which is itself kept off GitHub.
+if [ -f "$ge/outreach-firstlines.csv" ] || [ -f "$ge/dm-openers.md" ] || [ "$(ls "$ge/people/" 2>/dev/null | grep -c '\.md$' | tr -d ' ')" -gt 1 ]; then
+  mkdir -p "$ge/.state/.pre" 2>/dev/null && : > "$ge/.state/.pre/private-seen" 2>/dev/null
+fi
+cloud_copy() { [ ! -f "$ge/.state/.pre/private-seen" ]; }
+
 tmp="$ge/.state/index.md.tmp.$$"
 {
   printf '# Index\n\n'
@@ -118,7 +126,7 @@ tmp="$ge/.state/index.md.tmp.$$"
       prev=$(previous_row "$name")
       case $prev in
         *"| ok"*)
-          if ignored "$name"; then
+          if ignored "$name" && cloud_copy; then
             printf '%s\n' "$prev" | sed 's/| ok |/| ok, on the founder'"'"'s computer |/'
             continue
           fi ;;
@@ -141,7 +149,7 @@ tmp="$ge/.state/index.md.tmp.$$"
   else
     prev=$(previous_row "people/")
     case $prev in
-      *"| ok"*) printf '%s\n' "$prev" | sed 's/| ok |/| ok, on the founder'"'"'s computer |/' ;;
+      *"| ok"*) if cloud_copy; then printf '%s\n' "$prev" | sed 's/| ok |/| ok, on the founder'"'"'s computer |/'; else printf '| people/ | gate C | missing | - | - | 0 |\n'; fi ;;
       *) printf '| people/ | gate C | missing | - | - | 0 |\n' ;;
     esac
   fi

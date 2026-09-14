@@ -21,8 +21,11 @@ base=${full##*/}
 
 # Opened in the wrong folder: a Launchhouse file written here would be lost.
 if ! lh_active; then
-  near=$(lh_near)
+  near=$(lh_near_all)
   if [ -n "$near" ] && [ -n "$(lh_file_track "$base")" ] && [ "$base" != ".launchhouse" ]; then
+    if [ "$(printf '%s\n' "$near" | grep -c .)" -gt 1 ]; then
+      lh_deny_pre "Not written: this is not the founder's Launchhouse folder, so $base would be lost here. There are several Launchhouse folders nearby: $(printf '%s' "$near" | tr '\n' ';' | sed 's/;$//; s/;/, /g'). Ask the founder which is the real one, and tell them to open it."
+    fi
     lh_deny_pre "Not written: this is not the founder's Launchhouse folder, so $base would be lost here. Their folder is $near. Tell the founder in one sentence to open that folder instead, then do the work there."
   fi
   exit 0

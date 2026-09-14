@@ -145,6 +145,14 @@ two=${TMPDIR:-/tmp}/lh-two.$$; mkdir -p "$two/a/growth-engine" "$two/b/growth-en
 out=$(CLAUDE_PROJECT_DIR="$two" HOME=/nonexistent $SH "$S/context.sh"); rm -rf "$two"
 case $out in *"2 Launchhouse folders"*) ok "two nearby folders are both named" ;; *) bad "two nearby folders are both named" "$out" ;; esac
 
+# A private file deleted on the founder's own computer shows as missing, not kept.
+: > "$proj/growth-engine/.launchhouse" 2>/dev/null
+printf '| dm-openers.md | gate C | ok | 10 | 2026-09-14 | 25 openers |\n' > "$proj/growth-engine/.state/index.md"
+mkdir -p "$proj/growth-engine/.state/.pre"; : > "$proj/growth-engine/.state/.pre/private-seen"
+brain b2c
+CLAUDE_PROJECT_DIR="$proj" $SH "$S/index.sh"
+grep -q '| dm-openers.md | gate C | missing |' "$proj/growth-engine/.state/index.md" && ok "a locally deleted private file is missing" || bad "a locally deleted private file is missing" "$(grep dm-openers "$proj/growth-engine/.state/index.md")"
+
 # Nothing happens outside a Launchhouse folder.
 rm -f "$proj/growth-engine/.launchhouse"
 expect_quiet "inert without the marker" "$(pre "$proj/growth-engine/notes.md")"

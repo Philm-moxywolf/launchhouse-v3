@@ -44,6 +44,7 @@ function mask(s) {
 # ---------------------------------------------------------------- rule 1
 function other_track_words(ln, raw, m,    lo, ctxlink, ctxseq, ctxspf) {
   lo = tolower(m)
+  cur_lo = lo
   if (track == "b2c") {
     if (match(lo, W("apollo"))) return hold_word(ln, raw, "Apollo")
     if (match(lo, /outreach[- ]sequence/)) return hold_word(ln, raw, "the outreach sequence")
@@ -54,14 +55,14 @@ function other_track_words(ln, raw, m,    lo, ctxlink, ctxseq, ctxspf) {
     if (match(lo, W("cold emails?"))) return hold_word(ln, raw, "cold email")
     ctxspf = "dkim|dmarc|dns|txt record|domain|deliverab|mail server|sender"
     if (match(lo, W("spf")) && match(lo, ctxspf)) return hold_word(ln, raw, "SPF records")
-    ctxlink = "urls?|connection requests?|connect with|invites?|inmail|outreach|prospect|sequence|sales navigator|search|export|scrape"
+    ctxlink = "urls?|connection requests?|connect with|invites?|inmail|outreach|prospect|sequence|sales navigator|export|scrape"
     if (match(lo, W("linkedin"))) {
       if (match(lo, ctxlink)) return hold_word(ln, raw, "LinkedIn prospecting")
       emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions LinkedIn, which is usually part of the B2B method. Probably fine. Worth a glance.")
       return
     }
     # A welcome or review-request email sequence is ordinary B2C. A cold one is not.
-    ctxseq = "cold|outreach|prospect|enrol|enroll|apollo|cadence"
+    ctxseq = "cold|outreach|prospect|apollo"
     if (match(lo, W("sequences?")) && match(lo, ctxseq)) return hold_word(ln, raw, "a cold outreach sequence")
     if (match(lo, W("prospects?")))
       emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions prospects, which is usually B2B language. Probably fine. Worth a glance.")
@@ -69,14 +70,18 @@ function other_track_words(ln, raw, m,    lo, ctxlink, ctxseq, ctxspf) {
     if (match(lo, /hook[- ]bank/)) return hold_word(ln, raw, "the hook bank")
     if (match(lo, /dm[- ]openers?/)) return hold_word(ln, raw, "DM openers")
     if (match(lo, /inbound[- ]scripts?/)) return hold_word(ln, raw, "inbound scripts")
-    if (match(m, /(Business|Creator) account/)) return hold_word(ln, raw, "an Instagram Business or Creator account")
+    if (match(m, /(Business|Creator) account/) && (match(lo, /instagram|insta|facebook page/) || match(lo, W("ig")))) return hold_word(ln, raw, "an Instagram Business or Creator account")
     if (match(lo, W("instagram|link in bio|reels?")))
       emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions Instagram, which is usually part of the B2C method. Probably fine. Worth a glance.")
   }
 }
 
-function hold_word(ln, raw, label,    other) {
+function hold_word(ln, raw, label,    other, before, p) {
   other = (track == "b2c") ? "B2B" : "B2C"
+  # "This is not cold email" and "No Apollo here" say the right thing.
+  p = RSTART
+  before = substr(cur_lo, (p > 24 ? p - 24 : 1), (p > 24 ? 24 : p))
+  if (match(before, /(^|[^a-z])(not|no|never|without|nothing to do with|isn't)([^a-z][^.!?;:]*)?$/)) return
   emit("HOLD", ln, "track.wrong-track-word", raw, "This uses " label ", which is part of the " other " method, and this founder is on the " toupper(track) " track. Never write, offer or mention the other track's material.")
 }
 
@@ -156,7 +161,7 @@ function delegate_pos(lo, orig,    p, actors, verbs, s, off, q, w, name, objects
   p = minpos(p, windowed(lo, W(actors), "^(^|[^a-z])?(" actors ")s? (that |which |to |will |can |should |could |and it |so it |then )[a-z' ]*(" verbs ")", 70))
   p = minpos(p, windowed(lo, W("let|have|point"), "^(^|[^a-z])?(let|have|point) (it|them|something else|the (" actors ")|an? (" actors ")) [a-z ]*(run|work|handle|send|write|dm|message|go|fire|do|take|open)", 50))
   p = minpos(p, firstpos(lo, "(it|they|that) (handles it|takes it from there|takes over|does the rest|works through|runs itself)"))
-  p = minpos(p, windowed(lo, W("every|each|all|any|everyone|whoever"), "^(^|[^a-z])?(every|each|all|any|everyone|whoever)[a-z' ]* (gets|receives|is sent|are sent)[a-z ]*(dm|message)", 70))
+  p = minpos(p, windowed(lo, W("every|each|all|any|anyone|everyone|whoever"), "^(^|[^a-z])?(every|each|all|any|anyone|everyone|whoever)[a-z' ]* (gets|receives|is sent|are sent)[a-z ]*(dm|message)", 70))
   p = minpos(p, windowed(lo, "(send|dm|message|blast|fire)", "^(send|dm|message|blast|fire)[a-z]* (it |them |the [a-z]+ )?(to |at )?(everyone|every new|all your|all of your|each new|whoever|anyone who)", 50))
   if (match(lo, /on your behalf|while you sleep|without you|hands[- ]off|set and forget|autopilot|overnight|round the clock|24\/7|by itself|on its own|runs itself/) && match(lo, /send|dm|messag|deliver|fire|go out|goes out|land/))
     p = minpos(p, firstpos(lo, "on your behalf|while you sleep|without you|hands[- ]off|set and forget|autopilot|overnight|round the clock|24/7|by itself|on its own|runs itself"))

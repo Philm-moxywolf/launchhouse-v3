@@ -208,6 +208,16 @@ b2b|PASS|Week 1: batch-write the next 12 posts and DM ten past clients to ask fo
 b2b|PASS|Most owners I work with get DMs from software companies every week offering to automate their admin.
 b2c|HOLD|Paste the LinkedIn URLs of your prospects into the outreach sequence.
 b2c|HOLD|Build a cold outreach sequence for the 25.
+# --- found by the regression re-run, 14 September
+b2c|PASS|Contacts are enrolled in the welcome sequence when they buy.
+b2c|PASS|Never enrol a customer in the welcome sequence twice.
+b2c|PASS|The review request sequence has a steady cadence: day 21, then day 28.
+b2c|PASS|This is not cold email: it only goes to people who already bought.
+b2c|PASS|No Apollo here, just the customers who already bought from you.
+b2c|PASS|Found us through a LinkedIn search for sensitive skin brands.
+b2b|PASS|Keep your Google Business account up to date with photos of finished jobs.
+b2b|HOLD|Convert your Instagram to a Creator account first.
+b2c|HOLD|People who comment get a reply from the workflow, and anyone who follows gets the DM too.
 # --- offers the simulations found getting through: the reviewer's job if the hook misses them
 b2c|CATCH|Set up a bot to DM every new follower, it is not hard.
 b2c|CATCH|Load your 25 openers into ManyChat and it sends them for you.

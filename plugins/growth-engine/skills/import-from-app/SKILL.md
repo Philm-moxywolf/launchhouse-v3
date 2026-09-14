@@ -56,6 +56,7 @@ Then tidy up the copies that came with it, so nothing is found twice:
 When a file exists in both places:
 
 - **Starting files from the template** (`ledger.md`, `memory.md`, `ops-log.md`, `people/README.md`, `.launchhouse`): the app's version wins, except `.launchhouse`, which stays.
+- **`.state/index.md`** clashes on every import. Ignore it: it is rebuilt from the folder after the next change.
 - **If this is a second import** (`growth-engine/.state/imported.md` exists): the folder's own `ledger.md`, `memory.md` and `ops-log.md` win, because they hold approvals, posts and notes made since. Only bring across files that are new or that the founder names.
 - **Anything the founder already made in this folder**, such as a new Brain: stop and ask which to keep. Show both Locked dates and the first lines. Never merge two Brains yourself.
 
@@ -101,8 +102,8 @@ If more than two things are missing, say so, and offer the full `founder-brain` 
   - Format: `C|<n>|<pillar number>|<format>|<lane>|draft|-|-`
   - `<n>` is the piece number.
   - `<pillar number>` is 1 to 4, from the pillar heading it sits under.
-  - `<format>` is a short slug such as `short-post`, `long-post`, `video-script`, `carousel` or `caption`.
-  - `<lane>` is `media` if the piece has a note saying it needs a clip or photo, otherwise `text`.
+  - `<format>` is a short slug: `short-post`, `long-post`, `cta-post`, `video-script`, `carousel` or `caption`.
+  - `<lane>` is `media` only if the piece has a note saying it still needs a clip or photo the founder has not got. Otherwise `text`.
   - Every row is `draft`. Nothing is approved on import, because approval is the founder reading each piece and saying so.
 - **CSV.** Check `content-30.csv` has exactly the header `content,platform,scheduled_date,media_note`, and the same number of pieces as `content-30.md`.
   - If it does not, tell them, and offer to rebuild the CSV from the markdown. Rebuild only if they say yes.
@@ -134,6 +135,7 @@ The app wrote these files through a tool that no longer exists, and their header
 - **ops-log.md:** replace the line mentioning `ge log` with the header line from the start skill's scaffold. Keep every entry.
 - **memory.md, under Notes:** replace "ge never writes here" with "Anything below this heading is the founder's own."
 - **people/README.md:** replace it with the start skill's scaffold version, which no longer mentions a tool.
+- **Each person file:** replace the first line, `<!-- Written by ge person. ... -->`, with nothing, and under `## Yours` remove the line "Anything below this heading is yours. ge never writes here." if it is there. Change nothing else in the file.
 
 **If a change is held by the Launchhouse checks,** the hook tells you which line and why. Do not try to force the change through. That is the check finding something already in their work. Note it for step 5 and move on.
 

@@ -48,6 +48,13 @@ else
   today="$today (timezone not recorded yet)"
 fi
 
+# A file counts as made when it has real content here, or when the index says it
+# is kept on the founder's computer (a cloud copy of the folder does not have it).
+made() {
+  if [ -f "$ge/$1" ] && [ "$(tr -d ' \t\r\n' < "$ge/$1" | wc -c | tr -d ' ')" -ge 40 ]; then return 0; fi
+  grep -F "| $1 |" "$ge/.state/index.md" 2>/dev/null | grep -q "on the founder's computer"
+}
+
 present=""; absent=""
 list="founder-brain.md content-30.md content-30.csv rss-feeds.md"
 case $track in
@@ -56,13 +63,7 @@ case $track in
 esac
 list="$list ops-workflow.md 90-day-plan.md"
 for f in $list; do
-  if [ -f "$ge/$f" ] && [ "$(tr -d ' \t\r\n' < "$ge/$f" | wc -c | tr -d ' ')" -ge 40 ]; then
-    present="$present $f"
-  elif grep -F "| $f |" "$ge/.state/index.md" 2>/dev/null | grep -q "on the founder's computer"; then
-    present="$present $f"
-  else
-    absent="$absent $f"
-  fi
+  if made "$f"; then present="$present $f"; else absent="$absent $f"; fi
 done
 
 leftovers=""
@@ -83,15 +84,15 @@ elif [ ! -f "$ge/founder-brain.md" ]; then
   next="build the Founder Brain (/growth-engine:brain)"
 elif [ -z "$track" ]; then
   next="finish the Founder Brain, which has no track yet (/growth-engine:brain)"
-elif [ ! -f "$ge/content-30.md" ]; then
+elif ! made content-30.md; then
   next="build the content engine (/growth-engine:content)"
-elif [ "$track" = b2b ] && [ ! -f "$ge/outreach-sequence.md" ]; then
+elif [ "$track" = b2b ] && ! made outreach-sequence.md; then
   next="build the outreach engine (/growth-engine:outreach)"
-elif [ "$track" = b2c ] && [ ! -f "$ge/dm-openers.md" ]; then
+elif [ "$track" = b2c ] && ! made dm-openers.md; then
   next="build the audience engine (/growth-engine:audience)"
-elif [ ! -f "$ge/ops-workflow.md" ]; then
+elif ! made ops-workflow.md; then
   next="build the operations engine (/growth-engine:ops)"
-elif [ ! -f "$ge/90-day-plan.md" ]; then
+elif ! made 90-day-plan.md; then
   next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
 else
   next="ask where they are up to, and pick up from there"

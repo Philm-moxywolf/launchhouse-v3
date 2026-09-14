@@ -36,7 +36,7 @@ It is the one change that costs a founder work, so it takes one honest exchange 
 
 **Ask what changed.** Not to talk them out of it. "I picked wrong in session 1" is answered differently from "I want to serve schools as well as parents". The second one usually wants `hybrid: true` and the same track, and that distinction is worth thirty seconds of asking.
 
-**If they confirm, do it.** Reopen only the parts that fork on the track: the Model question (B2C only), the audience capture and the channel questions. Both are asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
+**If they confirm, do it.** Reopen only the parts that fork on the track: the Model question (B2C only), the audience capture and the channel questions. Each is asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
 
 Then change the file **in one write**:
 - the Track line, and the Model line (add it for B2C, remove it for B2B)

@@ -36,7 +36,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **Track chosen.** The `Track:` line is exactly `b2b` or `b2c`.
 - **Thesis written.** `## Thesis` is not nearly empty.
 - **Voice captured.** `## Voice` is not nearly empty.
-- **Flags answered honestly.** Self-reported. Also return the `## Flags` bullets that still need action. A bullet starting `- [x]`, containing "resolved", or plainly saying it is already done ("already", "no blocker", "done", "linked", "set up") is not open.
+- **Flags answered honestly.** Self-reported. Also return the `## Flags` bullets that still need action. A bullet starting `- [x]`, or saying as a whole word that it is resolved or already done ("resolved", "already", "no blocker", "done", "linked", "set up", "established", "not needed"), is not open. Read the whole bullet: "abandoned" does not mean done.
 
 ### Gate B
 - **Thirty pieces written.** The index count for `content-30.md` is 30 pieces or more.
