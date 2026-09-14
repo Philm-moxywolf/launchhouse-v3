@@ -18,6 +18,8 @@ case $tool in
     why="This adds people to the founder's Apollo account. Check the founder said yes." ;;
   *social-media-posting_create-post|*social-media-posting_edit-post)
     why="This puts a post into GoHighLevel. Check the founder has seen the words, the account and the time, and said yes." ;;
+  *conversations_send-a-new-message)
+    why="This sends a message from the founder's GoHighLevel account. It is only for replying to someone who wrote first: check their conversation shows a message from them, show the founder the reply, and get a yes. A first message to someone who has not written goes by hand from the founder's own phone." ;;
   *emails_create-template)
     why="This creates an email template in GoHighLevel. Check the founder said yes." ;;
   *) exit 0 ;;

@@ -1,5 +1,5 @@
 {
-  "description": "Launchhouse: folder context at the start of a session, the rules on every file written into growth-engine, a hard stop on the vendor tools that send, activate or buy, and a fresh yes before anything that spends, publishes or enrols.",
+  "description": "Launchhouse: folder context at the start of a session, the rules on every file written into growth-engine, a hard stop on the Apollo tools that start sending or buy, and a fresh yes before anything that sends a reply, spends, publishes or enrols.",
   "hooks": {
     "SessionStart": [
       {
@@ -32,7 +32,7 @@
         ]
       },
       {
-        "matcher": "mcp__.*(conversations_send-a-new-message|apollo_emailer_messages_send_now|apollo_emailer_messages_create|apollo_emailer_campaigns_approve|apollo_sequences_create|apollo_sequences_update|apollo_email_account_purchase_create)",
+        "matcher": "mcp__.*(apollo_emailer_messages_send_now|apollo_emailer_messages_create|apollo_emailer_campaigns_approve|apollo_sequences_create|apollo_sequences_update|apollo_email_account_purchase_create)",
         "hooks": [
           {
             "type": "command",
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "matcher": "mcp__.*(apollo_people_match|apollo_people_bulk_match|apollo_organizations_enrich|apollo_organizations_bulk_enrich|apollo_emailer_campaigns_add_contact_ids|apollo_contacts_create|apollo_contacts_bulk_create|social-media-posting_create-post|social-media-posting_edit-post|emails_create-template)",
+        "matcher": "mcp__.*(conversations_send-a-new-message|apollo_people_match|apollo_people_bulk_match|apollo_organizations_enrich|apollo_organizations_bulk_enrich|apollo_emailer_campaigns_add_contact_ids|apollo_contacts_create|apollo_contacts_bulk_create|social-media-posting_create-post|social-media-posting_edit-post|emails_create-template)",
         "hooks": [
           {
             "type": "command",

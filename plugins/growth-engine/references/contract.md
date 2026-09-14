@@ -73,7 +73,7 @@ Nothing is ever written outside `growth-engine/`. The Launchhouse checks refuse 
 ## content-30.md
 
 - **Count line.** When any piece needs a clip or photo the founder has not got, the file opens with a count line saying how many.
-- **Pieces.** The 30 are grouped under a heading per pillar, `## Pillar 1: <name>` and so on. Each piece has its own heading, numbered 1 to 30 across the whole file, with its format labelled: `### 7. Short post`.
+- **Pieces.** The 30 are grouped under a heading per pillar, `## Pillar 1: <name>` and so on. Each piece has its own heading, numbered 1 to 30 across the whole file, with its format labelled: `### 7. Short post`. Files brought across from the app may instead number pieces as a list, `7. **Short post.** ...`. Both count, so an imported file is never reshaped to fit.
 - **Missing media.** A piece needing a missing clip or photo ends with one line saying what it needs.
 - **New proof.** A running list of new proof sits at the bottom, under `## New proof`.
 
@@ -82,7 +82,9 @@ Nothing is ever written outside `growth-engine/`. The Launchhouse checks refuse 
 Header, exactly: `content,platform,scheduled_date,media_note`
 
 One row per piece, 30 rows, in the same order as `content-30.md`.
+- `platform` is one or more of `LinkedIn`, `X`, `Instagram`, `Facebook`, `TikTok`, separated by semicolons.
 - `scheduled_date` is left blank until publishing.
+- `media_note` is blank for a piece that needs no picture.
 - Fields holding commas, quotes or line breaks are wrapped in double quotes, with inner quotes doubled.
 
 ## outreach-sequence.md (B2B)
@@ -121,7 +123,7 @@ C|<id>|<pillar>|<format>|<lane>|<status>|<post id>|<goes out>
 | id | which file the words are in, and which piece: a plain number is a piece in `content-30.md`, and `<suffix>-<n>`, such as `2026-09-7`, is piece 7 in `content-30-2026-09.md` |
 | pillar | a whole number |
 | format | a short slug: `short-post`, `long-post`, `cta-post`, `video-script`, `carousel`, `caption` |
-| lane | `text`, or `media` when the piece needs a clip or photo |
+| lane | `media` when the piece is waiting on a clip or photo the founder has not got yet, otherwise `text` |
 | status | `draft`, `approved`, `scheduled`, `posted`, `failed`, `archived` |
 | post id | the id GoHighLevel gave it, otherwise `-` |
 | goes out | `-`, or the date and time it is scheduled for, in the founder's timezone, as `2026-09-25T09:00` |
@@ -142,7 +144,7 @@ C|<id>|<pillar>|<format>|<lane>|<status>|<post id>|<goes out>
 
 ## ops-log.md
 
-**Append only.** Each entry goes under a `## YYYY-MM-DD` heading, as `- HH:MM <decision|result|blocker|note>: text`, using the founder's timezone. If today's heading is missing, add it at the end.
+**Append only.** Each entry goes under a `## YYYY-MM-DD` heading, as `- HH:MM <decision|result|blocker|note>: text`. Take the time from `date +%H:%M`, which is the founder's own computer clock. If today's heading is missing, add it at the end.
 
 **Never** reorder or delete lines.
 
@@ -296,7 +298,6 @@ Where each connection stands. One row per check, rewritten in place when a check
 | GoHighLevel connector | done | 2026-09-21 | read back location: Lumen Skin |
 | GoHighLevel accounts to post to | done | 2026-09-21 | Instagram: lumenskin, Facebook: Lumen Skin |
 | GoHighLevel contacts | done | 2026-09-21 | contacts readable |
-| GoHighLevel sending tool blocked | done | 2026-09-21 | set to never allow by the founder |
 | Instagram Business or Creator | done | 2026-09-21 | Instagram connected in Social Planner |
 | Apollo connector | done | 2026-09-21 | signed in as sam@northfield.io |
 | Apollo sending mailbox | not started | 2026-09-21 | no mailbox connected in Apollo |

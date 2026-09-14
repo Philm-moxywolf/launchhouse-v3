@@ -44,7 +44,9 @@ If you cannot find anything, ask them to download everything again. In the app: 
 
 ## 2. Move it into place
 
-Move the app's files into `growth-engine/`, keeping their paths. Use `cp -R` from the holding folder, then remove `.lh-import/`.
+**Before copying anything,** compare what arrived with what is already in `growth-engine/`, and settle every file that exists in both places using the rules below. Only then copy.
+
+Move the app's files into `growth-engine/`, keeping their paths. Copy the whole holding folder with `cp -R` when nothing clashes. When something does, copy file by file, skipping the ones the rules below keep. Then remove `.lh-import/`.
 
 Then tidy up the copies that came with it, so nothing is found twice:
 - remove a nested `growth-engine/growth-engine/` once its files are in place
@@ -66,11 +68,11 @@ Then clear out what only the app needed:
 
 ## 3. Save it exactly as it arrived
 
-Run `git add -A` then `git commit -m "Your work from the app, as it was"`.
+First write `growth-engine/.state/imported.md` in the shape in the contract, with the zip or folder name and today's date. Then run `git add -A` and `git commit -m "Your work from the app, as it was"`, so both land in one save.
 
 This is the undo point for everything after. If git needs a name and email, follow step 4 of the `start` skill first.
 
-Then write `growth-engine/.state/imported.md` in the shape in the contract, with the zip or folder name and today's date, and commit it with the same save.
+`people/`, `outreach-firstlines.csv` and `dm-openers.md` are kept out of git on purpose, so this save does not hold them. For those files, the zip is the undo point. Tell the founder to keep the zip until they are happy with the move.
 
 ## 4. Adjust to the current format
 
@@ -122,7 +124,7 @@ Search the files for:
 - "download everything"
 - "Launchhouse app"
 
-List any lines found, and ask once whether to remove them. Change nothing else.
+List any lines found, and ask once whether to remove them. Remove only the words about the app, keeping the rest of the sentence reading properly, and show each changed line before and after. Change nothing else.
 
 ### The bookkeeping headers
 
@@ -130,6 +132,8 @@ The app wrote these files through a tool that no longer exists, and their header
 - **memory.md:** if a line mentions `ge remember`, replace it with "Add one line per entry inside the marked blocks, dated. Anything under Notes is the founder's own."
 - **ledger.md:** replace the line mentioning `ge ledger` with the two header lines from the start skill's scaffold. Keep every `C|` row.
 - **ops-log.md:** replace the line mentioning `ge log` with the header line from the start skill's scaffold. Keep every entry.
+- **memory.md, under Notes:** replace "ge never writes here" with "Anything below this heading is the founder's own."
+- **people/README.md:** replace it with the start skill's scaffold version, which no longer mentions a tool.
 
 **If a change is held by the Launchhouse checks,** the hook tells you which line and why. Do not try to force the change through. That is the check finding something already in their work. Note it for step 5 and move on.
 

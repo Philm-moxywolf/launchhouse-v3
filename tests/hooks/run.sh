@@ -84,7 +84,9 @@ grep -q '| founder-brain.md | gate A | ok |' "$proj/growth-engine/.state/index.m
 
 # The vendor tools that send.
 out=$(printf '{"tool_name":"mcp__e03ab338-9ab0__conversations_send-a-new-message","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
-expect_deny "GoHighLevel send message is denied" "$out"
+expect_quiet "a GoHighLevel reply is not hard blocked" "$out"
+out=$(printf '{"tool_name":"mcp__e03ab338-9ab0__conversations_send-a-new-message","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/ask-mcp.sh")
+case $out in *'"permissionDecision":"ask"'*) ok "a GoHighLevel reply asks every time" ;; *) bad "a GoHighLevel reply asks every time" "$out" ;; esac
 out=$(printf '{"tool_name":"mcp__d09f__apollo_emailer_campaigns_approve","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
 expect_deny "Apollo sequence activation is denied" "$out"
 out=$(printf '{"tool_name":"mcp__d09f__apollo_mixed_people_api_search","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj" $SH "$S/deny-mcp.sh")
@@ -104,8 +106,8 @@ case $out in *'"permissionDecision":"ask"'*) ok "publishing asks every time" ;; 
 
 # The send tool is stopped even from the wrong folder next door.
 mkdir -p "$proj/elsewhere"
-out=$(printf '{"tool_name":"mcp__e03a__conversations_send-a-new-message","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj/elsewhere" HOME=/nonexistent $SH "$S/deny-mcp.sh")
-expect_deny "the send tool is stopped from a folder next to the founder folder" "$out"
+out=$(printf '{"tool_name":"mcp__d09f__apollo_emailer_messages_send_now","tool_input":{}}' | CLAUDE_PROJECT_DIR="$proj/elsewhere" HOME=/nonexistent $SH "$S/deny-mcp.sh")
+expect_deny "Apollo send now is stopped from a folder next to the founder folder" "$out"
 
 # A Launchhouse file written outside the project is refused too.
 expect_deny "a Brain written outside the project" "$(pre "/tmp/somewhere/founder-brain.md")"
@@ -133,6 +135,15 @@ rm -f "$proj/growth-engine.zip"
 mkdir -p "$proj/growth-engine/drafts"; : > "$proj/growth-engine/drafts/week-2026-39.md"; rm -f "$proj/growth-engine/README-your-files.md"
 out=$(CLAUDE_PROJECT_DIR="$proj" $SH "$S/context.sh")
 case $out in *"Drafts waiting"*) ok "drafts waiting are mentioned" ;; *) bad "drafts waiting are mentioned" "$out" ;; esac
+
+# From the wrong folder: a Brain written next door is refused; ordinary files are not.
+expect_deny "a Brain written in a folder next to the founder folder" "$(printf '{"tool_name":"Write","tool_input":{"file_path":"%s"}}' "$proj/elsewhere/founder-brain.md" | CLAUDE_PROJECT_DIR="$proj/elsewhere" HOME=/nonexistent $SH "$S/guard-pre.sh")"
+expect_quiet "an ordinary file in a folder next to the founder folder" "$(printf '{"tool_name":"Write","tool_input":{"file_path":"%s"}}' "$proj/elsewhere/notes.md" | CLAUDE_PROJECT_DIR="$proj/elsewhere" HOME=/nonexistent $SH "$S/guard-pre.sh")"
+
+# Two Launchhouse folders side by side are both named.
+two=${TMPDIR:-/tmp}/lh-two.$$; mkdir -p "$two/a/growth-engine" "$two/b/growth-engine"; : > "$two/a/growth-engine/.launchhouse"; : > "$two/b/growth-engine/.launchhouse"
+out=$(CLAUDE_PROJECT_DIR="$two" HOME=/nonexistent $SH "$S/context.sh"); rm -rf "$two"
+case $out in *"2 Launchhouse folders"*) ok "two nearby folders are both named" ;; *) bad "two nearby folders are both named" "$out" ;; esac
 
 # Nothing happens outside a Launchhouse folder.
 rm -f "$proj/growth-engine/.launchhouse"

@@ -151,10 +151,13 @@ Two reasons, and the first is the one that matters to the founder:
 
 ## Recording the sends
 
+The 25 go out by hand on the Saturday in Atlanta. If the founder records sends before then, check in one line that these are real messages sent, not ones they are planning.
+
 When the founder says they have sent an opener:
 1. Add a touch line to that person's file: `- YYYY-MM-DD dm out: sent the opener`.
 2. Set their status to `sent`.
 3. Add a result line to `ops-log.md`, for example `- 15:40 result: 8 openers sent by hand`.
+4. Save: `git add growth-engine` and `git commit -m "Recorded sends"`. Person files stay out of git, so the ops log line is the record GitHub keeps.
 
 When someone replies, set them to `replied`. When they book, set them to `booked`.
 

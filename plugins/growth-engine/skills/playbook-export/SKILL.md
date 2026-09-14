@@ -12,7 +12,7 @@ Produces the four to six page personalised insert that goes with the printed gen
 ## Prerequisites
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
-2. **Read every file in `./growth-engine/`,** except `people/`, `uploads/` and `.state/`.
+2. **Read every file in `./growth-engine/`,** except `people/`, `uploads/`, `.state/`, `outreach-firstlines.csv` and `dm-openers.md`. Those last ones hold real people's details, and none of them belongs in the insert.
 3. **If `founder-brain.md` does not exist,** stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`). There is nothing to compile.
 
 **This is a compilation task, not a generation task.** Do not invent content that is not already in the founder's own files. If a section has no source file, leave it out and say so, rather than writing filler.
@@ -21,7 +21,7 @@ Produces the four to six page personalised insert that goes with the printed gen
 
 1. **Cover.** Founder name, business, track.
 2. **Your Brain.** Offer, audience, proof and voice, in one page.
-3. **Your content.** The pillars, and the 30 pieces as titles and openers only, not the full text.
+3. **Your content.** The pillars, and the first line of each of the 30 pieces, not the full text.
 4. **Your engine 2.**
    - B2B: the sequence.
    - B2C: the hook bank and inbound scripts.

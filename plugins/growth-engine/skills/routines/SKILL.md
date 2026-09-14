@@ -39,7 +39,7 @@ Never offer the B2B routine to a B2C founder.
 ## 2. Say what it costs and what it needs
 
 - **Cost.** Routines run on the founder's own Claude plan, and each run uses some of it. Say so plainly.
-- **Tools.** The routines that read GoHighLevel or Apollo (what worked, sequence health) need those connectors to be available when the routine runs. If a run finds no connector, it says so in its draft instead of guessing, and the founder can run the same check in the Code tab on a Monday.
+- **Tools.** The routines that read GoHighLevel or Apollo (what worked, sequence health) need those connectors to be available when the routine runs. If a run finds no connector, it writes nothing rather than guessing, and the founder can run the same check in the Code tab: "how did my posts do" or "how is my sequence going".
 
 ## 3. Set it up
 
@@ -58,7 +58,7 @@ When the founder opens a session, the drafts are in `growth-engine/drafts/` on t
 
 **After the first run, check where the draft landed.** Some cloud setups save a routine's work to its own branch rather than the main copy.
 1. Run `git fetch`, then `git branch -r`.
-2. If the draft is on a separate branch, bring just the drafts across with `git checkout <that branch> -- growth-engine/drafts/`, then save.
+2. If the draft is on a separate branch, bring just the drafts across with `git checkout origin/<that branch> -- growth-engine/drafts/`, then save.
 3. Suggest the founder allows the routine to save to the main copy in its settings, so it lands in one place from then on.
 
 **Accepting a draft:**

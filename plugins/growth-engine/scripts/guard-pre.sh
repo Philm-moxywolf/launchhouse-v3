@@ -11,20 +11,34 @@
 # the new words break a rule.
 
 . "$(dirname "$0")/lib.sh" 2>/dev/null || exit 0
-lh_active || exit 0
 
 input=$(cat) || exit 0
 path=$(lh_json_get file_path "$input") || exit 0
 [ -n "$path" ] || exit 0
 
-rel=$(lh_rel "$path")
 full=$(printf '%s' "$path" | tr '\\' '/')
 base=${full##*/}
+
+# Opened in the wrong folder: a Launchhouse file written here would be lost.
+if ! lh_active; then
+  near=$(lh_near)
+  if [ -n "$near" ] && [ -n "$(lh_file_track "$base")" ] && [ "$base" != ".launchhouse" ]; then
+    lh_deny_pre "Not written: this is not the founder's Launchhouse folder, so $base would be lost here. Their folder is $near. Tell the founder in one sentence to open that folder instead, then do the work there."
+  fi
+  exit 0
+fi
+
+rel=$(lh_rel "$path")
 
 case $rel in
   growth-engine/*) ;;
   *)
-    if [ -n "$(lh_file_track "$base")" ] && [ "$base" != ".launchhouse" ]; then
+    ftrack=$(lh_file_track "$base")
+    if [ -n "$ftrack" ] && [ "$base" != ".launchhouse" ]; then
+      track=$(lh_track)
+      if { [ "$ftrack" = b2b ] || [ "$ftrack" = b2c ]; } && [ "$track" != "$ftrack" ]; then
+        lh_deny_pre "Not written: $base is part of the $(printf '%s' "$ftrack" | tr 'bc' 'BC') method, and this founder is not on that track. Never write the other track's files, here or anywhere."
+      fi
       lh_deny_pre "Not written: $base belongs inside the growth-engine folder, and every Launchhouse file lives there so nothing gets lost. Write it to growth-engine/$base instead."
     fi
     exit 0 ;;

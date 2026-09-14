@@ -25,6 +25,8 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - If it is `b2c`, check only B2C items.
 - If there is no valid track, check Gate A only, and say the track is missing.
 
+**Use the index for counts.** `growth-engine/.state/index.md` is rebuilt from the folder after every change and at the start of every session. Its `count` column holds the counts the gates need: pieces in `content-30.md`, rows in the CSVs, openers, ledger pieces approved, and people by kind. Use those numbers. Confirm the file exists with Glob. For people, you can confirm with Grep, counting files in `people/` that match `^kind: prospect` or `^kind: target`. A status of `ok, on the founder's computer` means the file is kept off GitHub and was present when last seen: treat it as present.
+
 **Privacy.** Never read or report the contents of `uploads/` or `voice-samples/`. In `people/`, read only the header fields `kind` and `status`, and whether the Opener block has text. Never return a person's name, email or handle.
 
 ## The items
@@ -34,31 +36,31 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **Track chosen.** The `Track:` line is exactly `b2b` or `b2c`.
 - **Thesis written.** `## Thesis` is not nearly empty.
 - **Voice captured.** `## Voice` is not nearly empty.
-- **Flags answered honestly.** Self-reported. Also return any `## Flags` bullets that do not start with `- [x]` and do not contain "resolved".
+- **Flags answered honestly.** Self-reported. Also return the `## Flags` bullets that still need action. A bullet starting `- [x]`, containing "resolved", or plainly saying it is already done ("already", "no blocker", "done", "linked", "set up") is not open.
 
 ### Gate B
-- **Thirty pieces written.** `content-30.md` has 30 numbered pieces. Count the piece headings.
-- **Upload sheet exported.** `content-30.csv` has the header `content,platform,scheduled_date,media_note` and 30 data rows. A quoted field can span lines, so count records, not lines.
+- **Thirty pieces written.** The index count for `content-30.md` is 30 pieces or more.
+- **Upload sheet exported.** `content-30.csv` starts with the header `content,platform,scheduled_date,media_note` (Grep its first line), and the index count is 30 rows or more.
 - **Refill source list.** `rss-feeds.md` is not nearly empty.
-- **Thirty approved.** Count the lines in `ledger.md` starting `C|` whose sixth field is `approved`, `scheduled` or `posted`. Done at 30 or more.
+- **Thirty approved.** The index count for `ledger.md` shows 30 or more approved.
 - **Sounds like the founder.** Self-reported.
 
 ### Gate C, B2B
 - **Route and sequence.** `outreach-sequence.md` names the route (Apollo or by hand), and has 4 or 5 touches, each with an opt-out line. Count the touches. Check that each has a sentence letting the reader say no.
 - **List criteria.** `outreach-sequence.md` has tight, medium and broad criteria.
-- **List built.** Count the files in `people/` with `kind: prospect` and a `status` other than `cut`. Done at 25 or more.
-- **First lines.** `outreach-firstlines.csv` has the header `email,first_name,company,first_line` and 25 or more data rows.
-- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots, and is not nearly empty.
+- **List built.** The index count for `people/` shows 25 or more prospects (cut people are counted apart).
+- **First lines.** `outreach-firstlines.csv` has the header `email,first_name,company,first_line`, and the index count is 25 rows or more.
+- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request), and is not nearly empty.
 - **Domain set up and sending started.** Self-reported.
 
 ### Gate C, B2C
-- **Openers written.** `dm-openers.md` has 25 numbered openers.
-- **Targets recorded.** Count the files in `people/` with `kind: target`. Done at 25 or more.
+- **Openers written.** The index count for `dm-openers.md` is 25 openers or more.
+- **Targets recorded.** The index count for `people/` shows 25 or more targets.
 - **Hook bank with offer tests.** `hook-bank.md` has its category headings and an `Offer tests` heading.
 - **Inbound scripts.** `inbound-scripts.md` is not nearly empty.
-- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots.
+- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request).
 - **Business or Creator account.** Done if `.state/setup.md` has the Instagram row at `done`. Otherwise self-reported.
-- **Messages sent.** Before Saturday 26 September 2026 the state is `not due`: the 25 go out at the event. From then, count the targets at `status: sent`, `replied`, `booked` or `no_reply`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
+- **Messages sent.** Before Saturday 26 September 2026 the state is `not due`: the 25 go out at the event. From then, use the sent count in the index row for `people/`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
 
 ## What you return
 
@@ -72,7 +74,7 @@ Track: <b2b|b2c|missing>
 | B | Thirty approved | not done | 12 of 30 approved in ledger.md |
 | C | Messages sent | ask | no targets at sent yet |
 Flags open: <the unresolved flag bullets, or none>
-Other files: <any file at the top of growth-engine/ that is not on the lists above, or none>
+Other files: <any file at the top of growth-engine/ other than the gate files above and ledger.md, memory.md, ops-log.md, 90-day-plan.md, playbook-insert.md, playbook-insert.pdf and content-30 archives, or none>
 ```
 
 **State** is one of `done`, `nearly empty`, `not done`, `ask`, `not due`. **Evidence** is a short fact from the file, with a count where there is one.

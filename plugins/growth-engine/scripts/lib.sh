@@ -20,13 +20,15 @@ lh_active() {
 # parent, or the home folder. Empty if none. Used when the founder opened the
 # wrong folder, which is the most common failure of all.
 lh_near() {
+  lh_near_all | head -1
+}
+
+# Every Launchhouse folder near the opened one, one per line.
+lh_near_all() {
   r=$(lh_root)
   for cand in "$r"/*/growth-engine/.launchhouse "$r/../growth-engine/.launchhouse" "${HOME:-/nonexistent}/growth-engine/.launchhouse"; do
-    if [ -f "$cand" ]; then
-      (cd "$(dirname "$cand")/.." 2>/dev/null && pwd)
-      return 0
-    fi
-  done
+    [ -f "$cand" ] && (cd "$(dirname "$cand")/.." 2>/dev/null && pwd)
+  done | awk '!seen[$0]++'
   return 0
 }
 

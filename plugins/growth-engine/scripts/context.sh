@@ -13,9 +13,13 @@ ge="$root/growth-engine"
 
 if ! lh_active; then
   # The single most common failure: Claude opened one folder up or one down.
-  where=$(lh_near)
-  if [ -n "$where" ]; then
-    printf 'Launchhouse: this is not the founder folder. Their Launchhouse folder is %s. Before doing any Launchhouse work, tell the founder in one sentence to open that folder instead, because files written here will not be found later.\n' "$where"
+  all=$(lh_near_all)
+  n=$(printf '%s' "$all" | grep -c .)
+  if [ "$n" -gt 1 ]; then
+    printf 'Launchhouse: this is not the founder folder, and there are %s Launchhouse folders nearby:\n%s\nBefore doing any Launchhouse work, show the founder these, ask which is the real one (the /growth-engine:help skill compares them), and tell them to open it. Never merge or delete either.\n' "$n" "$all"
+    exit 0
+  elif [ "$n" = 1 ]; then
+    printf 'Launchhouse: this is not the founder folder. Their Launchhouse folder is %s. Before doing any Launchhouse work, tell the founder in one sentence to open that folder instead, because files written here will not be found later.\n' "$all"
     exit 0
   fi
   if [ -f "$root/growth-engine/founder-brain.md" ] || [ -f "$root/growth-engine/README-your-files.md" ]; then
@@ -53,6 +57,8 @@ esac
 list="$list ops-workflow.md 90-day-plan.md"
 for f in $list; do
   if [ -f "$ge/$f" ] && [ "$(tr -d ' \t\r\n' < "$ge/$f" | wc -c | tr -d ' ')" -ge 40 ]; then
+    present="$present $f"
+  elif grep -F "| $f |" "$ge/.state/index.md" 2>/dev/null | grep -q "on the founder's computer"; then
     present="$present $f"
   else
     absent="$absent $f"

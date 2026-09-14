@@ -56,7 +56,7 @@ Check the Brain's Flags section and surface anything unresolved. These two items
 
 When the founder asks "am I ready", or a gate is being checked this week, ask each self-reported item that is not yet answered. Ask one question at a time.
 
-Record each answer as a new dated line in `growth-engine/.state/gate-answers.md`, in the shape in `../../references/contract.md`. Then save it: `git add growth-engine/.state/gate-answers.md` and `git commit -m "Gate answers"`.
+Record each answer as a new dated line in `growth-engine/.state/gate-answers.md`, in the shape in `../../references/contract.md`. Then save it: `git add growth-engine` and `git commit -m "Gate answers"`.
 
 Otherwise, do not pester them with questions they did not ask for.
 
@@ -73,6 +73,7 @@ Say what is missing and what to do next. Give one clear next action, not a list 
 | What is missing | Next action |
 |---|---|
 | No Brain | `/growth-engine:brain` |
+| Brain has no Thesis, Voice or Locked date | `/growth-engine:brain`, update mode, to add what is missing |
 | No content | `/growth-engine:content` |
 | Content not approved | read and approve pieces, "approve 1 to 10" |
 | No engine 2 | `/growth-engine:engine2` |

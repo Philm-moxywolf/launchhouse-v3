@@ -58,10 +58,10 @@ Keep it to two pages. A plan nobody reads is not a plan.
 
 ## Check and save
 
-1. **Check.** Use the `rules-reviewer` agent on `90-day-plan.md`. Give it every figure the founder gave in this conversation. Assumptions labelled with the word assume are not claims.
-2. **Fix what it holds.** Ask about held figures. Do this at most twice.
-3. **Save.** Run `git add growth-engine` then `git commit -m "90 day plan"`. Push if there is a remote.
-4. **Record the number.** Add one line to the Decisions block of `memory.md`: `- YYYY-MM-DD 90 day number: <the number>`.
+1. **Record the number.** Add one line to the Decisions block of `memory.md`: `- YYYY-MM-DD 90 day number: <the number>`.
+2. **Check.** Use the `rules-reviewer` agent on `90-day-plan.md`. Give it every figure the founder gave in this conversation. Assumptions labelled with the word assume are not claims.
+3. **Fix what it holds.** Ask about held figures. Do this at most twice.
+4. **Save.** Run `git add growth-engine` then `git commit -m "90 day plan"`. Push if there is a remote.
 
 ## Pressure test
 

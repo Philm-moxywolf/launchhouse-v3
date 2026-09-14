@@ -42,7 +42,7 @@ Open with: "Two quick questions, then you are set up. About 30 seconds."
 
 **Where they are.** Work out their timezone yourself first:
 - Run `date '+%H:%M %Z'`.
-- On a Mac, `readlink /etc/localtime` gives the full name, such as `Europe/London` or `America/New_York`.
+- On a Mac, `readlink /etc/localtime` gives a path ending in the full name, such as `/var/db/timezone/zoneinfo/Europe/London`. Use the part after `zoneinfo/`.
 
 Then ask: "It is 14:05 where you are, the Europe/London time. Is that right?" If they say no, ask which city they are nearest and use its timezone. Always record a full name like `America/New_York`, never an abbreviation.
 

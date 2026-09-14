@@ -19,6 +19,8 @@ Check the session context at the top of the conversation. If it says this is not
 
 Then check whether `./growth-engine/founder-brain.md` already exists. If it came across from the app and the founder wants changes, treat it as an update: go straight to what they want to change and never re-run the full intake.
 
+**In any update, check the Brain has what the gates and engines read:** a Locked date, a Track line, `## Thesis`, `## Voice` and `## Numbers`. If one is missing, say so and offer to add it in the same sitting. A missing Thesis fails Gate A. For `## Numbers`, fill each line from what the Brain already says in Proof, Stage and Goal, and ask only for what is not there.
+
 - If it exists and the founder asked to build a new one, show them the current summary and ask whether to update it or start again.
 - If it exists and they asked to update, go straight to the section they want to change.
 - If it does not exist, run the full intake below.
@@ -34,16 +36,18 @@ It is the one change that costs a founder work, so it takes one honest exchange 
 
 **Ask what changed.** Not to talk them out of it. "I picked wrong in session 1" is answered differently from "I want to serve schools as well as parents". The second one usually wants `hybrid: true` and the same track, and that distinction is worth thirty seconds of asking.
 
-**If they confirm, do it.** Reopen only the parts that fork on the track: the audience capture and the channel questions. Both are asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
+**If they confirm, do it.** Reopen only the parts that fork on the track: the Model question (B2C only), the audience capture and the channel questions. Both are asked differently on each side, and the intake below already knows which. Everything else in the file is still true, so do not re-ask it and do not re-run the full intake.
 
 Then change the file **in one write**:
 - the Track line, and the Model line (add it for B2C, remove it for B2B)
 - `## Audience` and `## Channels`, from the new answers
-- any line elsewhere, most often in `## Flags`, that names the old track's method: the sending domain, SPF, DKIM, DMARC, cold email, an ICP or firmographics for B2B, or the Instagram account type for B2C. Rewrite it for the new track, or mark it resolved.
+- any line elsewhere, most often in `## Flags` or `## Channels`, that names the old track's method: the sending domain, SPF, DKIM, DMARC, cold email, an ICP or firmographics, LinkedIn prospecting or an outreach sequence for B2B; the Instagram account type, a hook bank or DM openers for B2C. Rewrite it for the new track, or mark it resolved.
+
+Then read the Thesis, Offer and Proof back to them in one message and ask whether they still hold for the new buyer. Change only what they say has changed.
 
 The Launchhouse checks read the whole Brain against its Track line, so a Brain that says b2c but still describes cold email is held and put back. One write with everything changed is what saves.
 
-**Then say what to expect.** Their old track's files stay where they are and stop appearing in their list, because the list only shows the track they are on. The new track's gates start empty. Name which files they now need and which session covers each.
+**Then say what to expect.** Their old track's files stay where they are and stop appearing in their list, because the list only shows the track they are on. The new track's gates start empty. Name which files they now need and which session covers each. Their 30 content pieces were written for the old buyer, so offer to rebuild them for the new one with the content engine's refill mode, which keeps the old batch as an archive.
 
 If they are hesitating, leave it where it is. They can come back to it, and a track changed twice costs more than a track changed once.
 
@@ -209,7 +213,7 @@ Results, numbers, named customers, testimonials, credentials, and the plain coun
 Active, dormant, and account status. Note IG account type for B2C, domain status and work email provider (Google, Microsoft 365, other) for B2B.
 
 ## Numbers
-Labelled lines the 90 day plan projects from. Customers now, average monthly value, target in 90 days. Write unknown where they do not know yet.
+Labelled lines the 90 day plan projects from. Customers now, average monthly value, target in 90 days. Take them from what the founder said in Proof, Stage and Goal where they already said it, and write unknown only where they do not know.
 
 ## Source material
 Five to ten accounts, competitors, newsletters or feeds their audience already reads. Topics only, not voice.

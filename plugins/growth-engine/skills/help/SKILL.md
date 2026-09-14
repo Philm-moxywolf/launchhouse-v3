@@ -26,8 +26,8 @@ This is the single most common problem.
 - If it says this is not the founder folder, tell them which folder to open, and that nothing is lost.
 - If it says nothing about Launchhouse, look for `growth-engine/.launchhouse` in this folder, one folder down, and the parent folder.
 
-**If you find more than one Launchhouse folder:**
-1. Show each location, what it contains, and when it last changed. Run `git log -1 --format=%cd` in each.
+**If you find more than one Launchhouse folder** (the session context names them):
+1. Show each location, what it contains, and when it last changed, from the `modified` column of its `growth-engine/.state/index.md`.
 2. Help them decide which is the real one.
 3. Do not merge them and do not delete anything. Tell them to move the others aside.
 
@@ -84,10 +84,7 @@ If a founder reports behaviour that does not match what they were told in a sess
 
 ## Common problems
 
-**"The commands are not there."** Three causes, in order of likelihood:
-1. They typed the command without its prefix. Every command starts with `/growth-engine:`, for example `/growth-engine:status`, and plain language works too.
-2. The plugin installed but has not loaded yet. Quit and reopen the app.
-3. They are signed in to a different Claude account from the one they installed on.
+**"The commands are not there."** If this skill is running, the plugin is loaded in this folder, so the usual cause is the prefix: every command starts with `/growth-engine:`, for example `/growth-engine:status`, and plain language works too. If they mean a different folder or Cowork, the plugin is turned on per folder: open their Launchhouse folder, or add the plugin in Cowork from the + button, Plugins. If it still does not show, quit and reopen the app, and check they are signed in to the Claude account they installed it on.
 
 **"It asked me about my business again."** They are in the wrong folder. Run check 1. Their Brain is almost certainly intact somewhere else.
 
@@ -100,7 +97,7 @@ Do not edit the Track line yourself outside that flow.
 **"My files disappeared."** Almost never true.
 1. Run check 1.
 2. Then run `git log --oneline -10 -- growth-engine`, which shows every save.
-3. Any earlier version can be brought back with `/growth-engine:save`.
+3. Any earlier version of a saved file can be brought back with `/growth-engine:save`. `people/`, `outreach-firstlines.csv` and `dm-openers.md` are kept out of git on purpose, so those have no history.
 
 **"It said a file was held."** The Launchhouse checks found a line that offers to automate cold DMs, promises replies, or uses the other track's material. The file was put back as it was, so nothing is lost. The message names the line, and the line gets rewritten.
 

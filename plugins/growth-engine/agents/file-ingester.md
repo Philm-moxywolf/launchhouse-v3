@@ -22,7 +22,7 @@ You put one file into a Launchhouse founder's folder so the engines can read it.
    - Use `upload` if nothing is left.
    - When the result is markdown and the source was not `.md`, fold the extension in: `Price List.docx` becomes `price-list-docx.md`.
 
-2. **Handle it by type.**
+2. **Handle it by type.** Match extensions in any case: `.PDF`, `.Docx` and `.HEIC` count.
    - **`.md`:** read it and write it with the header.
    - **`.txt`:** read it and write it with the header, as `<slug>-txt.md`.
    - **`.csv`:** write the header, then the content inside a fenced block, as `<slug>-csv.md`.
@@ -43,8 +43,8 @@ You put one file into a Launchhouse founder's folder so the engines can read it.
      - For the rest, read `xl/sharedStrings.xml` and each `xl/worksheets/sheetN.xml`. Write one `## <sheet name>` markdown table per sheet, up to 10,000 rows.
      - If that is not workable, return `CANNOT: export each sheet as CSV and add those`.
    - **`.heic`, `.heif`:**
-     - If `sips` exists (a Mac), run `sips -s format jpeg "<source>" --out "<folder>/<slug>.jpg"`.
-     - Otherwise return `CANNOT: email or message the photo to yourself and save it from there, which converts it`.
+     - If `sips` exists (a Mac), run `sips -s format jpeg "<source>" --out "<folder>/<slug>.jpg"`, then check the `.jpg` exists.
+     - If there is no `sips`, or it fails, or no `.jpg` appears, return `CANNOT: email or message the photo to yourself and save it from there, which converts it`.
    - **Anything else:** return `CANNOT: open it and use Save As or Export to PDF, then add the PDF`.
 
 3. **The header,** on every markdown file you write:

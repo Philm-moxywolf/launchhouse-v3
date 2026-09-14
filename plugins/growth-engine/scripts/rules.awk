@@ -52,20 +52,17 @@ function other_track_words(ln, raw, m,    lo, ctxlink, ctxseq, ctxspf) {
     if (match(lo, /firmographic/)) return hold_word(ln, raw, "firmographics")
     if (match(lo, W("dkim|dmarc"))) return hold_word(ln, raw, "DKIM and DMARC")
     if (match(lo, W("cold emails?"))) return hold_word(ln, raw, "cold email")
-    ctxspf = "dkim|dmarc|domain|dns|sending|sender|email|inbox|deliverab|record"
+    ctxspf = "dkim|dmarc|dns|txt record|domain|deliverab|mail server|sender"
     if (match(lo, W("spf")) && match(lo, ctxspf)) return hold_word(ln, raw, "SPF records")
-    ctxlink = "url|urls|connect|invite|inmail|outreach|prospect|sequence|search|export|scrape"
+    ctxlink = "urls?|connection requests?|connect with|invites?|inmail|outreach|prospect|sequence|sales navigator|search|export|scrape"
     if (match(lo, W("linkedin"))) {
       if (match(lo, ctxlink)) return hold_word(ln, raw, "LinkedIn prospecting")
       emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions LinkedIn, which is usually part of the B2B method. Probably fine. Worth a glance.")
       return
     }
-    ctxseq = "email|outreach|enrol|enroll|step|cadence|drip|prospect|sender|inbox"
-    if (match(lo, W("sequences?"))) {
-      if (match(lo, ctxseq)) return hold_word(ln, raw, "an email sequence")
-      emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions a sequence, which is usually part of the B2B method. Probably fine. Worth a glance.")
-      return
-    }
+    # A welcome or review-request email sequence is ordinary B2C. A cold one is not.
+    ctxseq = "cold|outreach|prospect|enrol|enroll|apollo|cadence"
+    if (match(lo, W("sequences?")) && match(lo, ctxseq)) return hold_word(ln, raw, "a cold outreach sequence")
     if (match(lo, W("prospects?")))
       emit("NOTE", ln, "track.wrong-track-word-maybe", raw, "Mentions prospects, which is usually B2B language. Probably fine. Worth a glance.")
   } else if (track == "b2b") {
@@ -117,6 +114,7 @@ function firstpos(s, re) { return match(s, re) ? RSTART : 0 }
 function minpos(a, b) { if (a == 0) return b; if (b == 0) return a; return a < b ? a : b }
 
 function channel_pos(lo,    p, igword) {
+  if (match(lo, W("linkedin")) && !match(lo, /instagram|insta/) && !match(lo, W("ig"))) return 0
   p = firstpos(lo, W("dm|dms|dm's|dming|dmed|dmmed|dmming|dm'd"))
   p = minpos(p, firstpos(lo, "direct[ -]?messag"))
   p = minpos(p, firstpos(lo, "(instagram|insta|(^|[^a-z])ig) (dms?|messag)"))
@@ -140,15 +138,20 @@ function windowed(lo, startre, winre, width,    s, off, p, w) {
   return 0
 }
 
-function delegate_pos(lo, orig,    p, actors, verbs, s, off, q, w, name) {
+function delegate_pos(lo, orig,    p, actors, verbs, s, off, q, w, name, objects) {
   actors = "tool|app|bot|script|software|service|platform|plugin|extension|integration|automation|scheduler|sender|responder|autoresponder|agent|assistant|ai|sequence|campaign|crm|zap|macro|workflow|system|robot"
   verbs = "send|blast|fire|deliver|dm|message|push|answer|repl|respond|handle|manage|open|start|initiat|write|draft|take"
   p = 0
-  p = minpos(p, firstpos(lo, W("bulk|mass|batch|blast|blasts|drip")))
+  p = minpos(p, firstpos(lo, W("bulk|mass|blast|blasts|drip")))
   p = minpos(p, firstpos(lo, "at scale|in volume|high volume|at volume"))
   p = minpos(p, firstpos(lo, W("bot|bots|chatbot|chatbots")))
-  p = minpos(p, firstpos(lo, "schedul|(^|[^a-z])queue|(^|[^a-z])timer([^a-z]|$)|(^|[^a-z])cron([^a-z]|$)"))
-  p = minpos(p, firstpos(lo, "automat(e|es|ed|ing|ion|ions|ic|ically)"))
+  # Scheduling, queueing, batching and automating count only when what they act on
+  # is the messages. "Schedule the week's posts, then DM five owners" is not an offer.
+  objects = "dms?([^a-z]|$)|dm's|direct messag|messag|openers?|outreach|first touch|inbox|conversations?"
+  p = minpos(p, windowed(lo, "schedul|queue|batch|timer|cron|automat", "^(schedul|queue|batch|timer|cron|automat)[a-z]*( up| send| out)?[a-z0-9' ]* (" objects ")", 60))
+  p = minpos(p, windowed(lo, "dm|messag|opener", "^(dms|dm|dm's|direct messages?|messages?|openers?) (are |is |get |gets |go |goes |can be |will be |on a |your followers |them )[a-z0-9' ]*(schedul|queued|timer|automat)", 50))
+  p = minpos(p, firstpos(lo, "(dm|message|messaging) automation"))
+  p = minpos(p, firstpos(lo, "(handled|sent|run|fired off|done) by (a|an|the) (bot|scheduler|tool|app|automation|script|software|sequence|workflow)"))
   p = minpos(p, firstpos(lo, "auto[ -]?(dm|send|message|repl|respond)"))
   p = minpos(p, windowed(lo, W(actors), "^(^|[^a-z])?(" actors ")s? (that |which |to |will |can |should |could |and it |so it |then )[a-z' ]*(" verbs ")", 70))
   p = minpos(p, windowed(lo, W("let|have|point"), "^(^|[^a-z])?(let|have|point) (it|them|something else|the (" actors ")|an? (" actors ")) [a-z ]*(run|work|handle|send|write|dm|message|go|fire|do|take|open)", 50))
@@ -175,12 +178,12 @@ function delegate_pos(lo, orig,    p, actors, verbs, s, off, q, w, name) {
 }
 
 function started_by_them(lo) {
-  return match(lo, /comment[ -](to|2)[ -]dm|(messag[a-z]*|contacted|wr[io]te|dm[a-z']*) you first|user[- ]initiated|started the conversation|(^|[^a-z])inbound|triggered by|keyword trigger|trigger keyword|comment keyword|in (reply|response) to|repl[a-z]* to (their|the|a|every|each|any|incoming) (comment|message|dm|question|reply|story)|respond[a-z]* to (their|the|a|every|each|any|incoming)|who (comment|messag|dm|asked|replied|wrote|reply|replies)|opt(ed)?[- ]in|messaging window|24[- ]hour window|on (the|their|a|each|every|any) (comment|reply|message|dm)|(someone|somebody|a follower|they|people|anyone|customers) (comment|comments|commented|messages|dms|replies|writes|asks)/)
+  return match(lo, /comment[ -](to|2)[ -]dm|(messag[a-z]*|contacted|wr[io]te|dm[a-z']*) you first|user[- ]initiated|started the conversation|(^|[^a-z])inbound|triggered by|keyword trigger|trigger keyword|comment keyword|in (reply|response) to|repl[a-z]* to (their|the|a|every|each|any|incoming) (comment|message|dm|question|reply|story)|respond[a-z]* to (their|the|a|every|each|any|incoming)|who (comment|messag|dm|asked|replied|wrote|reply|replies)|opt(ed)?[- ]in|messaging window|24[- ]hour window|on (the|their|a|each|every|any) (comment|reply|message|dm)|(someone|somebody|a follower|they|people|anyone|customers|the person|a customer) (comment|comments|commented|messages|messaged|dms|replies|replied|writes|wrote|asks|asked)|commented first|(every|each|a) (new )?comment|comments? (with|containing|using) |when they comment|after they comment|the moment they comment/)
 }
 
 function cold_span(lo,    s, off, p, before) {
   s = lo; off = 0
-  while (match(s, /cold|unsolicited|outbound|new followers?|every follower|each follower|all (your )?followers|your list|the list|prospects|target accounts|target list|story viewers|post viewers|profile viewers|(people|users|everyone|accounts|anyone) who (view|like|liked|likes|follow|visit)|not spoken|haven't spoken|have not spoken|never spoken|first message|first dm|first touch|openers?|in bulk|on your behalf|while you sleep|autopilot|set and forget/)) {
+  while (match(s, /cold|unsolicited|outbound|new followers?|every follower|each follower|all (your )?followers|your list|the list|prospects|target accounts|target list|story viewers|post viewers|profile viewers|(people|users|everyone|accounts|anyone) who (view|like|liked|likes|follow|visit)|not spoken|haven't spoken|have not spoken|never spoken|in bulk|on your behalf|while you sleep|autopilot|set and forget/)) {
     p = off + RSTART
     before = substr(lo, (p > 16 ? p - 16 : 1), (p > 16 ? 16 : p - 1))
     if (!match(before, /(never|not|no|rather than|instead of|without|excludes?|except)[^.!?]*$/)) return 1
@@ -191,7 +194,7 @@ function cold_span(lo,    s, off, p, before) {
 
 function consequence(s) {
   return match(s, /restrict|banned|shadowban|suspend|blocked|action block|at risk|flagged|forbidden|against|violat|is a bug|bad idea|mistake|risky|dangerous|not worth|a trap|off the table|not something|puts the account|lose your account|scrap/) \
-      || match(s, W("not|never|no|cannot|don't|do not|won't"))
+      || match(s, W("never|cannot|don't|do not|won't|not allowed|not permitted"))
 }
 
 function dm_check(ln, sent, nextsent,    lo, c, d, dist, replaces, before, refusal) {

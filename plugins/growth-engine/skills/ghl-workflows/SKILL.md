@@ -70,6 +70,10 @@ The snapshot is the plumbing. The copy is the founder's.
 
 For the chosen snapshot, write every message it sends: emails with subject lines, SMS, DM replies, internal notifications. Write in the captured voice, matched to track.
 
+**Reuse what exists.** For the two DM snapshots, if `inbound-scripts.md` already holds the comment-to-DM or qualify-and-book copy, use that copy, fitted to the snapshot's steps, rather than writing a second version. Say so in the file.
+
+**Placeholders in plain words.** The snapshot brings its own trigger, stages, tags and fields, and their exact names are only known once it loads at the clinic. Write personal details as plain placeholders, `[first name]`, `[business name]`, `[booking link]`, never merge-field code, and describe tags and stages in plain words. They are matched to the snapshot's own fields when it is loaded.
+
 Also specify:
 - the trigger
 - the wait intervals between steps
@@ -97,9 +101,9 @@ Write `./growth-engine/ops-workflow.md` containing:
 - the trigger, the timings, the exit condition and the tags
 - any gap in the library, or n8n requirement, for a mentor
 
-Add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-MM-DD ops workflow: <snapshot>, for <bottleneck in a few words>`.
-
 ## Step 6: check and save
+
+First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-MM-DD ops workflow: <snapshot>, for <bottleneck in a few words>`.
 
 1. **Check.** Use the `rules-reviewer` agent on `ops-workflow.md`. Give it every figure the founder gave in this conversation.
 2. **Fix what it holds.** Ask about any held figure rather than guessing. Do this at most twice.

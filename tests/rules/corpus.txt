@@ -190,3 +190,24 @@ b2b|HOLD|Add these to your hook bank.
 b2b|HOLD|Convert to a Business account and link a Facebook Page.
 b2b|PASS|Most of our buyers found us through a LinkedIn post.
 b2b|PASS|Write the email sequence for the 25 accounts.
+
+# --- found by the founder simulations, 14 September: ordinary lines that must never be held
+b2c|PASS|The question in my inbox most weeks: which SPF won't set my face off?
+b2c|PASS|Mineral SPF recommendations from my inbox this week.
+b2c|PASS|Instagram sends the auto-DM instantly, because the person commented first.
+b2c|PASS|Once the snapshot is live, every new comment with CALM gets the DM on its own.
+b2c|PASS|The comment-to-DM automation sends the first message the moment they comment.
+b2c|PASS|Welcome email sequence for the 610 people on your list.
+b2c|PASS|Welcome email for the 610 people on your list, sent as a short sequence.
+b2c|PASS|Step 2 of the review request sequence, sent 5 days after the order arrives.
+b2c|PASS|Active: LinkedIn, posts sporadically, roughly twice a month. 1,400 connections, mostly genuine industry.
+b2b|PASS|DM me and I'll send over the scheduling checklist I use.
+b2b|PASS|Schedule the week's posts in GoHighLevel on Sunday night, then DM five owners you already know by Monday lunchtime.
+b2b|PASS|Queue up the week's posts, then send a LinkedIn DM to each of the three best-fit accounts.
+b2b|PASS|Week 1: batch-write the next 12 posts and DM ten past clients to ask for referrals.
+b2b|PASS|Most owners I work with get DMs from software companies every week offering to automate their admin.
+b2c|HOLD|Paste the LinkedIn URLs of your prospects into the outreach sequence.
+b2c|HOLD|Build a cold outreach sequence for the 25.
+# --- offers the simulations found getting through: the reviewer's job if the hook misses them
+b2c|CATCH|Set up a bot to DM every new follower, it is not hard.
+b2c|CATCH|Load your 25 openers into ManyChat and it sends them for you.

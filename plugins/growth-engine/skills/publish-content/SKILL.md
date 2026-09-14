@@ -38,9 +38,9 @@ A row's id says where its words are: a plain number is that piece in `content-30
 
 Reading a piece in this conversation and saying yes is approving it. Silence is not.
 
-**If a piece's lane is `media`,** it needs a clip or photo. Ask whether the picture is in their GoHighLevel Media Library.
-- If it is not, leave that piece out and say which ones wait for pictures.
-- If it is, it goes out as a draft, so they can attach the picture in Social Planner before it goes live. Say that plainly.
+**Pictures.**
+- A piece whose lane is `media` is still waiting on a clip or photo. Ask whether they have it now and it is in their GoHighLevel Media Library. If not, leave it out and say which ones wait for pictures. If they have it, set the lane to `text`.
+- A piece with a `media_note` naming a picture they have goes out as a draft, so they attach the picture in Social Planner before it goes live. Say that plainly.
 
 ## 2. Check the words again
 

@@ -50,14 +50,14 @@ Plain words work for everything. The commands below are there if you prefer them
 | `agents/voice-reviewer` | Checks writing sounds like the founder, against their own samples |
 | `agents/status-checker` | Reads the folder against the gates and reports what the files prove |
 | `agents/file-ingester` | Converts one supplied file into readable text with a note of where it came from |
-| `hooks/` | Tell Claude where you are up to at the start of a session. Put back any file that breaks a rule. Stop the GoHighLevel and Apollo tools that send, activate or buy. Ask the founder again before anything that spends credits, publishes or adds people to a sequence |
+| `hooks/` | Tell Claude where you are up to at the start of a session. Put back any file that breaks a rule. Stop the Apollo tools that start sending or buy. Ask the founder again before a GoHighLevel reply, and before anything that spends credits, publishes or adds people to a sequence |
 | `references/` | The folder contract, the gates, and the media lists every skill works to |
 | `routines/` | Five routine prompts: Monday plan, content top-up, what worked, sequence health, countdown |
 
 ## The rules, in code
 
 1. **Two tracks.** B2B or B2C, chosen once in the Brain. The other track's files cannot be written, and its material is held.
-2. **No Instagram DM automation.** An offer to automate cold DMs is held before it stays on disk, and GoHighLevel's send-message tool is stopped.
+2. **No Instagram DM automation.** An offer to automate cold DMs is held before it stays on disk. GoHighLevel's send tool only replies to people who wrote first, with the founder's yes each time.
 3. **25 B2B messages, and no promised replies.** A line promising replies is held. Apollo sequences are built paused, and starting one is the founder's button.
 4. **Everything lives in `growth-engine/`.** A Launchhouse file written anywhere else is refused.
 5. **No invented proof.** The rules reviewer checks every figure against the Brain as it was before the work, and against what the founder said, before any engine calls the work done.

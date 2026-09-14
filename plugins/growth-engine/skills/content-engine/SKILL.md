@@ -35,7 +35,7 @@ Derive them from proof, offer, audience pain, and point of view. Do not use gene
 **B2C pillars** typically land on: transformation and outcome, behind the scenes, education against a common mistake, and social proof.
 
 **If the Brain says proof is thin, the proof pillar becomes something else.** Not a thinner version of itself, because a thin proof pillar is where numbers get made up to fill it.
-- **On B2B** it becomes how the work actually gets done, in the detail nobody outside the trade would know.
+- **On B2B** it becomes what they see go wrong on jobs: the faults, the shortcuts and the misunderstandings they meet, in the detail nobody outside the trade would know. That keeps it apart from the "how the work gets done" pillar, which is about their own method.
 - **On B2C** it becomes the founder's own story and what they watch go wrong.
 
 Both are true, both are theirs, and neither needs a number.
@@ -58,10 +58,10 @@ Hold on to the answer. Step 4 uses it.
 
 ### If track is b2b
 
-Format mix:
+Format mix, 30 in all:
 - 20 short posts, 80 to 150 words, for LinkedIn and X
 - 6 longer posts, 200 to 300 words, for LinkedIn
-- 4 with a soft call to action
+- 4 posts with a soft call to action, 80 to 150 words, for LinkedIn
 
 Each post has:
 - a specific opening line that earns the second line
@@ -70,6 +70,8 @@ Each post has:
 - no generic advice
 
 If the Brain flagged thin proof, lean on point of view and observation rather than inventing results. **Never invent numbers, customers, or outcomes.**
+
+**If the Brain says little about how they actually work,** ask before writing the method pieces: "walk me through what you do on a typical job, step by step". One answer gives you ten posts. Never make up how a named customer's job went, or what happened inside their business.
 
 ### If track is b2c
 
@@ -123,7 +125,7 @@ Use the answer from Step 2.
 
 **Write all 30 either way. Never write fewer.** A short file hides the problem: it looks finished, and they find out in September that half their month is missing. Thirty pieces with a count on the top is a plan they can act on. Twenty two is a plan that lies.
 
-**Put the count at the top of the file**, before anything else, in their words:
+**Put the count at the top of the file**, just under the title and before the first pillar, in their words:
 
 > 18 of these need a clip or a photo you have not got yet. Each one says which. They are ready to post the moment you have the picture.
 
@@ -157,10 +159,11 @@ Write the files, in the shapes in the contract:
 1. **`./growth-engine/content-30.md`**, already written in batches. Check it holds all 30 and the count line.
 2. **`./growth-engine/content-30.csv`**, the same 30 as a table.
    - Columns: `content`, `platform`, `scheduled_date`, `media_note`.
+   - `platform` names where the piece goes, from `LinkedIn`, `X`, `Instagram`, `Facebook`, `TikTok`, with more than one separated by semicolons: `LinkedIn;X`.
    - Leave `scheduled_date` blank. When a piece goes out is decided when publishing, not here.
-   - `media_note` names the founder's own clip or photo when they have one that fits. When they do not, it says what to make, plainly, for example "record talking head, 30 seconds" or "screenshot of dashboard".
+   - `media_note` names the founder's own clip or photo when the piece uses one they have. When it needs one they have not got, it says what to make, plainly, for example "record talking head, 30 seconds". A piece that needs no picture leaves it blank.
    - Quote any field holding a comma, a quote or a line break.
-3. **`./growth-engine/ledger.md`**: one row per piece, appended below the header lines, as `C|<n>|<pillar>|<format>|<lane>|draft|-|-`. Use `media` as the lane for pieces that need a clip or photo, `text` otherwise. Every row starts as `draft`.
+3. **`./growth-engine/ledger.md`**: one row per piece, appended below the header lines, as `C|<n>|<pillar>|<format>|<lane>|draft|-|-`. The lane is `media` only for a piece still waiting on a clip or photo the founder has not got; everything ready to post, with or without a picture they already have, is `text`. Every row starts as `draft`.
 
 ## Step 7: check and save
 
@@ -186,7 +189,7 @@ When the founder says they have read and approve pieces:
 1. Confirm which numbers, in one line, if it is not obvious.
 2. Set those rows in `ledger.md` to `approved`. Only rows at `draft` or already `approved` change.
 3. If they changed a piece after it was approved, set it back to `draft` and say it needs approving again, because approval is of the words as they read now.
-4. Save: `git add growth-engine/ledger.md` and `git commit -m "Approved pieces <numbers>"`.
+4. Save: `git add growth-engine` and `git commit -m "Approved pieces <numbers>"`.
 5. Say how many are approved out of 30, and that publishing is `/growth-engine:publish` once GoHighLevel is connected.
 
 Never approve a piece the founder has not named.

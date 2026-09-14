@@ -58,6 +58,14 @@ If the file was deleted, find the last save that had it with `git log --diff-fil
 
 **Never** undo more than they asked for.
 
+## Restoring the Founder Brain
+
+Before restoring `founder-brain.md`, compare the `Track:` line of the version coming back with the current one. If they differ, say so plainly before the yes: "that version is on the B2B track, and you are on B2C now, so everything would switch back". After restoring, the Launchhouse checks and the session context follow the restored track.
+
+## What history cannot bring back
+
+`people/`, `outreach-firstlines.csv` and `dm-openers.md` are kept out of git, so they have no earlier versions here. If one of those is lost, say so honestly. People can be found again in Apollo, or from the founder's own list.
+
 ## Content approvals
 
 If a restored file is `content-30.md`, any piece whose words changed goes back to `draft` in `ledger.md`, because approval is of the words as they read. Say which.

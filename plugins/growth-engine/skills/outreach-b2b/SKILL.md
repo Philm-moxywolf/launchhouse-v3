@@ -132,7 +132,7 @@ A specific observation about the reader's own world reads as true. A number nobo
 Write one file per person in `growth-engine/people/`, named by the slug of their email address, in the prospect shape in the contract:
 - `kind: prospect`
 - `status: candidate`
-- `source: apollo`, `manual` or `import`
+- `source`: `apollo` when it came through the Apollo connector, `import` for a list they pasted or exported from somewhere, `manual` for people they typed in one by one
 - `created`: today
 - `email`, `first_name`, `company`, `title` when known
 - anything specific about them as note lines, with where it came from
@@ -147,7 +147,7 @@ When there are more than 25, go through them with the founder. Set the ones they
 
 For each person not at `cut`, write one opening line specific to that company or that person.
 
-**Generate from the actual detail:** company name, website copy, a recent post, a job ad, a news item. If there is nothing specific, say so, and write a line based on the segment rather than fabricating a detail. **A generic honest line beats an invented specific one.**
+**Generate from the actual detail:** company name, website copy, a recent post, a job ad, a news item. If there is nothing specific, tell the founder which people you had nothing on, and write their line from the segment rather than fabricating a detail. **A generic honest line beats an invented specific one.**
 
 **Work in batches of 5 to 10**, so the founder can check quality as it goes. For each person, write the line inside the Opener block of their person file.
 
@@ -171,6 +171,7 @@ Write `./growth-engine/outreach-sequence.md` containing:
 - the three list criteria
 - the full sequence, with subject lines, wait intervals and the opt-out line in every touch
 - the merge variables, on the Apollo route only
+- the deliverability brief from Step 5, under `## Before you send`
 
 Write `./growth-engine/outreach-firstlines.csv`:
 - columns `email`, `first_name`, `company`, `first_line`
@@ -200,6 +201,7 @@ When they say they have sent to someone:
 - set that person's `status` to `contacted_ok`
 - add a touch line `- YYYY-MM-DD email out: sent touch 1`
 - add a result line to `ops-log.md`
+- save: `git add growth-engine` and `git commit -m "Recorded sends"`. Person files stay out of git, so the ops log line is the record GitHub keeps.
 
 When someone replies, set them to `replied` and remind the founder to cancel that person's scheduled follow-ups.
 

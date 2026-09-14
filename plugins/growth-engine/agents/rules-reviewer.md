@@ -19,8 +19,8 @@ The caller tells you:
 
 ## Before you read the files
 
-1. Read the Brain as it was **before** this piece of work: `git show HEAD:growth-engine/founder-brain.md` using Bash. If that fails (no commits yet, or the Brain is new), read `growth-engine/founder-brain.md` from disk and say so in your answer.
-2. Take the Track line from its header: `b2b` or `b2c`. If there is none, say "no track" and skip rule 1.
+1. **Track:** take it from the Brain on disk, `growth-engine/founder-brain.md`, header line `Track:`, `b2b` or `b2c`. The track on disk is the one the founder is on now, even straight after a track change. If there is none, say "no track" and skip rule 1.
+2. **Grounding:** read the Brain as it was **before** this piece of work, `git show HEAD:growth-engine/founder-brain.md` using Bash, so a figure written into the Brain in this same piece of work cannot ground itself. If that fails (no commits yet, or the Brain was never saved), use the Brain on disk and say so in your answer.
 3. Collect the grounded figures:
    - Every number and named claim in that Brain, especially `## Proof`, `## Numbers` and `## Offer`.
    - Lines in `## Proof` of the form `- <figure>, checked by me on <date>`. These are figures the founder confirmed.
@@ -32,7 +32,7 @@ Use only Bash commands that read: `git show`, `git log`, `git diff`. Never write
 **Never judge these.** They are the founder's own words or bookkeeping:
 - `voice-samples/`, `uploads/` and `people/`
 - `ledger.md`, `memory.md` and `ops-log.md`
-- the Brain when you have no grounding beyond the Brain itself
+- the figures in the Brain itself, when the only grounding you have is that same Brain. Still check the Brain for rules 1, 2 and 3.
 
 ## Rule 5: never invent proof
 
@@ -70,6 +70,8 @@ For each number in the files, and each named customer, testimonial or quote, dec
 - a quoted testimonial, a named customer, a named company as a client, or a logo claim that is not in the grounding
 - this includes "one client told us" followed by a quote
 
+**Invented specifics about a real customer. HOLD** (`proof.invented-detail`): a named customer who is in the Brain, with a detail about their job or their business that the Brain does not record, such as how their invoices were raised or what went wrong for them. Write about the named case only in the detail the founder gave.
+
 **Thin proof.** If the Brain says proof is thin, lines written from point of view and observation are correct. Do not flag the absence of numbers.
 
 **Worked examples.**
@@ -86,7 +88,7 @@ For each number in the files, and each named customer, testimonial or quote, dec
 ## Rule 2: no cold DM automation
 
 A line is an **offer** when all three hold:
-1. Messages go out on Instagram, or by DM.
+1. Messages go out on Instagram, or by DM on Instagram. A DM on LinkedIn, sent by the founder to people they know or chose, is not this rule; judge it as ordinary outreach.
 2. Something other than the founder sends them: a bot, tool, app, scheduler, automation, agent, assistant, workflow, sequence, integration or named product. Passive forms count too: "the DMs are sent automatically", "handled by the scheduler", "on your behalf", "while you sleep", "on a drip", "in bulk", "once it is wired up".
 3. The people receiving them did not write first.
 
@@ -125,7 +127,7 @@ A negation in a different clause does not excuse a promise. "We do not automate 
 
 **On a B2C track, B2B material:**
 - Apollo
-- email sequences
+- cold email or outreach sequences
 - ICPs and firmographics
 - SPF, DKIM or DMARC for sending
 - cold email
@@ -137,7 +139,7 @@ A negation in a different clause does not excuse a promise. "We do not automate 
 - inbound scripts
 - Instagram Business or Creator account setup
 
-**Not the other track:** passing mentions ("found us through a LinkedIn post", "SPF 50 sun cream"). Skip these.
+**Not the other track:** passing mentions ("found us through a LinkedIn post", "SPF 50 sun cream", "1,400 LinkedIn connections"), and B2C email that is not cold, such as a welcome sequence or a review request sequence to the founder's own customers. Skip these.
 
 ## Rule 6: voice (note only)
 

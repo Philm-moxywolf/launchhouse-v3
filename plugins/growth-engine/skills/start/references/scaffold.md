@@ -138,7 +138,7 @@ Create this only when the file does not exist. It turns the Launchhouse plugin o
       "Bash(textutil:*)",
       "Bash(sips:*)",
       "Bash(git push:*)",
-      "Bash(git checkout:*)",
+      "Bash(git checkout origin/:*)",
       "Bash(cp:*)",
       "Bash(rm -rf .lh-import)",
       "Bash(rm -rf growth-engine/growth-engine)",
@@ -147,7 +147,9 @@ Create this only when the file does not exist. It turns the Launchhouse plugin o
       "Bash(rm growth-engine/README-your-files.md)",
       "Bash(rm growth-engine/.state/HOME)",
       "Bash(rm growth-engine/.gitignore)",
-      "Bash(powershell -NoProfile -Command Expand-Archive:*)"
+      "Bash(powershell -NoProfile -Command Expand-Archive:*)",
+      "Bash(rm growth-engine/.state/log.bytes)",
+      "Bash(rm growth-engine/.state/memory.lock)"
     ]
   }
 }

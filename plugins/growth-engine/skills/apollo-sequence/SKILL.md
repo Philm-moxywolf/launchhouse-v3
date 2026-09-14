@@ -31,7 +31,7 @@ Takes the founder's outreach engine into their own Apollo account.
    - It returns a catalogue: names with the surname hidden, titles and companies, and whether an email is likely. No email addresses.
 2. **Widen if needed.** If tight returns fewer than 35 good matches, add medium, then broad. Say which you used.
 3. **Show about 35 candidates** as a short table: first name, title, company, and why they fit the criteria. Never invent a detail.
-4. **Cut to 30 with the founder.** They cut the ones that are not a fit on a second look. Keeping 5 over 25 covers addresses that will not verify.
+4. **Cut to 30 with the founder.** They cut the ones that are not a fit on a second look. This is the outreach engine's "build to 35, cut to 25", done in two steps: the 5 kept over 25 cover addresses that will not verify, and the last cut to 25 happens after enrichment.
 
 ## 2. Enrich, only with a yes
 
