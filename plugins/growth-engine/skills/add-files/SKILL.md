@@ -49,10 +49,10 @@ If there are more than five files, run the calls in parallel.
 | `.pdf` with text | Read it. Longer than 10 pages: read 20 pages at a time. Write each page's text under `## Page N`, up to 300 pages, and note any pages left out. | `<slug>-pdf.md` |
 | `.pdf` that is scanned images | Keep the file as it is. You can read it visually when needed. | `<slug>.pdf` |
 | `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp` | Keep the file as it is. | `<slug>.<ext>` |
-| `.docx` | On a Mac, run `textutil -convert txt -stdout "<file>"`, then add the header. Elsewhere, ask them to save it as PDF. | `<slug>-docx.md` |
+| `.docx` | On a Mac, `textutil -convert txt -stdout "<file>"`. Elsewhere, read the text out of the file (it is a zip of XML). Add the header. If neither works, ask them to save it as PDF. | `<slug>-docx.md` |
 | `.pptx` | Read the slide text out of the file (it is a zip of XML) and write `## Slide N` per slide. **Leave out speaker notes**, and say so in the header. | `<slug>-pptx.md` |
 | `.xlsx` | Read the sheets out of the file (it is a zip of XML) and write one `## <sheet name>` table per sheet. **Leave out hidden sheets**, and say so in the header. If that is not workable, ask them to export each sheet as CSV. | `<slug>-xlsx.md` |
-| `.heic`, `.heif` (iPhone photos) | Cannot be read. On a Mac, offer to convert it: `sips -s format jpeg "<file>" --out "<folder>/<slug>.jpg"`. Otherwise, tell them to email or message the photo to themselves and save it from there, which converts it. | `<slug>.jpg` |
+| `.heic`, `.heif` (iPhone photos) | Cannot be read. On a Mac, offer to convert it: `sips -s format jpeg "<file>" --out "<folder>/<slug>.jpg"`. On Windows or if that fails, tell them to email or message the photo to themselves and save it from there, which converts it. | `<slug>.jpg` |
 | `.doc`, `.pages`, `.key`, `.numbers`, anything else | Cannot be read reliably. Tell them to open it and use Save As or Export to PDF, then add the PDF. | nothing |
 
 **Why notes and hidden sheets are left out.** Speaker notes and hidden sheets are where people keep things they did not mean to share. A founder's own notes must not silently reach the engines.

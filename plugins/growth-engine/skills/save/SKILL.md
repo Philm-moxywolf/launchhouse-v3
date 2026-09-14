@@ -30,9 +30,11 @@ Any of those can lose work, and none of them is ever needed here.
    - If `git remote -v` shows a remote, run `git push`.
    - If the push is refused because GitHub has newer saves (for example, a routine drafted something), run `git pull --no-rebase`, then push again.
    - If the pull stops on a conflict, do not resolve it by guessing. Run `git merge --abort`, say their work is saved on this computer, and tell them a mentor will sort the GitHub copy.
-   - If the push asks for a login or fails another way, say their work is saved on this computer, and GitHub can be sorted with a mentor.
+   - If the push asks for a login or fails another way, say their work is saved on this computer, and it goes up to GitHub with one button: open GitHub Desktop and press **Push origin**. If they do not use GitHub Desktop, a mentor can connect it.
 
 **If git has no name or email set,** ask for the email they use for GitHub, and set both for this folder only, as in the start skill.
+
+**If `git` itself does not work,** the computer cannot save history yet. On a Windows PC, send them through step 0 of the start skill to install Git for Windows. Their files are still safe in the folder meanwhile.
 
 ## What changed
 

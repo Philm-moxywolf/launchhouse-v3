@@ -33,7 +33,8 @@ You put one file into a Launchhouse founder's folder so the engines can read it.
    - **Images** (`.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`): copy unchanged with `cp` to `<slug>.<ext>`.
    - **`.docx`:**
      - On a Mac, run `textutil -convert txt -stdout "<source>"` and use the output.
-     - If `textutil` is not there, return `CANNOT: save it as PDF and add the PDF`.
+     - Otherwise run `unzip -p "<source>" word/document.xml`, and take the text of the `<w:t>` elements, starting a new paragraph at each `</w:p>`.
+     - If neither works, return `CANNOT: save it as PDF and add the PDF`.
    - **`.pptx`:**
      - Run `unzip -p "<source>" 'ppt/slides/slide*.xml'` to read the slide text from the `<a:t>` elements, one `## Slide N` per slide, in slide number order.
      - Do not read `ppt/notesSlides`. Speaker notes are left out, so say so in the header.

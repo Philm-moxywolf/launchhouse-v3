@@ -33,9 +33,11 @@ This is the single most common problem.
 
 **If there is none,** the folder is not set up. Offer `/growth-engine:start`.
 
-### 2. The plugin
+### 2. The plugin and the checks
 
 If this skill is running, the plugin is loaded. Say so plainly, because founders often assume something is broken when it is not.
+
+The Launchhouse checks run separately. If the top of the conversation has no line starting "Launchhouse", they are not running on this computer. Run `git --version`. On a Windows PC, if that fails, the computer needs Git for Windows: git-scm.com, Download for Windows, press Next on every screen, then quit and reopen the Claude app. On a Mac, quit and reopen the app.
 
 ### 3. Saving
 
