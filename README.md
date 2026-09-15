@@ -8,6 +8,8 @@ There is no app to host, no key to paste, no database and no terminal. Founders 
 
 This repository is the plugin marketplace `launchhouse-v3`, holding one plugin, `growth-engine`. The folder founders work in is a separate template: [Philm-moxywolf/launchhouse-founder-template](https://github.com/Philm-moxywolf/launchhouse-founder-template).
 
+**Why two repositories.** The plugin is the engine and the template is the founder's own work. Keeping the engine in a plugin means a fix reaches every founder from **+**, then **Plugins**, without touching their folder. The template is a head start, not a requirement: the plugin works in any folder, and "start launchhouse" gives that folder everything the template has.
+
 ## For founders
 
 The full guide, with what you will see at each step, is `START-HERE.md` in your copy of the founder folder. In short:
@@ -110,7 +112,7 @@ It then runs all three test suites.
   - `HOLD` for shapes that always must be held
   - `CATCH` for offers the hook should catch, which the reviewer covers when it does not
 - **Keep the hook scripts portable.** They are POSIX sh and awk on purpose, with no node, python or jq, so they run on a Mac, on Windows through Git for Windows, and in Cowork. Each does nothing outside a folder carrying `growth-engine/.launchhouse`, and lets the write through if it cannot work out what is happening.
-- **Keep the scaffold and the template in step.** The start skill's scaffold (`skills/start/references/scaffold.md`) and the founder template must match; `tests/scaffold` fails when they do not.
+- **Keep the scaffold and the template in step.** The start skill's scaffold (`skills/start/references/scaffold.md`) and the founder template must match, including `CLAUDE.md`; `tests/scaffold` fails when they do not. Change the template's `CLAUDE.md`, then copy it into the scaffold's `CLAUDE.md` block.
 - **Releasing an update.** Bump `version` in both `plugins/growth-engine/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, then push. Founders update from **+**, then **Plugins**, in the Claude app.
 
 ## Licence

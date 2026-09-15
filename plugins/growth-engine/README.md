@@ -4,6 +4,8 @@ The Launchhouse plugin. It teaches Claude the programme, runs the engines, and c
 
 It only acts inside a founder folder, one that carries `growth-engine/.launchhouse`. Everywhere else its hooks do nothing.
 
+Any folder can become a founder folder. The founder template is the quickest start, but saying "start launchhouse" in any other folder creates the same starting files, including `CLAUDE.md`.
+
 ## Skills
 
 Founders reach every skill by plain words, or by the short command where one exists.
@@ -12,7 +14,7 @@ Founders reach every skill by plain words, or by the short command where one exi
 
 | Skill | Command | What it does | Writes |
 |---|---|---|---|
-| `start` | `/growth-engine:start` | Checks Git and the checks are running, asks name and timezone, creates any missing starting files, saves | `.state/profile.md`, starting files |
+| `start` | `/growth-engine:start` | Checks Git and the checks are running, asks name and timezone, gives any folder what the template has, saves | `.state/profile.md`, starting files, `.gitignore`, `.claude/settings.json`, `CLAUDE.md` |
 | `import-from-app` | `/growth-engine:import` | Brings a Launchhouse app download across, saves it as it arrived, adjusts it to the contract, reviews it | the app's files, `.state/imported.md` |
 | `add-files` | `/growth-engine:add-files` | Turns documents, decks, sheets, PDFs and photos into readable files. Writing samples go apart from facts | `uploads/`, `voice-samples/` |
 | `connect-tools` | `/growth-engine:connect` | Proves GoHighLevel, and Apollo for B2B, by reading the founder's own account back | `.state/setup.md` |
