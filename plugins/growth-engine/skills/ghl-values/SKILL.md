@@ -37,7 +37,7 @@ Their track decides their snapshot, and the snapshot decides the lists. Nobody c
 |---|---|---|
 | **B2B** | Essentials 11, Lead follow-up 6, Discovery booking 11, Proposal chase 6 | 34 |
 | **B2C** | Essentials 11, Comment to DM 7, DM qualify and book 10, Review request 0 | 28 |
-| **Hybrid** | One Essentials 11, plus the packs from both sides | up to 51 |
+| **Hybrid** | One Essentials 11, plus all six packs, on one board of its own | 51 |
 
 **Write them all.** Every pack arrives as drafts, and a founder publishes the folders they filled. Words written now are what lets them switch a second folder on in October without coming back to this.
 

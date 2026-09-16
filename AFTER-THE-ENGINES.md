@@ -48,7 +48,7 @@ Your track decides your snapshot, so there is nothing to choose. It arrives carr
 |---|---|---|
 | **B2B** | Essentials, Lead follow-up, Discovery booking, Proposal chase | 34 |
 | **B2C** | Essentials, Comment to DM, DM qualify and book, Review request | 28 |
-| **Hybrid** | One Essentials, plus packs from both sides | up to 51 |
+| **Hybrid** | One Essentials, plus all six packs, on one board of its own | 51 |
 
 **Every folder arrives switched off.** You publish the ones you have filled, and the rest sit there as drafts until you want them. Nothing in a draft ever runs.
 
