@@ -58,7 +58,7 @@ Three causes, in this order.
 
 No. Nothing. The new step reads two files you already have, `growth-engine/founder-brain.md` and `growth-engine/ops-workflow.md`, and writes one new file next to them. There is no setting to change and nothing to move.
 
-If `ops-workflow.md` is missing, say **"build my ops engine"** first. It names the snapshot you chose, and your words cannot be written without it.
+If `ops-workflow.md` is missing, say **"build my ops engine"** first. It names the pack you publish first, and your words cannot be written without it.
 
 ## Does your folder itself need updating?
 

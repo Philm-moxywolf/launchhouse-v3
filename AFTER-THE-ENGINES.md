@@ -58,9 +58,9 @@ Nine of the eleven Essentials values are needed before you publish. The two that
 
 **Read them back.** They are your words going to real people. Change anything that does not sound like you. Changing a word now costs nothing. Changing it at the clinic costs your place in the queue.
 
-**One value waits for the day.** If you chose `Discovery booking`, `Call Booking Link` is a link copied out of your own account rather than words, so Claude leaves it blank and you paste it in at the clinic.
+**One value waits for the day.** On B2B and Hybrid, `Call Booking Link`, in `Discovery booking`, is a link copied out of your own account rather than words, so Claude leaves it blank and you paste it in at the clinic.
 
-**If you chose Review request,** it has no custom values at all. Its two emails live in your review templates instead. Write both now with Claude, into the same file. They go in at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`: `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding the word PLACEHOLDER and send exactly as they are, so they must be replaced before you publish.
+**On B2C and Hybrid, `Review request` has no custom values at all.** Its two emails live in your review templates instead. Write both now with Claude, into the same file. They go in at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`: `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding the word PLACEHOLDER and send exactly as they are, so they must be replaced before you publish.
 
 ## Also worth doing before the day
 
@@ -80,7 +80,7 @@ Your snapshot page, the printed pack you are given at the clinic, carries the li
 
 ### 1. Load the snapshot
 
-A snapshot is a pack of ready-built workflows, the one you chose in your ops engine. It arrives as a set of workflows, not as a single one.
+A snapshot is a set of ready-built workflows. Yours is the one your track decides: B2B, B2C or Hybrid. It arrives as a set of workflows, not as a single one.
 
 We give you the share link on the day. Open it, choose your sub-account, and wait. It takes a few minutes. If it asks about conflicts, leave every item unticked.
 
@@ -98,7 +98,7 @@ Nothing can fire at a real person while you work.
 
 ### 3. Paste the words in
 
-Open `ghl-values.md` next to your browser. Switch back to your sub-account if you are still in Agency View, then open `Settings`, then `Custom Values`. Every name is already sitting there, because the snapshot brought it. Open each one, paste the words you wrote last week, and save. Around fifteen minutes.
+Open `ghl-values.md` next to your browser. Switch back to your sub-account if you are still in Agency View, then open `Settings`, then `Custom Values`. Every name is already sitting there, because the snapshot brought it. Open each one, paste the words you wrote before the clinic, and save. Around fifteen minutes.
 
 **Change the words only, never the name.** When a value is first saved, GoHighLevel quietly makes a permanent label out of its name, and every workflow step points at that label rather than at the name you see. Rename it afterwards and the label stays behind, so every message that used it goes out blank, with nothing on screen to tell you.
 
@@ -108,9 +108,9 @@ Your GoHighLevel connector cannot do this part. It reads your account and posts 
 
 ### 4. The two that are not words
 
-**If you chose `Discovery booking`:** open your `Discovery call` calendar, click `Share`, then `Copy Link`, and paste that link into `Call Booking Link`. This is the value Claude left blank.
+**If you are publishing `Discovery booking`:** open your `Discovery call` calendar, click `Share`, then `Copy Link`, and paste that link into `Call Booking Link`. This is the value Claude left blank.
 
-**If you chose `Review request`:** paste your two review emails into the templates at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`.
+**If you are publishing `Review request`:** paste your two review emails into the templates at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`.
 
 ### 5. Check four things
 

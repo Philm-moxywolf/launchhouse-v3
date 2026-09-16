@@ -10,7 +10,7 @@ Where you are, what is left, and what has to be true before you travel. Today is
 | Mon 7 or Tue 8 September | Session 1 | Your Founder Brain, and your track chosen once. B2B also starts the sending domain |
 | Between 1 and 2 | Homework | Your 30 pieces, and 10 to 20 things you have already written, gathered first |
 | Mon 14 or Tue 15 September | Session 2 | GoHighLevel bought and connected, Apollo finished for B2B |
-| Between 2 and 3 | Homework | Your second engine, and your operations engine: one snapshot chosen and all its copy |
+| Between 2 and 3 | Homework | Your second engine, and your operations engine: your bottleneck, the pack to publish first, and its copy |
 | Mon 21 or Tue 22 September | Session 3 | Your work in your own private copy of this folder, everything connected, and your Brain proved to be read by Claude |
 | That evening | Homework | Your GoHighLevel words written, in `ghl-values.md`, ready to paste |
 | Wed 23 September | The clinic | Your snapshot loaded, your words pasted in, published, and one real email in your own inbox |
