@@ -7,7 +7,7 @@ description: Build the operations engine. Runs a bottleneck diagnostic, picks on
 
 One workflow running on the founder's own business before they leave Atlanta.
 
-**The workflow is a pre-built GoHighLevel snapshot,** loaded in one click at the clinic on Wednesday 23 September. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
+**The workflow is a pre-built GoHighLevel snapshot.** It is loaded into the founder's own account at the clinic on Wednesday 23 September, and every message inside it arrives empty. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
 
 **Founders do not build workflows.** If a founder starts describing a bespoke automation, bring them back to the library. A custom build cannot be loaded and tested in one clinic session; a snapshot can.
 
@@ -68,7 +68,9 @@ Recommend one and explain why against their stated bottleneck. Let them override
 
 The snapshot is the plumbing. The copy is the founder's.
 
-For the chosen snapshot, write every message it sends: emails with subject lines, SMS, DM replies, internal notifications. Write in the captured voice, matched to track.
+For the chosen snapshot, write every message it sends: emails with subject lines, DM replies, public comment replies and the words on any buttons. Write in the captured voice, matched to track.
+
+Two rules that make the copy usable later. **No greeting inside a message body:** the workflow step writes the greeting and the first name above it. **Nothing in square or curly brackets:** the words in a slot are the same for everyone who receives that message, and anything about one person is merged by the step.
 
 **Reuse what exists.** For the two DM snapshots, if `inbound-scripts.md` already holds the comment-to-DM or qualify-and-book copy, use that copy, fitted to the snapshot's steps, rather than writing a second version. Say so in the file.
 
@@ -113,7 +115,7 @@ First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-
 
 The founder brings this file to the clinic on 23 September and loads the snapshot. Loading brings every workflow and the empty name of every message slot, and none of the words.
 
-The words go in next, as custom values, with `/growth-engine:values`, or by saying "fill my custom values". That is where this copy is turned into the list their account is waiting for. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
+The words go in next, as custom values, with `/growth-engine:values`, or by saying "fill my custom values". That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
 
 **Do not put this copy into their account yet, anywhere.** The snapshot brings the empty slots, and the values step fills them. An email template made now is a second copy that no workflow reads, and the founder ends up typing the same words twice.
 
