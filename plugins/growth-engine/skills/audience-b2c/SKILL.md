@@ -131,7 +131,7 @@ This is where the automation lives, and it is fully sanctioned.
 
 **Cap the follow-up.** One follow-up, then stop. If they do not reply to the first message and do not reply to the follow-up, the conversation is over and nothing more goes out. Write the stop into the copy, because a flow with no exit carries on at somebody who has already decided.
 
-**Copy only.** Write the copy for each flow. The workflow itself is a GoHighLevel snapshot loaded at the clinic on 23 September, so do not attempt to build automation here. These words become the snapshot's custom values, filled in after it loads, so write no greeting into a message and nothing in square or curly brackets.
+**Copy only.** Write the copy for each flow. The workflow itself is a GoHighLevel snapshot loaded at the clinic on 23 September, so do not attempt to build automation here. These words become the snapshot's custom values, and the values step fits them to their slots.
 
 ### Name the trigger in every label, not just the first one
 

@@ -4,8 +4,11 @@ on:
   push:
   pull_request:
 
+# A founder's private copy of this repository carries this file too. The jobs
+# run only on the engine's own repository, so a founder's pushes never start them.
 jobs:
   validate:
+    if: github.repository == 'Philm-moxywolf/launchhouse-v3'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -13,6 +16,7 @@ jobs:
         run: sh scripts/validate.sh
 
   shells:
+    if: github.repository == 'Philm-moxywolf/launchhouse-v3'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,6 +37,7 @@ jobs:
         run: SHELL_UNDER_TEST=${{ matrix.shell }} ${{ matrix.shell }} tests/hooks/run.sh
 
   windows:
+    if: github.repository == 'Philm-moxywolf/launchhouse-v3'
     runs-on: windows-latest
     defaults:
       run:

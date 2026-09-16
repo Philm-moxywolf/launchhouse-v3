@@ -111,7 +111,7 @@ It is a backstop, not a guarantee. They still read their own work before it goes
 
 **"It will not send my Apollo sequence."** Also correct. Sequences are built paused, and starting one is a button the founder presses in Apollo, having read it.
 
-**"It is asking permission for everything."** Their folder's settings let Claude save work without asking. If they opened a folder that was not made from the Launchhouse template, the settings are missing. `/growth-engine:start` creates them when they are missing. Some things always ask, on purpose: publishing, spending Apollo credits, and adding people to a sequence.
+**"It is asking permission for everything."** Their folder's settings let Claude save work without asking. If they opened a folder that is not their copy of the Launchhouse repository, the settings are missing. `/growth-engine:start` creates them when they are missing. Some things always ask, on purpose: publishing, spending Apollo credits, and adding people to a sequence.
 
 **"I cannot get any of this working."** Do not keep troubleshooting past two failed attempts. Send them to the Slack channel.
 

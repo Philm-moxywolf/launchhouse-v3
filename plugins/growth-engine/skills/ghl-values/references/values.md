@@ -1,6 +1,6 @@
 # Every custom value, by pack
 
-A founder fills two lists: the **Essentials** list for their track, and the list for the **one snapshot** they loaded. Nothing else.
+A founder fills the **Essentials** list for their track, and the list for **every pack** in their track's snapshot. The Hybrid snapshot has one Essentials list and all six packs. Nothing else. The pack named in `ops-workflow.md` is written first. A file made in the app calls that pack a snapshot, and `Comment-to-DM capture` there is the `Comment to DM` pack here.
 
 The key is what the workflow step uses, written `{{custom_values.<key>}}`. GoHighLevel builds the key from the name when the value is created, so a value must never be renamed afterwards: every step that uses it would go blank.
 
@@ -59,6 +59,8 @@ Values whose names appear in both Essentials packs are one value in an account. 
 
 ## B2B Proposal chase (6)
 
+If `ops-workflow.md` names a different pack, it holds no Proposal chase emails. Write these six fresh, to the shape each row gives.
+
 | Value | Key | What goes in it |
 |---|---|---|
 | Proposal Check In Subject | `proposal_check_in_subject` | The subject line of your first follow-up email, the one that checks your proposal arrived. Copy it from ops-workflow.md in your growth-engine folder: it is the subject of the first Proposal chase email. |
@@ -98,7 +100,7 @@ Values whose names appear in both Essentials packs are one value in an account. 
 | Comment Public Reply 1 | `comment_public_reply_1` | One short line posted under their comment, where everyone can see it, so other readers know the person was answered. For example, say you have sent it to them by DM and it may be in their message requests. |
 | Comment Public Reply 2 | `comment_public_reply_2` | A second wording of the same public reply, so repeat replies do not all look the same. One sentence. |
 | Comment Public Reply 3 | `comment_public_reply_3` | A third wording of the public reply. One sentence. |
-| Comment Private Reply | `comment_private_reply` | The one DM sent when they comment. Copy the message labelled 'Reply, sent when they comment:' from the comment to DM part of your inbound-scripts.md file, or the private reply Instagram sends for you, from the Comment to DM part of ops-workflow.md. It only goes to someone who commented first, which is the one message Instagram allows. |
+| Comment Private Reply | `comment_private_reply` | The one DM sent when they comment. Copy the message labelled 'Reply, sent when they comment:' from the comment to DM part of your inbound-scripts.md file, or the private reply Instagram sends for you, from the Comment to DM part of ops-workflow.md, which a file made in the app calls Comment-to-DM capture. It only goes to someone who commented first, which is the one message Instagram allows. |
 | Comment Button 1 | `comment_button_1` | The words on the first button under the DM: the first of three choices you want people to pick from, for example the thing they ask about most. One to three words, 20 characters or fewer including spaces, because Meta cuts button titles at 20 characters. |
 | Comment Button 2 | `comment_button_2` | The words on the second button: a second, different choice. One to three words, 20 characters or fewer including spaces. |
 | Comment Button 3 | `comment_button_3` | The words on the third button: a third choice, different from the other two. One to three words, 20 characters or fewer including spaces. |
@@ -107,7 +109,7 @@ Values whose names appear in both Essentials packs are one value in an account. 
 
 | Value | Key | What goes in it |
 |---|---|---|
-| DM Question 1 | `dm_question_1` | The first message in the DM qualify and book part of your ops-workflow.md file. If that file has no DM copy, use the DM qualify and book part of inbound-scripts.md. |
+| DM Question 1 | `dm_question_1` | The first message in the DM qualify and book part of your ops-workflow.md file. If that file has no DM qualify and book copy, because it names a different pack, use the DM qualify and book part of inbound-scripts.md. If neither has it, write it fresh. |
 | DM Question 1 Button 1 | `dm_question_1_button_1` | The first answer option written under question one in the same file. One to three words, 20 characters or fewer including spaces, because Meta cuts button titles at 20 characters. |
 | DM Question 1 Button 2 | `dm_question_1_button_2` | The second answer option under question one. One to three words, 20 characters or fewer including spaces. |
 | DM Question 1 Button 3 | `dm_question_1_button_3` | The third answer option under question one. One to three words, 20 characters or fewer including spaces. |

@@ -23,6 +23,7 @@ Look in the folder they opened, and in `growth-engine/`, for any of these:
 - **A folder** called `growth-engine` inside `growth-engine`: unzipped one level too deep.
 - **Loose files** such as `founder-brain.md` or `content-30.md` sitting in the folder they opened rather than in `growth-engine/`.
 - **Files already in the right place**: `growth-engine/founder-brain.md` and friends.
+- **A folder they already used in Claude** with the older Launchhouse toolkit, before this copy existed. Ask where it is, show them what is in it, and once they say yes copy its contents into `.lh-import/growth-engine/`, then carry on exactly as for a zip. Never move or delete the original.
 
 If you cannot find anything, ask them to download everything again. In the app: open Files, press the button that downloads everything. Then drag the file into this folder. Stop until they have.
 
@@ -165,6 +166,7 @@ Then tell the founder what it found:
 - B2B with no `outreach-sequence.md`: build the outreach engine
 - B2C with no `dm-openers.md`: build the audience engine
 - no `ops-workflow.md`: build the operations engine
+- `ops-workflow.md` but no `ghl-values.md`: write the GoHighLevel words, before the clinic ("fill my custom values")
 - all of those done: connect GoHighLevel, and Apollo for B2B, then publish
 
 End with: "You do not need the app any more. Everything is here, and it is saved."

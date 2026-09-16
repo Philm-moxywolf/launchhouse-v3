@@ -60,10 +60,15 @@ If more than 25 remain, go through them with the founder and cut to 25. Cut peop
 
 Every person not at `cut` needs a first line in the Opener block of their file.
 
+**Keep the lines that exist.** They are the founder's, from the outreach engine or from the app. Never rewrite one while loading.
+
 If any are missing, write them now, following Step 4 of the outreach engine exactly:
 - one line specific to that company or person, from real detail
 - a generic honest line when there is nothing specific
+- in the founder's voice, from the Voice section of the Brain and their own writing in `voice-samples/`
 - batches of 5 to 10, so the founder can check as they go
+
+Use the `voice-reviewer` agent on the first batch you write, and change what it flags before writing the rest.
 
 Then rewrite `growth-engine/outreach-firstlines.csv` from the people not at `cut`, in the contract's shape.
 
@@ -97,6 +102,9 @@ Only contacts go into sequences.
 ### The sequence
 
 1. **Read the copy.** Read the touches from `outreach-sequence.md`: subject lines, bodies with the `{{contact.first_name}}`, `{{account.name}}` and `{{first_line}}` variables, wait intervals, and the same-thread decisions. The personal line goes into touch 1 as `{{first_line}}`, exactly.
+   - **These are the founder's words, in their voice, and they go in as written.** Never shorten, polish or rewrite a touch while loading it. The sequence was written and approved in the outreach engine, whether in this folder or in the app.
+   - If a file from the app writes the personal line some other way, such as `[first line]`, change only that marker to `{{first_line}}`, and show the founder the line before and after.
+   - If a touch has no opt-out line, or there are fewer than four touches, stop. Send them back to the outreach engine to finish the sequence there, rather than writing touches here.
 2. **Pick the schedule.** Call the tool ending `apollo_emailer_schedules_index`, and choose a weekday business-hours schedule in the founder's timezone. Confirm it with them.
 3. **Show the plan.** Say: "I will create the sequence <name>, paused, with <n> touches, sending from <mailbox> on <schedule>. Nothing sends until you press start in Apollo."
 4. **Wait for a yes.**

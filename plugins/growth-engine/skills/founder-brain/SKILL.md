@@ -80,7 +80,7 @@ If they say both, do not create a third track. Ask which motion produces more re
 
 Explain briefly why you are asking: the outreach engine works completely differently on each track, and getting this wrong means building the wrong machine.
 
-**If track is B2C**, ask one more question: do they sell a service people book, or products people buy from a shop? Record the answer as `Model`, either `service` or `ecommerce`. It decides which operations snapshot they get and how their content is shaped. Never ask this of a B2B founder.
+**If track is B2C**, ask one more question: do they sell a service people book, or products people buy from a shop? Record the answer as `Model`, either `service` or `ecommerce`. It shapes their content, and it guides which pack of their operations snapshot they publish first. Never ask this of a B2B founder.
 
 ### Group 3: audience
 

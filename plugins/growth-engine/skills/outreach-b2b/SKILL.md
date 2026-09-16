@@ -88,7 +88,7 @@ Four to five touches over two to three weeks.
 - A subject line on touch 1. For each later touch, a decision on whether it replies in the same thread or starts a new one. Same thread is the default.
 - A wait interval stated between every touch. Three to four working days is the normal spacing across two to three weeks.
 - **A plain opt-out line in the body of every touch.** One sentence, in their own words, for example "if this is not for you, say so and I will leave you alone". Do not rely on a tool's unsubscribe link: the free plan may not have one, and at this volume a human sentence reads better anyway. This is not optional. It is what the law expects and what a real person deserves.
-- Written in the founder's captured voice, not in generic sales English.
+- Written in the founder's captured voice, not in generic sales English. Use the `voice-reviewer` agent on the touches once they are written, and change what it flags.
 - No fake familiarity, no invented compliments, no "I noticed you..." unless it is genuinely specific.
 
 ### Merge variables
@@ -149,7 +149,9 @@ For each person not at `cut`, write one opening line specific to that company or
 
 **Generate from the actual detail:** company name, website copy, a recent post, a job ad, a news item. If there is nothing specific, tell the founder which people you had nothing on, and write their line from the segment rather than fabricating a detail. **A generic honest line beats an invented specific one.**
 
-**Work in batches of 5 to 10**, so the founder can check quality as it goes. For each person, write the line inside the Opener block of their person file.
+**Write each line in the founder's voice,** from the Voice section of the Brain and their own writing in `voice-samples/`. It opens a message from them, so it has to sound like them.
+
+**Work in batches of 5 to 10**, so the founder can check quality as it goes. For each person, write the line inside the Opener block of their person file. Use the `voice-reviewer` agent on the first batch, and change what it flags before writing the rest.
 
 **On the manual route,** the Opener block holds that person's whole touch 1, finished, under 120 words, opening with their first line and ending with the opt-out line. It stays in their person file, which never goes to GitHub, and the first line of the block is what goes into the CSV.
 

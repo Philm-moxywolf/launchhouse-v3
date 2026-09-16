@@ -4,7 +4,7 @@ The Launchhouse plugin. It teaches Claude the programme, runs the engines, and c
 
 It only acts inside a founder folder, one that carries `growth-engine/.launchhouse`. Everywhere else its hooks do nothing.
 
-Any folder can become a founder folder. The founder template is the quickest start, but saying "start launchhouse" in any other folder creates the same starting files, including `CLAUDE.md`.
+Any folder can become a founder folder. A founder's private copy of the launchhouse-v3 repository is the usual start, and saying "start launchhouse" in it, or in any other folder, creates the same starting files, including `CLAUDE.md`.
 
 ## Skills
 

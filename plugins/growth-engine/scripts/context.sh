@@ -96,7 +96,7 @@ elif [ "$track" = b2c ] && ! made dm-openers.md; then
 elif ! made ops-workflow.md; then
   next="build the operations engine (/growth-engine:ops)"
 elif ! made 90-day-plan.md; then
-  next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). Once the snapshot is loaded at the clinic, fill the words it arrives without (/growth-engine:values). The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
+  next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). Before the clinic, write the words the snapshot arrives without (/growth-engine:values), then paste them in once it loads there. The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
 else
   next="ask where they are up to, and pick up from there"
 fi

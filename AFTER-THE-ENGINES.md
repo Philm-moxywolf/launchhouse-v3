@@ -42,7 +42,7 @@ Say **"fill my custom values"**, or type `/growth-engine:values`.
 
 Claude reads your Brain and your engine files, asks you the few things nothing else answers, writes every message in your voice, and saves them to `ghl-values.md` in your folder.
 
-Your track decides your snapshot, so there is nothing to choose. It arrives carrying four folders: **Essentials**, which everybody gets, and three packs.
+Your track decides your snapshot, so there is nothing to choose. It brings **Essentials**, which everybody gets, and its packs. Each workflow's name starts with the pack it belongs to.
 
 | Your snapshot | What is in it | Words to write |
 |---|---|---|
@@ -50,9 +50,9 @@ Your track decides your snapshot, so there is nothing to choose. It arrives carr
 | **B2C** | Essentials, Comment to DM, DM qualify and book, Review request | 28 |
 | **Hybrid** | One Essentials, plus all six packs, on one board of its own | 51 |
 
-**Every folder arrives switched off.** You publish the ones you have filled, and the rest sit there as drafts until you want them. Nothing in a draft ever runs.
+**Every pack arrives switched off.** You publish the packs you have filled, and the rest sit there as drafts until you want them. Nothing in a draft ever runs.
 
-Writing them all now is what lets you switch a second folder on in October without doing this again. If you are short of time, Claude writes the pack that answers your bottleneck first, then Essentials, then the rest, and tells you plainly what it left.
+Writing them all now is what lets you switch a second pack on in October without doing this again. Claude writes the pack your ops file names first, then Essentials, then the rest, and if you run short of time it tells you plainly what it left.
 
 Nine of the eleven Essentials values are needed before you publish. The two that welcome a new client or customer are only needed if you switch that pair on.
 

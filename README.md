@@ -4,20 +4,22 @@ The engines for Launchhouse Atlanta founders, run from the Claude desktop app in
 
 Claude asks the founder the questions, writes their Founder Brain and everything built on it, and saves it as it goes. It puts posts into GoHighLevel and builds an Apollo sequence when the founder says yes. It holds back anything that offers to automate cold DMs, says replies are certain, or uses the other track's material. A reviewer checks every figure before the work is called done.
 
-There is no app to host, no database and no terminal. Tools are connected by signing in. Founders need the Claude desktop app, GitHub Desktop, and their own copy of the founder folder.
+There is no app to host, no database and no terminal. Tools are connected by signing in. Founders need the Claude desktop app, GitHub Desktop, and their own private copy of this repository.
 
-This repository is the plugin marketplace `launchhouse-v3`, holding one plugin, `growth-engine`. The folder founders work in is a separate template: [Philm-moxywolf/launchhouse-founder-template](https://github.com/Philm-moxywolf/launchhouse-founder-template).
+This repository is the plugin marketplace `launchhouse-v3`, holding one plugin, `growth-engine`. It is also where every founder starts: each one imports a private copy of it and works inside that copy.
 
-**Why two repositories.** The plugin is the engine and the template is the founder's own work. Keeping the engine in a plugin means a fix reaches every founder from **+**, then **Plugins**, without touching their folder. The template is a head start, not a requirement: the plugin works in any folder, and "start launchhouse" gives that folder everything the template has.
+**Why the engine is a plugin.** A founder's copy is their own work, and the engine runs from the plugin. So a fix reaches every founder from **+**, then **Plugins**, and nobody has to pull anything into their copy. The copy brings the settings that switch the plugin on and the rules Claude reads, and "start launchhouse" adds the rest. The plugin works in any folder, and the separate [founder template](https://github.com/Philm-moxywolf/launchhouse-founder-template) holds the same starting files.
+
+**Why an import and not a fork.** A founder's copy holds their Brain and their work. A fork of a public repository is always public. An import is the same copy, made private.
 
 ## For founders
 
-The full guide, with what you will see at each step, is `START-HERE.md` in your copy of the founder folder. In short:
+The full guide, with what you will see at each step, is [START-HERE.md](START-HERE.md), which comes with your copy. In short:
 
 1. **Install the apps.**
    - The Claude desktop app and GitHub Desktop, signed in.
    - On a Windows PC, also Git for Windows from git-scm.com, pressing Next on every screen.
-2. **Make your own copy.** Open the founder template on GitHub, press **Use this template**, and choose **Private**.
+2. **Make your own private copy.** Go to **github.com/new/import**, paste `https://github.com/Philm-moxywolf/launchhouse-v3`, name it, choose **Private**, and press **Begin import**. Not Fork: a fork is always public, and this copy holds your work.
 3. **Put it on your computer.** On your copy, press **Code**, then **Open with GitHub Desktop**, then **Clone**.
 4. **Open it in Claude.** In the Claude app, choose **Code**, pick the folder, and accept the Launchhouse plugin.
    - If it is not offered: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**.
@@ -85,6 +87,8 @@ Everything is in `growth-engine/` inside the founder's own folder. Most of it is
 
 | Path | What it is |
 |---|---|
+| `START-HERE.md` | The founder's step by step, from taking their private copy to checking where they are up to |
+| `CLAUDE.md`, `.claude/settings.json`, `.gitignore` | What a founder's copy starts with: the rules Claude reads, the plugin switched on, and people's details kept off GitHub |
 | `.claude-plugin/marketplace.json` | The marketplace, `launchhouse-v3` |
 | `plugins/growth-engine/` | The plugin. Its own [README](plugins/growth-engine/README.md) lists every skill, agent, command, hook and routine |
 | `scripts/validate.sh` | The one check. Run it before every commit |
@@ -119,6 +123,7 @@ It then runs all three test suites.
   - `HOLD` for shapes that always must be held
   - `CATCH` for offers the hook should catch, which the reviewer covers when it does not
 - **Keep the hook scripts portable.** They are POSIX sh and awk on purpose, with no node, python or jq, so they run on a Mac, on Windows through Git for Windows, and in Cowork. Each does nothing outside a folder carrying `growth-engine/.launchhouse`, and lets the write through if it cannot work out what is happening.
+- **Founder copies.** Each founder imports a private copy of this repository and works in it. The CI jobs run only on `Philm-moxywolf/launchhouse-v3` itself, so a founder's pushes never trigger them. The root `.gitignore`, `.claude/settings.json` and `CLAUDE.md` are what that copy starts with, and `scripts/validate.sh` fails when they drift from the start skill's scaffold. The root `.gitignore` does not ignore `growth-engine/`, because in a founder's copy that folder is their work; validation fails if one is ever committed here. The settings turn on `acceptEdits` for this folder, so put any maintainer overrides in `.claude/settings.local.json`, which is ignored.
 - **Keep the scaffold and the template in step.** The start skill's scaffold (`skills/start/references/scaffold.md`) and the founder template must match, including `CLAUDE.md`; `tests/scaffold` fails when they do not. Change the template's `CLAUDE.md`, then copy it into the scaffold's `CLAUDE.md` block.
 - **Releasing an update.** Bump `version` in both `plugins/growth-engine/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`, then push. Founders update from **+**, then **Plugins**, in the Claude app.
 

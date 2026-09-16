@@ -15,7 +15,7 @@ This turns the copy the founder already wrote into the exact list their account 
 
 **Who is reading.** A founder who does not use a terminal. Never ask them to run a command.
 
-**Order matters, and the writing comes first.** The words are written in the week before the clinic, from the Brain and the ops file. Nothing here needs the snapshot to exist, so never tell a founder they are early. The snapshot is loaded at the clinic on 23 September, which brings the empty slots, and the words written earlier are pasted in then. Publishing comes after that.
+**Order matters, and the writing comes first.** The words are written before the clinic, usually the evening after Session 3, from the Brain and the ops file. Nothing here needs the snapshot to exist, so never tell a founder they are early. The snapshot is loaded at the clinic on 23 September, which brings the empty slots, and the words written earlier are pasted in then. Publishing comes after that.
 
 If the snapshot is already loaded, nothing changes except that the pasting can follow straight on.
 
@@ -25,8 +25,8 @@ If the snapshot is already loaded, nothing changes except that the pasting can f
 2. **Read the Brain.** Read `./growth-engine/founder-brain.md`.
    - If it genuinely does not exist, stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`, or "build my founder brain"), and do not proceed.
    - Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice.
-3. **Read `./growth-engine/ops-workflow.md`.** It names the snapshot they chose and holds the copy already written for it. Reuse that copy rather than writing a second version of the same email.
-   - If it does not exist, build the operations engine first (`/growth-engine:ops`, or "build my ops engine"). The snapshot choice lives there.
+3. **Read `./growth-engine/ops-workflow.md`.** It names the pack to publish first and holds the copy already written for it. Reuse that copy rather than writing a second version of the same email. A file made in the app calls that pack a snapshot, using one of six names: Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, or Review request. Comment-to-DM capture is the Comment to DM pack. Read the name as the pack to publish first. The file is not out of date, and nothing in it needs redoing. Their snapshot still comes from the Brain.
+   - If it does not exist, build the operations engine first (`/growth-engine:ops`, or "build my ops engine"). Which pack goes first is decided there.
 4. **Check for existing values.** If `ghl-values.md` already exists, ask whether they want to change the words or start again, and go straight there.
 
 ## Step 1: name their lists
@@ -39,9 +39,9 @@ Their track decides their snapshot, and the snapshot decides the lists. Nobody c
 | **B2C** | Essentials 11, Comment to DM 7, DM qualify and book 10, Review request 0 | 28 |
 | **Hybrid** | One Essentials 11, plus all six packs, on one board of its own | 51 |
 
-**Write them all.** Every pack arrives as drafts, and a founder publishes the folders they filled. Words written now are what lets them switch a second folder on in October without coming back to this.
+**Write them all.** Every pack arrives as drafts, and a founder publishes the packs they filled. Words written now are what lets them switch a second pack on in October without coming back to this.
 
-**If they are short of time,** write the pack that answers their bottleneck first, then Essentials, then the rest. `ops-workflow.md` names that pack. Say plainly which ones you have left, so nothing is published thinking it is finished.
+**Write the pack `ops-workflow.md` names first,** then Essentials, then the rest. That is the pack that answers their bottleneck. If they run short of time, stop after any pack and say plainly which ones you have left, so nothing is published thinking it is finished.
 
 In each `Essentials` list, 9 of the 11 must be filled before anything is published: the two client or customer welcome values are only needed if they switch that pair of workflows on.
 
@@ -55,7 +55,7 @@ Their voice is on paper already. Take it from there rather than inventing a seco
 
 | File | What to take from it |
 |---|---|
-| `ops-workflow.md` | The snapshot they chose, and every message already written for it |
+| `ops-workflow.md` | The pack to publish first, and every message already written for it. A file from the app holds copy for that one pack only, which is complete as it is. Write the other packs fresh here |
 | `content-30.md` | Their 30 pieces: the clearest sample of how they actually write |
 | `outreach-sequence.md` | B2B: the subject lines and angles they already send |
 | `hook-bank.md` | B2C: hooks worth reworking into subject lines |
@@ -63,7 +63,7 @@ Their voice is on paper already. Take it from there rather than inventing a seco
 | `inbound-scripts.md` | B2C: their comment and DM wording, for the two Instagram snapshots |
 | `90-day-plan.md` | What they are pushing this quarter, so the ask matches |
 
-Two rules when files disagree. **The Brain wins on voice and on what may be claimed.** A post naming a number the Brain does not record does not license that number here. **The list in `references/values.md` decides what exists.** Copy written before the snapshot was picked can hold a message with nowhere to go. Leave those out and say plainly which ones, and why.
+Two rules when files disagree. **The Brain wins on voice and on what may be claimed.** A post naming a number the Brain does not record does not license that number here. **The list in `references/values.md` decides what exists.** Copy written in the app, or before the packs were settled, can hold a message with nowhere to go, such as a text message or a note to the founder. Leave those out and say plainly which ones, and why. That is a gap in the list, not a fault in their file.
 
 ## Step 3: ask only what nothing answers
 
@@ -79,7 +79,7 @@ Never ask for something the Brain or their files already say. After reading ever
 - Their voice from the Brain and their own posts. Short sentences. No em dashes or en dashes, and none of the sales words the house style rules out.
 - **Never invent proof.** No numbers, results, customer counts or testimonials the Brain does not record. Thin proof means writing from point of view and observation instead.
 - **No greeting inside a body.** The step writes the greeting word and their first name above it. A greeting in the words gives every reader two.
-- **Nothing in curly or square brackets, anywhere in a value.** No `[first name]`, no merge field code. `ops-workflow.md` is written with plain placeholders like `[first name]` on purpose; this is where those come out, because the step supplies the name and a value holds only the words that are the same for everyone.
+- **Nothing in curly or square brackets, anywhere in a value.** No `[first name]`, no merge field code. If the copy being reused carries a placeholder like `[first name]`, a merge field, or a greeting, take it out here: the step supplies the greeting and the name, and a value holds only the words that are the same for everyone.
 - **The Instagram values carry no name at all.** Outside email there is no fallback, so a missing name sends a blank.
 - Subjects are a few plain words that read correctly with no name in them.
 - **Length comes from the row in `references/values.md`, not from habit.** Write the paragraphs or sentences that row asks for, with a blank line between paragraphs. Where a row names no length, an email body is two to four short sentences and an Instagram message is one or two, well under the 640 characters Meta allows.
@@ -153,7 +153,7 @@ Then one live test: send themselves the real trigger, from their own second emai
 
 Two stopping points, because this runs twice.
 
-**Writing, in the week before:**
+**Writing, before the clinic:**
 - the snapshot named from the Brain, and its lists confirmed with them
 - every value written in their voice, none holding a bracket or a greeting, and any left for later named plainly
 - `ghl-values.md` saved, and read back to them

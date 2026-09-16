@@ -20,7 +20,7 @@ Updates are never automatic. You take them when we say, so that a room of 130 pe
 
 1. Open the Claude desktop app on your Launchhouse folder.
 2. Press the **+** button next to the message box and open **Plugins**.
-3. Find **growth-engine** and update it. You want version **0.9.3** or later.
+3. Find **growth-engine** and update it. You want version **0.9.4** or later.
 4. If it still shows the old version, quit the app and open it again.
 
 **In Claude Code, the terminal:**
@@ -62,7 +62,7 @@ If `ops-workflow.md` is missing, say **"build my ops engine"** first. It names t
 
 ## Does your folder itself need updating?
 
-No. Your folder was made from a template, so it shares no history with it: there is nothing to pull and nothing to merge. Nothing in it has to change for the new step, and it has been checked four ways. Your permissions file already allows everything the step runs, your `CLAUDE.md` names no individual skills, and the checks already know the new file by name.
+No. Your folder is your own private copy, and the engine lives in the plugin, not in the copy. So there is nothing to pull into it and nothing to merge. Nothing in it has to change for the new step, and it has been checked four ways. Your permissions file already allows everything the step runs, your `CLAUDE.md` names no individual skills, and the checks already know the new file by name.
 
 If we ever do change something in the folder itself, we will say exactly which file and Claude will put it in for you.
 

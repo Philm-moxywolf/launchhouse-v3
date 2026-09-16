@@ -1,5 +1,20 @@
+# Real people's details. Never in git.
+**/people/*
+!growth-engine/people/README.md
+growth-engine/outreach-firstlines.csv
+growth-engine/dm-openers.md
+# A copy unzipped in the wrong place, or twice.
+growth-engine/growth-engine/
+growth-engine */
+# Working copies the Launchhouse checks keep for a moment.
+growth-engine/.state/.pre/
+# Downloads from the app, once brought across.
+*.zip
+.lh-import/
 .DS_Store
+# The lines above are what a founder's private copy of this repository needs.
+# Their growth-engine folder is saved in that copy, so it is not ignored here.
+# scripts/validate.sh fails if one is ever committed to the engine itself.
 /dist/
 /runs/
-# A founder folder must never be committed here.
-/growth-engine/
+.claude/settings.local.json

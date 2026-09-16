@@ -94,7 +94,7 @@ grep -n 'shell: *true\|eval ' $P/scripts/*.sh >/dev/null 2>&1 && err "a hook scr
 # ---------------------------------------------------------------- founder-facing prose
 # Everything a founder or Claude reads as instructions. rules.awk and the corpus
 # spell out the banned shapes on purpose, so they are exempt from those checks.
-prose=$(find README.md AFTER-THE-ENGINES.md ROAD-TO-ATLANTA.md UPDATE-YOUR-SETUP.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
+prose=$(find README.md START-HERE.md CLAUDE.md AFTER-THE-ENGINES.md ROAD-TO-ATLANTA.md UPDATE-YOUR-SETUP.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
 msgs=$(find $P/scripts -name '*.sh' 2>/dev/null)
 
 for f in $prose $msgs; do
@@ -133,6 +133,29 @@ for f in $tracked; do
   [ -f "$f" ] || continue
   grep -Eqi 'MASTERPLAN|RUNBOOK|AUDIT\.md|TASKS\.md|spike-findings|our retainer|hourly rate' "$f" 2>/dev/null && err "$f mentions internal planning material"
 done
+
+# ---------------------------------------------------------------- the root, which is what a founder's private copy starts with
+ref=$P/skills/start/references/scaffold.md
+block() {
+  awk -v h="## $1" '
+    index($0, h) == 1 { found = 1; next }
+    found && /^```/ { if (inblock) exit; inblock = 1; next }
+    found && inblock { print }
+  ' "$ref"
+}
+json_ok .claude/settings.json || err ".claude/settings.json is not valid JSON"
+[ "$(block '.claude/settings.json, in the folder the founder opened')" = "$(cat .claude/settings.json 2>/dev/null)" ] \
+  || err ".claude/settings.json differs from the start skill's scaffold"
+want=$(block 'CLAUDE.md, in the folder the founder opened')
+[ -n "$want" ] && [ "$(head -n "$(printf '%s\n' "$want" | wc -l | tr -d ' ')" CLAUDE.md 2>/dev/null)" = "$want" ] \
+  || err "CLAUDE.md does not open with the start skill's scaffold text"
+missing=$(block '.gitignore, in the folder the founder opened' | while IFS= read -r line; do
+  grep -qxF -- "$line" .gitignore 2>/dev/null || printf '%s\n' "$line"
+done)
+[ -z "$missing" ] || err ".gitignore is missing scaffold lines: $(printf '%s' "$missing" | tr '\n' ' ')"
+grep -Eqx '/?growth-engine/?' .gitignore 2>/dev/null && err ".gitignore ignores the whole growth-engine folder, so a founder's copy would not save their work"
+grep -q "if: github.repository == 'Philm-moxywolf/launchhouse-v3'" .github/workflows/validate.yml \
+  || err "the CI jobs would run in every founder's copy"
 
 # ---------------------------------------------------------------- the founder template, when it sits alongside
 T=${LH_TEMPLATE:-../launchhouse-founder-template}

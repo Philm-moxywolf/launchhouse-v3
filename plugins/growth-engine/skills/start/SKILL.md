@@ -35,13 +35,13 @@ The session context at the top of this conversation says one of three things.
 
 Everything a founder makes lives in `growth-engine/`, inside the folder they opened. Nothing is ever written anywhere else.
 
-Create only what is missing, and never overwrite a file that exists. The folder made from the Launchhouse template already has all of this, so usually there is nothing to do. Any other folder works too: this step gives it everything the template would. The exact starting contents are in `references/scaffold.md` next to this file.
+Create only what is missing, and never overwrite a file that exists. A founder's private copy of the Launchhouse repository already has the settings and `CLAUDE.md`, so this step adds the rest. Any other folder works too: this step gives it everything the copy would. The exact starting contents are in `references/scaffold.md` next to this file.
 
 - `growth-engine/.launchhouse`
 - `growth-engine/ledger.md`, `growth-engine/memory.md`, `growth-engine/ops-log.md`
 - `growth-engine/people/README.md`
 - `growth-engine/uploads/`, `growth-engine/voice-samples/`, `growth-engine/drafts/`, each with an empty `.gitkeep`
-- a `.gitignore` in the folder they opened, containing the lines in the scaffold reference
+- a `.gitignore` in the folder they opened, containing the lines in the scaffold reference. If it has a line that ignores the whole `growth-engine` folder, such as `/growth-engine/`, remove that one line: it would stop their work being saved.
 - `.claude/settings.json` in the folder they opened, only if it does not exist
 - `CLAUDE.md` in the folder they opened: created if missing, or the Launchhouse text added to the end of one that is not Launchhouse's, as the scaffold reference says
 

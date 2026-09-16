@@ -20,7 +20,10 @@ One workflow running on the founder's own business before they leave Atlanta.
    - If it genuinely does not exist, stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`, or "build my founder brain"), and do not proceed.
    - Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice.
 3. **Use the Brain** for track, model, stage, offer and goal.
-4. **Check for an existing workflow.** If `ops-workflow.md` already exists, ask whether they want to change the copy or pick again, and go straight there.
+4. **Check for an existing workflow.** If `ops-workflow.md` already exists, the bottleneck is already found, so do not run the diagnostic again.
+   - The pack it names is the pack to publish first, even when the file calls it a snapshot, as files from the app do (Comment-to-DM capture is the Comment to DM pack).
+   - Keep the file as it is. Ask whether they want to change the copy or put a different pack first, and go straight there.
+   - Change only what they ask for, and never replace their copy without their yes. The other packs get their words from the values step, not here.
 
 ## Step 1: bottleneck diagnostic
 
@@ -41,9 +44,9 @@ Then name the bottleneck in one sentence, in their words. Confirm it with them b
 |---|---|---|
 | B2B | **B2B** | Essentials B2B, Lead follow-up, Discovery booking, Proposal chase |
 | B2C | **B2C** | Essentials B2C, Comment to DM, DM qualify and book, Review request |
-| Either, hybrid | **Hybrid** | One Essentials, plus packs from both sides |
+| Either, hybrid | **Hybrid** | One Essentials, plus all six packs, on a board of its own |
 
-Every pack arrives as drafts, in its own workflow folder. Nothing runs until the founder publishes it, so what the bottleneck decides is **which folder they publish first, and whose words get written first.**
+Every pack arrives as drafts. Nothing runs until the founder publishes it, so what the bottleneck decides is **which pack they publish first, and whose words get written first.**
 
 ### B2B packs
 
@@ -70,17 +73,15 @@ Every pack arrives as drafts, in its own workflow folder. Nothing runs until the
 
 A B2C founder with `Model: ecommerce` usually publishes review request or comment to DM first. With `Model: service`, DM qualify and book is usually the one. Recommend, never force.
 
-Name the pack that answers their bottleneck, say why, and let them override. The rest of their snapshot stays as drafts until they want it.
+Name the pack that answers their bottleneck, say why, and let them override. That one pack is what the output file records as the chosen snapshot, exactly as files from the app do. The rest of their snapshot stays as drafts until they want it.
 
 ## Step 3: write the copy
 
 The snapshot is the plumbing. The copy is the founder's.
 
-For the chosen snapshot, write every message it sends: emails with subject lines, DM replies, public comment replies and the words on any buttons. Write in the captured voice, matched to track.
+For the pack they publish first, write every message it sends: emails with subject lines, SMS, DM replies, internal notifications, and for an Instagram pack its public comment replies and the words on its buttons. Write in the captured voice, matched to track.
 
-Two rules that make the copy usable later. **No greeting inside a message body:** the workflow step writes the greeting and the first name above it. **Nothing in square or curly brackets:** the words in a slot are the same for everyone who receives that message, and anything about one person is merged by the step.
-
-**Reuse what exists.** For the two DM snapshots, if `inbound-scripts.md` already holds the comment-to-DM or qualify-and-book copy, use that copy, fitted to the snapshot's steps, rather than writing a second version. Say so in the file.
+**Reuse what exists.** For the two DM packs, if `inbound-scripts.md` already holds the comment to DM or qualify and book copy, use that copy, fitted to the pack's steps, rather than writing a second version. Say so in the file.
 
 **Placeholders in plain words.** The snapshot brings its own trigger, stages, tags and fields, and their exact names are only known once it loads at the clinic. Write personal details as plain placeholders, `[first name]`, `[business name]`, `[booking link]`, never merge-field code, and describe tags and stages in plain words. They are matched to the snapshot's own fields when it is loaded, and the values step takes the placeholders out, because the workflow step writes the greeting and the first name itself.
 
@@ -92,7 +93,7 @@ Also specify:
 
 Keep waits realistic. Chasing someone four times in two days annoys them.
 
-**On the two DM snapshots, check the trigger before you write a word.** Both start with something the other person did: a comment on a post, or a message they sent in. Write the copy as the answer to that, and label each message with what triggers it, for example "Reply, sent when they comment:". If you find yourself writing to somebody who has done neither, the trigger is wrong, and no amount of rewriting the copy fixes it.
+**On the two DM packs, check the trigger before you write a word.** Both start with something the other person did: a comment on a post, or a message they sent in. Write the copy as the answer to that, and label each message with what triggers it, for example "Reply, sent when they comment:". If you find yourself writing to somebody who has done neither, the trigger is wrong, and no amount of rewriting the copy fixes it.
 
 **No message claims a result the Brain does not record.** A review request that says "join our 200 happy customers" is an invented number, sent to a real customer who can count. If the Brain has no number, ask for the review on the work the founder actually did for that person, and name the work.
 
@@ -106,24 +107,24 @@ Most founders do not need this. If the founder does not clearly need it, do not 
 
 Write `./growth-engine/ops-workflow.md` containing:
 - the named bottleneck
-- the chosen snapshot, and why
+- the chosen snapshot, meaning the pack to publish first, and why
 - all message copy
 - the trigger, the timings, the exit condition and the tags
 - any gap in the library, or n8n requirement, for a mentor
 
 ## Step 6: check and save
 
-First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-MM-DD ops workflow: <snapshot>, for <bottleneck in a few words>`.
+First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-MM-DD ops workflow: <pack>, for <bottleneck in a few words>`.
 
 1. **Check.** Use the `rules-reviewer` agent on `ops-workflow.md`. Give it every figure the founder gave in this conversation.
 2. **Fix what it holds.** Ask about any held figure rather than guessing. Do this at most twice.
-3. **Save.** Run `git add growth-engine` then `git commit -m "Operations engine: <snapshot>"`. Push if there is a remote. If the push fails, say it is saved on this computer.
+3. **Save.** Run `git add growth-engine` then `git commit -m "Operations engine: <pack>"`. Push if there is a remote. If the push fails, say it is saved on this computer.
 
-## At the clinic
+## Before and at the clinic
 
-The founder brings this file to the clinic on 23 September and loads the snapshot. Loading brings every workflow and the empty name of every message slot, and none of the words.
+The founder loads the snapshot at the clinic on 23 September. Loading brings every workflow and the empty name of every message slot, and none of the words.
 
-The words go in next, as custom values, with `/growth-engine:values`, or by saying "fill my custom values". That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
+So the words are written first, before the clinic, usually the evening after Session 3, with `/growth-engine:values`, or by saying "fill my custom values". At the clinic they are pasted in as custom values. That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
 
 **Do not put this copy into their account yet, anywhere.** The snapshot brings the empty slots, and the values step fills them. An email template made now is a second copy that no workflow reads, and the founder ends up typing the same words twice.
 
@@ -132,5 +133,5 @@ Never create, change or switch on a workflow. The snapshot does that.
 ## Gate
 
 - bottleneck named in one sentence
-- snapshot chosen
+- snapshot named, and the pack to publish first chosen
 - all copy written

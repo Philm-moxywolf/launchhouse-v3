@@ -50,7 +50,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **List criteria.** `outreach-sequence.md` has tight, medium and broad criteria.
 - **List built.** The index count for `people/` shows 25 or more prospects (cut people are counted apart).
 - **First lines.** `outreach-firstlines.csv` has the header `email,first_name,company,first_line`, and the index count is 25 rows or more.
-- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request), and is not nearly empty.
+- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six packs (Lead follow-up, Discovery booking, Proposal chase, Comment to DM, DM qualify and book, Review request), and is not nearly empty. A file from the app calls the pack a snapshot and may use an older name such as Comment-to-DM capture: that counts.
 - **Domain set up and sending started.** Self-reported.
 
 ### Gate C, B2C
@@ -58,7 +58,7 @@ You check a Launchhouse founder's folder against the gates and report what the f
 - **Targets recorded.** The index count for `people/` shows 25 or more targets.
 - **Hook bank with offer tests.** `hook-bank.md` has its category headings and an `Offer tests` heading.
 - **Inbound scripts.** `inbound-scripts.md` is not nearly empty.
-- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six snapshots (Lead follow-up, Discovery booking, Proposal chase, Comment-to-DM capture, DM qualify and book, Review request), and is not nearly empty.
+- **Workflow built.** `ops-workflow.md` names a bottleneck and one of the six packs (Lead follow-up, Discovery booking, Proposal chase, Comment to DM, DM qualify and book, Review request), and is not nearly empty. A file from the app calls the pack a snapshot and may use an older name such as Comment-to-DM capture: that counts.
 - **Business or Creator account.** Done if `.state/setup.md` has the Instagram row at `done`. Otherwise self-reported.
 - **Messages sent.** Before Saturday 26 September 2026 the state is `not due`: the 25 go out at the event. From then, use the sent count in the index row for `people/`. Done at 25 or more. If the count is 0, the state is `ask`, not `not done`.
 

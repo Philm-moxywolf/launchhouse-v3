@@ -1,0 +1,56 @@
+{
+  "extraKnownMarketplaces": {
+    "launchhouse-v3": {
+      "source": {
+        "source": "github",
+        "repo": "Philm-moxywolf/launchhouse-v3"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "growth-engine@launchhouse-v3": true
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git show:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git remote -v)",
+      "Bash(git pull --no-rebase)",
+      "Bash(git fetch)",
+      "Bash(git branch -r)",
+      "Bash(git restore:*)",
+      "Bash(git mv:*)",
+      "Bash(git merge --abort)",
+      "Bash(git init)",
+      "Bash(git config user.name:*)",
+      "Bash(git config user.email:*)",
+      "Bash(date:*)",
+      "Bash(readlink /etc/localtime)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(unzip:*)",
+      "Bash(tar -xf:*)",
+      "Bash(textutil:*)",
+      "Bash(sips:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout origin/:*)",
+      "Bash(cp:*)",
+      "Bash(rm -rf .lh-import)",
+      "Bash(rm -rf growth-engine/growth-engine)",
+      "Bash(rm -rf growth-engine/.state/snapshots)",
+      "Bash(rm growth-engine/drafts/:*)",
+      "Bash(rm growth-engine/README-your-files.md)",
+      "Bash(rm growth-engine/.state/HOME)",
+      "Bash(rm growth-engine/.gitignore)",
+      "Bash(powershell -NoProfile -Command Expand-Archive:*)",
+      "Bash(rm growth-engine/.state/log.bytes)",
+      "Bash(rm growth-engine/.state/memory.lock)"
+    ]
+  }
+}
