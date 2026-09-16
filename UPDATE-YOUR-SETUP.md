@@ -10,7 +10,7 @@ Updating cannot lose your Brain, your posts or your files, because they live in 
 
 ## Why update at all
 
-The step that fills your snapshot's words at the clinic arrived in a later version. Without it, Claude does not know your value names, how many there are, or which of them have to be filled before you publish.
+The step that writes your snapshot's words arrived in a later version. You run it in the week before the clinic, not on the day. Without it, Claude does not know your value names, how many there are, or which of them have to be filled before you publish.
 
 Updates are never automatic. You take them when we say, so that a room of 130 people is running the same thing.
 
@@ -58,7 +58,7 @@ Three causes, in this order.
 
 No. Nothing. The new step reads two files you already have, `growth-engine/founder-brain.md` and `growth-engine/ops-workflow.md`, and writes one new file next to them. There is no setting to change and nothing to move.
 
-If `ops-workflow.md` is missing, say **"build my ops engine"** first. That is the one thing the clinic cannot happen without.
+If `ops-workflow.md` is missing, say **"build my ops engine"** first. It names the snapshot you chose, and your words cannot be written without it.
 
 ## Does your folder itself need updating?
 
@@ -84,7 +84,7 @@ Your real safety net is that your folder is saved as you go. Say **"save my work
 
 Everything you have keeps working. No file is touched and every engine you have already run still runs.
 
-You would only lose the values step, which means filling your snapshot's words by hand at the clinic with no list to work from. If you get to the clinic without updating, the rule is simple: **load your snapshot, do not publish anything, update, then fill.** A published workflow with empty words sends blank emails to real people.
+You would only lose the values step. That means arriving at the clinic with nothing written, and spending the day writing instead of pasting. If you get to the clinic without updating, the rule is simple: **load your snapshot, publish nothing, update, then write and paste.** A published workflow with empty words sends blank emails to real people.
 
 ## Stuck
 

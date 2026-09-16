@@ -45,16 +45,16 @@ Values whose names appear in both Essentials packs are one value in an account. 
 
 | Value | Key | What goes in it |
 |---|---|---|
-| Call Booking Link | `call_booking_link` | Not written by the app. Open your own `Discovery call` calendar, click `Share`, then `Copy Link`, and paste the link and nothing else. |
-| Call Link Email Subject | `call_link_email_subject` | The subject line of the email that sends your booking link. Copy it from ops-workflow.md in your growth-engine folder if the app wrote it there. |
+| Call Booking Link | `call_booking_link` | Not words, and the one value you cannot prepare in advance. At the clinic, open your own `Discovery call` calendar, click `Share`, then `Copy Link`, and paste the link and nothing else. |
+| Call Link Email Subject | `call_link_email_subject` | The subject line of the email that sends your booking link. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Link Email Body | `call_link_email_body` | The body of that email, with the booking link taken out, because the step puts the link on its own line underneath. Two to four short sentences: why a short call is worth their time, and an ask to pick a time from the link below. |
-| Call Nudge Subject | `call_nudge_subject` | The subject line of the nudge sent 2 days after the booking link email to someone who has not booked or replied. Copy it from ops-workflow.md in your growth-engine folder if the app wrote it there. |
+| Call Nudge Subject | `call_nudge_subject` | The subject line of the nudge sent 2 days after the booking link email to someone who has not booked or replied. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Nudge Body | `call_nudge_body` | One to three sentences, with the link taken out. A light reminder with one reason to book, not the first email again. |
-| Call Last Nudge Subject | `call_last_nudge_subject` | The subject line of the last nudge, sent 3 days after the nudge. Copy it from ops-workflow.md in your growth-engine folder if the app wrote it there. |
+| Call Last Nudge Subject | `call_last_nudge_subject` | The subject line of the last nudge, sent 3 days after the nudge. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Last Nudge Body | `call_last_nudge_body` | Two to four sentences, with the link taken out. Say this is the last email you will send about booking. |
-| Call Missed Subject | `call_missed_subject` | The subject line of the email sent a day after you mark a call `No Show`. Copy it from ops-workflow.md in your growth-engine folder if the app wrote it there. |
+| Call Missed Subject | `call_missed_subject` | The subject line of the email sent a day after you mark a call `No Show`. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Missed Body | `call_missed_body` | Two or three sentences, with the link taken out. No blame, an easy way to book again through the link below, and a line saying this is the last email you will send about it. |
-| Call Cancelled Subject | `call_cancelled_subject` | The subject line of the email sent straight after a lead cancels their call. Copy it from ops-workflow.md in your growth-engine folder if the app wrote it there. |
+| Call Cancelled Subject | `call_cancelled_subject` | The subject line of the email sent straight after a lead cancels their call. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Cancelled Body | `call_cancelled_body` | Two or three sentences, with the link taken out. Thank them for letting you know, and invite them to pick a new time through the link below if they still want to talk. |
 
 ## B2B Proposal chase (6)

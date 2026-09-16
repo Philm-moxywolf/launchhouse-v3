@@ -1,5 +1,5 @@
 ---
-description: Write the words your loaded GoHighLevel snapshot is waiting for, and get them in
+description: Write the words your GoHighLevel snapshot will arrive without, before it loads, and paste them in after
 ---
 
 Use the ghl-values skill.

@@ -1,11 +1,13 @@
 ---
 name: ghl-values
-description: Fill the GoHighLevel custom values a loaded snapshot arrives with empty, in the founder's own voice, from their Brain and the copy their engines already wrote, then put them into their account by hand or over the API. Both tracks. Trigger on "fill my custom values", "my snapshot emails are blank", "write my GoHighLevel copy", "finish setting up my snapshot", "what goes in custom values", or "my workflow sent a blank email".
+description: Write every GoHighLevel custom value a snapshot will arrive without, in the founder's own voice, from their Brain and the copy their engines already wrote, before the snapshot is loaded, then put them into the account once it is. Both tracks. Trigger on "fill my custom values", "my snapshot emails are blank", "write my GoHighLevel copy", "finish setting up my snapshot", "what goes in custom values", or "my workflow sent a blank email".
 ---
 
 # GoHighLevel values
 
-A loaded snapshot arrives with every workflow built and every message empty. Only the names of the slots travel, never the words in them. Until the words are in, the workflows send blank emails to real people.
+A snapshot arrives with every workflow built and every message empty. Only the names of the slots travel, never the words in them. Until the words are in, the workflows send blank emails to real people.
+
+So the words are written first, at home, and pasted in after the snapshot loads.
 
 This turns the copy the founder already wrote into the exact list their account is waiting for, and gets it in.
 
@@ -13,7 +15,9 @@ This turns the copy the founder already wrote into the exact list their account 
 
 **Who is reading.** A founder who does not use a terminal. Never ask them to run a command.
 
-**Order matters.** The snapshot is loaded first, at the clinic on 23 September. Loading brings the value names. Filling them comes after, and publishing comes after that. If they have not loaded yet, say so plainly, then offer to write the words now so the paste takes minutes on the day.
+**Order matters, and the writing comes first.** The words are written in the week before the clinic, from the Brain and the ops file. Nothing here needs the snapshot to exist, so never tell a founder they are early. The snapshot is loaded at the clinic on 23 September, which brings the empty slots, and the words written earlier are pasted in then. Publishing comes after that.
+
+If the snapshot is already loaded, nothing changes except that the pasting can follow straight on.
 
 ## Prerequisites
 
@@ -63,7 +67,7 @@ Never ask for something the Brain or their files already say. After reading ever
 1. The one word every email opens with: Hi, Hey, Hello or Good morning.
 2. What actually happens after someone enquires, and how fast. The welcome email promises this, so it has to be true.
 3. How they sign off, and the name they sign with.
-4. `Discovery booking` only: what a call with them is like, and their booking link, copied from their own `Discovery call` calendar with `Share`, then `Copy Link`.
+4. `Discovery booking` only: what a call with them is like. Their booking link is copied out of their own `Discovery call` calendar with `Share`, then `Copy Link`, so if the snapshot is not loaded yet, do not ask for it. Leave that one value blank and say plainly that it is the one they paste on the day.
 
 ## Step 4: write the words
 
@@ -142,7 +146,13 @@ Then one live test: send themselves the real trigger, from their own second emai
 
 ## Gate
 
+Two stopping points, because this runs twice.
+
+**Writing, in the week before:**
 - the two lists named, and confirmed with them
 - every value on those lists written in their voice, none holding a bracket or a greeting
-- `ghl-values.md` saved
+- `ghl-values.md` saved, and read back to them
+- any value that waits for the day named plainly, and left blank
+
+**Pasting, once the snapshot is loaded:**
 - the account filled, checked on all four counts, and one live test read back
