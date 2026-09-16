@@ -77,6 +77,9 @@ if [ ! -f "$ge/.state/imported.md" ]; then
   for z in "$root"/*.zip "$ge"/*.zip; do
     [ -f "$z" ] && leftovers=1
   done
+  for d in "$root"/growth-engine\ */; do
+    [ -f "${d}README-your-files.md" ] && leftovers=1
+  done
 fi
 
 if [ -n "$leftovers" ]; then

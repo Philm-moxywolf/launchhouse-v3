@@ -6,7 +6,7 @@ Where you are, what is left, and what has to be true before you travel. Today is
 
 | When | What | What you leave with |
 |---|---|---|
-| Fri 4 September | Pre-work sent | Your own copy set up: the Launchhouse app for most founders, or this folder if you started in Claude |
+| Fri 4 September | Pre-work sent | Your own copy set up: the Launchhouse app for most founders, or the older Launchhouse toolkit if you started in Claude |
 | Mon 7 or Tue 8 September | Session 1 | Your Founder Brain, and your track chosen once. B2B also starts the sending domain |
 | Between 1 and 2 | Homework | Your 30 pieces, and 10 to 20 things you have already written, gathered first |
 | Mon 14 or Tue 15 September | Session 2 | GoHighLevel bought and connected, Apollo finished for B2B |
@@ -23,7 +23,9 @@ Where you are, what is left, and what has to be true before you travel. Today is
 
 Everything in one place, connected, and proved by reading your own accounts back rather than by taking your word for it.
 
-**If you built your work in the Launchhouse app,** this is the move, and it comes first. Download everything from the app's Files screen. Take your private copy of this folder and open it in Claude: [START-HERE.md](START-HERE.md) is how. Drag the download in and say "bring my work across". It is saved exactly as it arrived before anything is tidied, so nothing is lost in the move.
+**If you built your work in the Launchhouse app,** this is the move, and it comes first. Download everything from the app's Files screen. Take your private copy of this folder and open it in Claude: [START-HERE.md](START-HERE.md) is how. Drag the download in, still zipped. If your Mac opened it into a folder, leave that folder where it is. Then say "bring my work across". It is saved exactly as it arrived before anything is tidied, so nothing is lost in the move.
+
+**If you started in Claude with the older Launchhouse toolkit,** remove it from the Plugins panel first, then quit and reopen the app, so only one set of commands answers. Your work in its folder is not touched. Then take your private copy of this folder the same way, say "bring my work across", and tell Claude which folder your work is in. It is copied, never moved.
 
 Then: `/growth-engine:connect`, or say "connect my tools". GoHighLevel for both tracks, and Apollo as well if you sell to businesses. Then `/growth-engine:status`, or "where am I up to", so you leave knowing exactly what is outstanding.
 
@@ -41,7 +43,7 @@ Five things, and it is a short gap: Session 3 is the Monday or Tuesday and the c
 
 ### The clinic, Wednesday 23 September
 
-About half an hour, and most of it is pasting. You load your snapshot, paste in the words you wrote the evening before, publish, and send yourself one real test.
+About half an hour, and most of it is pasting. You load your snapshot, paste in the words you wrote the evening after Session 3, publish, and send yourself one real test.
 
 Both things have to be true before you travel: your snapshot loaded and sending, and your Brain proved to be read by Claude on your own machine.
 
@@ -63,11 +65,11 @@ Writing, sending and meeting people. Nothing is set up on the day.
 
 ## What differs by track
 
-**B2B.** The sending domain started in Session 1 and is the only deadline that is not ours. Apollo sends. Your second engine is the sequence, the list criteria, 25 people and 25 first lines.
+**B2B.** The sending domain started in Session 1 and is the only deadline that is not ours. If your work email is on Google, Apollo sends. On any other provider your 25 go by hand from your own mailbox. Your second engine is the sequence, the list criteria, 25 people and 25 first lines.
 
 **B2C.** No domain and no Apollo. Instagram must be a Business or Creator account linked to a Facebook Page, or nothing publishes or captures inbound. Your second engine is 25 targets, 25 openers, the hook bank and your inbound scripts.
 
-Everything else is the same: the Brain, the 30 pieces, GoHighLevel, one snapshot of six, the clinic, and the Sunday plan.
+Everything else is the same: the Brain, the 30 pieces, GoHighLevel, one snapshot that your track decides with every pack in it arriving as drafts, the clinic, and the Sunday plan.
 
 ## If you are behind
 

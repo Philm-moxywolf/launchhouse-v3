@@ -116,10 +116,12 @@ done
 
 # No dead ends. An engine that is missing something offers the way forward, or
 # asks for what it needs, and never just ends. Safety stops, such as the wrong
-# folder or the wrong track, still say where to go.
-for f in $(find $P/skills -name SKILL.md); do
-  grep -niE 'do not proceed|stop and tell the founder to run' "$f" >/dev/null 2>&1 \
-    && err "$f ends at a dead end: $(grep -niE 'do not proceed|stop and tell the founder to run' "$f" | head -1 | cut -c1-80)"
+# folder or the wrong track, still say where to go. Commands route to engines,
+# so they are held to the same rule.
+deadend='do not proceed|stop and tell the founder to run|stop and tell the founder the founder brain comes first'
+for f in $(find $P/skills -name SKILL.md) $(find $P/commands -name '*.md'); do
+  grep -niE "$deadend" "$f" >/dev/null 2>&1 \
+    && err "$f ends at a dead end: $(grep -niE "$deadend" "$f" | head -1 | cut -c1-80)"
 done
 for sk in content-engine outreach-b2b audience-b2c ghl-workflows growth-plan ghl-values apollo-sequence; do
   grep -q 'When the Brain is not enough\|When something is missing or thin' "$P/skills/$sk/SKILL.md" \

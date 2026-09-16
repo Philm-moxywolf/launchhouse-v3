@@ -24,7 +24,7 @@ This is the single most common problem.
 
 **Read the session context at the top of the conversation.**
 - If it says this is not the founder folder, tell them which folder to open, and that nothing is lost.
-- If it says nothing about Launchhouse, look for `growth-engine/.launchhouse` in this folder, one folder down, and the parent folder.
+- If it says nothing about Launchhouse, look for `growth-engine/.launchhouse` in this folder, one folder down, the parent folder, and the home folder.
 
 **If you find more than one Launchhouse folder** (the session context names them):
 1. Show each location, what it contains, and when it last changed, from the `modified` column of its `growth-engine/.state/index.md`.
@@ -37,7 +37,7 @@ This is the single most common problem.
 
 If this skill is running, the plugin is loaded. Say so plainly, because founders often assume something is broken when it is not.
 
-The Launchhouse checks run separately. If the top of the conversation has no line starting "Launchhouse", they are not running on this computer. Run `git --version`. On a Windows PC, if that fails, the computer needs Git for Windows: git-scm.com, Download for Windows, press Next on every screen, then quit and reopen the Claude app. On a Mac, quit and reopen the app.
+The Launchhouse checks run separately. If this folder has `growth-engine/.launchhouse` and the top of the conversation has no line starting "Launchhouse", they are not running on this computer. In a folder that is not set up yet, no such line is expected: offer `/growth-engine:start` instead. When the checks are not running, run `git --version`. On a Windows PC, if that fails, the computer needs Git for Windows: git-scm.com, Download for Windows, press Next on every screen, then quit and reopen the Claude app. On a Mac, quit and reopen the app.
 
 ### 3. Saving
 

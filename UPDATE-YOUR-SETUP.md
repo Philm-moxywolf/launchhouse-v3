@@ -10,7 +10,7 @@ Updating cannot lose your Brain, your posts or your files, because they live in 
 
 ## Why update at all
 
-The step that writes your snapshot's words arrived in a later version. You run it in the week before the clinic, not on the day. Without it, Claude does not know your value names, how many there are, or which of them have to be filled before you publish.
+The step that writes your snapshot's words arrived in a later version. You run it the evening after Session 3, not on the day of the clinic. Without it, Claude does not know your value names, how many there are, or which of them have to be filled before you publish.
 
 Updates are never automatic. You take them when we say, so that a room of 130 people is running the same thing.
 
@@ -20,7 +20,7 @@ Updates are never automatic. You take them when we say, so that a room of 130 pe
 
 1. Open the Claude desktop app on your Launchhouse folder.
 2. Press the **+** button next to the message box and open **Plugins**.
-3. Find **growth-engine** and update it. You want version **0.9.4** or later.
+3. Find **growth-engine** and update it. You want version **0.9.5** or later.
 4. If it still shows the old version, quit the app and open it again.
 
 **In Claude Code, the terminal:**
@@ -62,7 +62,7 @@ If `ops-workflow.md` is missing, say **"build my ops engine"** first. It names t
 
 ## Does your folder itself need updating?
 
-No. Your folder is your own private copy, and the engine lives in the plugin, not in the copy. So there is nothing to pull into it and nothing to merge. Nothing in it has to change for the new step, and it has been checked four ways. Your permissions file already allows everything the step runs, your `CLAUDE.md` names no individual skills, and the checks already know the new file by name.
+No. Your folder is your own private copy, and the engine lives in the plugin, not in the copy. So there is nothing to pull into it and nothing to merge. Nothing in it has to change for the new step. Your permissions file already allows the saving it does, your `CLAUDE.md` does not need to name it, and the checks already know the new file by name.
 
 If we ever do change something in the folder itself, we will say exactly which file and Claude will put it in for you.
 
@@ -70,7 +70,7 @@ If we ever do change something in the folder itself, we will say exactly which f
 
 If you also installed the older `launchhouse` toolkit at some point, you now have two sets of the same commands, and Claude will answer with whichever wins.
 
-Keep `growth-engine@launchhouse-v3`. Remove the other from the Plugins panel, then quit and reopen the app. Keeping both is worse than it sounds: only this one carries the checks that hold a file breaking a rule and put it back as it was.
+Keep `growth-engine@launchhouse-v3`. Remove the other from the Plugins panel first, then quit and reopen the app. Your work is not touched. If your work is still in the folder you used with the older toolkit, open this copy, say **"bring my work across"**, and tell Claude which folder that is. It is copied, never moved. Keeping both is worse than it sounds: only this one carries the checks that hold a file breaking a rule and put it back as it was.
 
 ## Checking nothing was lost
 

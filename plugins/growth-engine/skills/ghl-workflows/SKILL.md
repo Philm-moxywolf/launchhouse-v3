@@ -7,7 +7,7 @@ description: Build the operations engine. Runs a bottleneck diagnostic, names th
 
 One workflow running on the founder's own business before they leave Atlanta.
 
-**The workflow is a pre-built GoHighLevel snapshot.** It is loaded into the founder's own account at the clinic on Wednesday 23 September, and every message inside it arrives empty. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
+**The workflow is a pre-built GoHighLevel snapshot.** It is loaded into the founder's own account at the clinic on Wednesday 23 September, and every message inside it arrives without the founder's words. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
 
 **Founders do not build workflows.** If a founder starts describing a bespoke automation, bring them back to the library. A custom build cannot be loaded and tested in one clinic session; a snapshot can.
 
@@ -47,7 +47,7 @@ Then name the bottleneck in one sentence, in their words. Confirm it with them b
 |---|---|---|
 | B2B | **B2B** | Essentials B2B, Lead follow-up, Discovery booking, Proposal chase |
 | B2C | **B2C** | Essentials B2C, Comment to DM, DM qualify and book, Review request |
-| Either, hybrid | **Hybrid** | One Essentials, plus all six packs, on a board of its own |
+| Either, hybrid | **Hybrid** | B2C Essentials (on either track), plus all six packs, on a board of its own |
 
 Every pack arrives as drafts. Nothing runs until the founder publishes it, so what the bottleneck decides is **which pack they publish first, and whose words get written first.**
 
@@ -125,11 +125,11 @@ First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-
 
 ## Before and at the clinic
 
-The founder loads the snapshot at the clinic on 23 September. Loading brings every workflow and the empty name of every message slot, and none of the words.
+The founder loads the snapshot at the clinic on Wednesday 23 September. Loading brings every workflow and the names of the message slots, not the words. Each slot arrives empty or holding the word PLACEHOLDER, and either way it sends exactly as it is until the founder's words are pasted in.
 
-So the words are written first, before the clinic, usually the evening after Session 3, with `/growth-engine:values`, or by saying "fill my custom values". At the clinic they are pasted in as custom values. That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
+So the words are written first, before the clinic, usually the evening after Session 3, with `/growth-engine:values`, or by saying "fill my custom values". At the clinic they are pasted in as custom values, and on B2C and Hybrid the two review emails go into their review templates. That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people. Only the packs whose words were written are published, Essentials among them, and the rest stay as drafts.
 
-**Do not put this copy into their account yet, anywhere.** The snapshot brings the empty slots, and the values step fills them. An email template made now is a second copy that no workflow reads, and the founder ends up typing the same words twice.
+**Do not put this copy into their account yet, anywhere.** The snapshot brings the slots but not the words, and the values step fills them. An email template made now is a second copy that no workflow reads, and the founder ends up typing the same words twice.
 
 Never create, change or switch on a workflow. The snapshot does that.
 

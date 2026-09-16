@@ -59,7 +59,7 @@ A piece the founder has read but not approved counts as not done, on purpose.
 | The list criteria are written down | file-backed | `outreach-sequence.md` holds tight, medium and broad criteria |
 | The list is built | file-backed | at least 25 files in `people/` with `kind: prospect` and a status other than `cut` |
 | First lines exist for the 25 | file-backed | `outreach-firstlines.csv` has the header `email,first_name,company,first_line` and 25 rows |
-| The workflow is built | file-backed | `ops-workflow.md` names the bottleneck and the snapshot, and holds the copy |
+| The workflow is built | file-backed | `ops-workflow.md` names the bottleneck and the pack to publish first, and holds its copy |
 | Domain setup is done and sending has started | self-reported | ask |
 
 Twenty five messages, low volume, to a list the founder built and can explain. Nothing anywhere counts replies.
@@ -72,7 +72,7 @@ Twenty five messages, low volume, to a list the founder built and can explain. N
 | Twenty five targets are recorded | file-backed | at least 25 files in `people/` with `kind: target` |
 | A hook bank with offer tests exists | file-backed | `hook-bank.md` has its six categories and an `Offer tests` heading |
 | Inbound scripts exist | file-backed | `inbound-scripts.md` is not nearly empty |
-| The workflow is built | file-backed | `ops-workflow.md` names the bottleneck and the snapshot, and holds the copy |
+| The workflow is built | file-backed | `ops-workflow.md` names the bottleneck and the pack to publish first, and holds its copy |
 | The account is Business or Creator, linked to a Page | self-reported, or read from GoHighLevel | `.state/setup.md` if the connector read it, otherwise ask |
 | The messages have been sent | at the event, not counted at Gate C | people at `status: sent`, `replied`, `booked` or `no_reply`, from Saturday 26 September |
 

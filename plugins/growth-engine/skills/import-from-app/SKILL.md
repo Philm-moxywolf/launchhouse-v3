@@ -1,6 +1,6 @@
 ---
 name: import-from-app
-description: Bring a founder's work across from the Launchhouse app into this folder, then tidy it for the new setup without rewriting anything they wrote. Handles the downloaded zip, a folder unzipped one level too deep, or files dropped loose. Saves an untouched copy first, adjusts files to the current format, checks them against the rules, and saves again. Trigger on "bring my work across", "import from the app", "I downloaded my files", "move my work over", "here is my zip", or when the session context says there is work from the app in the folder.
+description: Bring a founder's work across from the Launchhouse app into this folder, then tidy it for the new setup without rewriting anything they wrote. Handles the downloaded zip, a download the Mac already unzipped, a folder unzipped one level too deep, or files dropped loose. Saves an untouched copy first, adjusts files to the current format, checks them against the rules, and saves again. Trigger on "bring my work across", "import from the app", "I downloaded my files", "move my work over", "here is my zip", or when the session context says there is work from the app in the folder.
 ---
 
 # Bring work across from the app
@@ -18,19 +18,21 @@ The full format every file should end up in is in `../../references/contract.md`
 Look in the folder they opened, and in `growth-engine/`, for any of these:
 
 - **A zip file**, usually `growth-engine.zip`.
+  - If there is more than one, use the newest by its date on disk, and tell them that date before unpacking.
   - If there is none, ask where it saved. It is often the Downloads folder.
   - If they say Downloads, look for `growth-engine*.zip` there. Show them what you found, and copy it into this folder once they say yes.
+- **An unzipped download.** Safari on a Mac unzips downloads by itself, so there may be no zip at all. Look in Downloads for a folder whose name is `growth-engine` or starts with `growth-engine` (such as `growth-engine 2`) and holds `README-your-files.md`, and in this folder for one whose name starts with `growth-engine ` (such as `growth-engine 2`). If you find more than one, use the newest, and tell them the date on its `Downloaded` line before copying anything. Show them what is in it, and once they say yes copy its contents into `.lh-import/growth-engine/`, then carry on exactly as for a zip. Never move or delete the original: for `people/`, `outreach-firstlines.csv` and `dm-openers.md` it is the undo point, as the zip would be.
 - **A folder** called `growth-engine` inside `growth-engine`: unzipped one level too deep.
 - **Loose files** such as `founder-brain.md` or `content-30.md` sitting in the folder they opened rather than in `growth-engine/`.
 - **Files already in the right place**: `growth-engine/founder-brain.md` and friends.
-- **A folder they already used in Claude** with the older Launchhouse toolkit, before this copy existed. Ask where it is, show them what is in it, and once they say yes copy its contents into `.lh-import/growth-engine/`, then carry on exactly as for a zip. Never move or delete the original.
+- **A folder they already used in Claude** with the older Launchhouse toolkit, before this copy existed. Ask where it is. The work is the `growth-engine` folder inside it, so if they name the outer folder, use its `growth-engine` folder, and never copy the outer folder's own files, such as `.claude/` or `CLAUDE.md`. Show them what is in it, and once they say yes copy the contents of that `growth-engine` folder into `.lh-import/growth-engine/`, then carry on exactly as for a zip. Never move or delete the original.
 
-If you cannot find anything, ask them to download everything again. In the app: open Files, press the button that downloads everything. Then drag the file into this folder. Stop until they have.
+If you cannot find anything, ask them to download everything again. In the app: open Files, press the button that downloads everything. Then drag the file into this folder. If their Mac opens it into a folder instead, that is fine: look for it in Downloads as above. Stop until they have.
 
 **Unpack a zip into a holding folder, never straight into growth-engine:**
 - Make `.lh-import/`.
 - Run `unzip -o <zip> -d .lh-import`.
-- If `unzip` is not available (usual on Windows), run `powershell -NoProfile -Command Expand-Archive -Path '<zip>' -DestinationPath .lh-import -Force`.
+- If `unzip` is not available (usual on Windows), run `powershell -NoProfile -Command Expand-Archive -LiteralPath "'<zip>'" -DestinationPath .lh-import -Force`. The double quotes keep the single quotes for PowerShell, so a name with a space, such as `growth-engine (1).zip`, still works.
 - If neither works, ask the founder to right-click the zip, choose Extract All, and tell you when it is done.
 - The app's zip has a `growth-engine/` folder at its top. Use that folder's contents.
 
@@ -74,7 +76,7 @@ First write `growth-engine/.state/imported.md` in the shape in the contract, wit
 
 This is the undo point for everything after. If git needs a name and email, follow step 4 of the `start` skill first.
 
-`people/`, `outreach-firstlines.csv` and `dm-openers.md` are kept out of git on purpose, so this save does not hold them. For those files, the zip is the undo point. Tell the founder to keep the zip until they are happy with the move.
+`people/`, `outreach-firstlines.csv` and `dm-openers.md` are kept out of git on purpose, so this save does not hold them. For those files, the zip, or the folder they came from, is the undo point. Tell the founder to keep it until they are happy with the move.
 
 ## 4. Adjust to the current format
 
@@ -112,6 +114,12 @@ If more than two things are missing, say so, and offer the full `founder-brain` 
 ### B2B first lines
 
 If `outreach-firstlines.csv` has a `status` column, or quotes around every field, rewrite it with the unquoted header `email,first_name,company,first_line`, quoting only fields that hold a comma or a quote. Keep every row. This file stays out of git, because it holds real people's details.
+
+Then, if `people/` holds fewer `kind: prospect` files than the CSV has rows, write a person file for each row whose email has none, named by the slug of the email, in the prospect shape in the contract. Set `key` and `email` to the address, with `kind: prospect`, `status: candidate`, `source: import`, `created` today, and `first_name` and `company` from the row. Put the row's `first_line` inside the Opener block. Never change a person file that already exists.
+
+### B2C openers
+
+If `people/` holds fewer `kind: target` files than `dm-openers.md` has openers, write a target file for each handle that has none, named by the slug of `ig:<handle>`, in the target shape in the contract. Set `key: ig:<handle>`, with `kind: target`, `status: opener_written`, `platform: ig`, `handle` without the `@`, `source: import` and `created` today. Put that opener inside the Opener block. Never change a person file that already exists. An opener with no handle against it gets no file: tell the founder how many there are, and that each one is recorded once they add the handle. These files stay out of git, because they hold real people's details.
 
 ### Refill archives
 

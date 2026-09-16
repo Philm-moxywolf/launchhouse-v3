@@ -23,8 +23,9 @@ The full guide, with what you will see at each step, is [START-HERE.md](START-HE
 3. **Put it on your computer.** On your copy, press **Code**, then **Open with GitHub Desktop**, then **Clone**.
 4. **Open it in Claude.** In the Claude app, choose **Code**, pick the folder, and accept the Launchhouse plugin.
    - If it is not offered: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**.
+   - If you used the older Launchhouse toolkit, remove it from the Plugins panel first, then quit and reopen the app. Your work in its folder is not touched.
 5. **Start.** Say **"start launchhouse"**.
-6. **Bring your work across.** If you built work in the Launchhouse app, download everything from its Files screen, drag the file into your folder, and say **"bring my work across"**.
+6. **Bring your work across.** If you built work in the Launchhouse app, download everything from its Files screen and drag the file into your folder, still zipped. If your Mac opened it into a folder instead, leave that folder where it is. Then say **"bring my work across"**. If you used the older Launchhouse toolkit in Claude, say the same and tell Claude which folder that work is in.
 7. **Connect your tools.** In **Settings**, then **Connectors**, connect HighLevel, and Apollo if you sell to businesses. Then say **"connect my tools"**.
 8. **Check.** Say **"where am I up to"**.
 
@@ -95,7 +96,7 @@ Everything is in `growth-engine/` inside the founder's own folder. Most of it is
 | `tests/rules/` | 197 real sentences the rules must hold or leave alone, taken from the Launchhouse app's own tests and from founder simulations |
 | `tests/hooks/` | Builds a throwaway founder folder and drives the hooks the way Claude does |
 | `tests/scaffold/` | Checks the founder template matches what the start skill creates |
-| `.github/workflows/validate.yml` | Runs all of it on every push, under sh, dash and bash with two awks, and on Windows |
+| `.github/workflows/validate.yml` | Runs the check, and the rules and hooks suites under sh, dash and bash with two awks and on Windows, on every push. The founder template is checked only where it sits alongside this repository, so run the check locally before a release |
 
 ## For maintainers
 
@@ -114,7 +115,7 @@ sh scripts/validate.sh
 - that no internal planning material is committed
 - the founder template, when it sits next to this repository at `../launchhouse-founder-template`
 
-It then runs all three test suites.
+It then runs the rules and hooks suites, and the scaffold suite too when the founder template sits alongside.
 
 **Working rules**
 - **Fix the skill, not the output.** A generic post means the skill is not reading the Brain's voice. Editing the post hides that.

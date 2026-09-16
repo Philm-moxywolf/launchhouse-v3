@@ -88,18 +88,21 @@ The folder is saved with git, so every change can be seen and undone, and so it 
 Check for work from the app. Any of these means the founder has brought files across:
 - `growth-engine/README-your-files.md`
 - a folder called `growth-engine` inside `growth-engine`
+- a folder in the folder they opened whose name starts with `growth-engine ` (such as `growth-engine 2`) and holds `README-your-files.md`, **unless** `growth-engine/.state/imported.md` exists, because the import leaves that folder in place as the undo point
 - `growth-engine/.state/HOME` mentioning `/tmp/ge/`
 - a `.zip` file in the folder, or in `growth-engine/`, **unless** `growth-engine/.state/imported.md` exists, which means the import already happened
 
 **If there is app work,** say: "I can see your work from the app. I will bring it across and tidy it for the new setup. Nothing you wrote gets rewritten." Then follow the `import-from-app` skill.
 
-**If there is no app work in the folder, ask once:** "Did you build anything in the Launchhouse app, like your Founder Brain?" Most founders did, in Session 1.
+**If there is no app work in the folder, ask once:** "Did you build anything already, in the Launchhouse app or in Claude with the older Launchhouse toolkit?" Most founders did, in Session 1.
 
 **If their work is still in the app,** tell them how to get it:
 1. In the app, open Files and press the button that downloads everything.
-2. Drag the downloaded file into this folder, or tell you where it saved.
+2. Drag the downloaded file into this folder, or tell you where it saved. If their Mac opened it into a folder, they leave that folder where it is and tell you.
 
 Then follow `import-from-app`.
+
+**If their work is in a folder they used with the older toolkit,** follow `import-from-app`, which copies it across and never moves the original.
 
 **If there is no app work and no Founder Brain,** say that the Founder Brain comes next. It is the record of their business that everything else reads, about an hour of their own words. Offer to start now, and follow the `founder-brain` skill if they say yes.
 

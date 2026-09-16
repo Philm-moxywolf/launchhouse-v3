@@ -79,8 +79,8 @@ Add any of these lines that are missing. Keep whatever else is there.
 # Real people's details. Never in git.
 **/people/*
 !growth-engine/people/README.md
-growth-engine/outreach-firstlines.csv
-growth-engine/dm-openers.md
+**/outreach-firstlines.csv
+**/dm-openers.md
 # A copy unzipped in the wrong place, or twice.
 growth-engine/growth-engine/
 growth-engine */

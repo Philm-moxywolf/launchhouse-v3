@@ -19,7 +19,7 @@ Each check writes a row in `growth-engine/.state/setup.md`, in the shape in `../
 ## 0. Before starting
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
-2. **Read the track** from the Brain. Apollo is B2B only. A B2C founder never sees an Apollo step, and not seeing one is correct.
+2. **Read the track** from the Brain. Apollo is B2B only. A B2C founder never sees an Apollo step, and not seeing one is correct. If there is no Brain, or it has no Track line yet, do not stop and never ask which track they are on. Say in one sentence that GoHighLevel is the same for everyone, so it can be checked now, and that the rest waits until their Founder Brain is built. Do section 1 without its B2C-only Instagram check, skip section 2, then offer to build the Brain now (`/growth-engine:brain`, or "build my founder brain"), and tell them that saying "connect my tools" afterwards finishes the job.
 3. **Check what is done.** Read `growth-engine/.state/setup.md` if it exists. Skip what is already done unless they asked to check again.
 
 ## 1. GoHighLevel
@@ -27,8 +27,8 @@ Each check writes a row in `growth-engine/.state/setup.md`, in the shape in `../
 ### Do they have it
 
 Ask: "Can you log in to GoHighLevel?" The programme buys the Starter plan in Session 2.
-- **If not yet:** record `GoHighLevel connector | not needed yet | <date> | not bought yet`. Say they are not behind, and stop this part.
-- **If they are not sure:** tell them to look in their inbox for an email from GoHighLevel with a login link. If there is nothing, they have not bought it yet, and that is fine.
+- **If not yet:** record `GoHighLevel connector | not started | <date> | not bought yet`. Say plainly that it was due in Session 2. The clinic on Wednesday 23 September loads their snapshot into it, so it is needed before then. Give the one next step: buy the Starter plan now, as Session 2 set out, then say "connect my tools" again. If they are unsure how, send them to the Slack channel. Stop this part until then.
+- **If they are not sure:** tell them to look in their inbox for an email from GoHighLevel with a login link. If there is nothing, they have not bought it yet, so follow the step above.
 
 ### Is it connected
 

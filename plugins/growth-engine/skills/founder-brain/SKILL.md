@@ -76,7 +76,7 @@ Ask: **does your revenue come mostly from selling to other businesses, or to ind
 - Mostly consumers, so B2C
 - Genuinely both
 
-If they say both, do not create a third track. Ask which motion produces more revenue today, or which one they most want to grow over the next 90 days. Record that as `track`, and record `hybrid: true` alongside it. The hybrid flag adjusts tone and examples later. It does not create a separate path.
+If they say both, do not create a third track. Ask which motion produces more revenue today, or which one they most want to grow over the next 90 days. Record that as `track`, and record `hybrid: true` alongside it. The hybrid flag adjusts tone and examples later, and it gives them the Hybrid GoHighLevel snapshot. It does not create a third track.
 
 Explain briefly why you are asking: the outreach engine works completely differently on each track, and getting this wrong means building the wrong machine.
 

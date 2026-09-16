@@ -319,7 +319,7 @@ Written once by import-from-app, after the app's work is saved.
 - **On:** YYYY-MM-DD
 ```
 
-While it exists, a leftover zip in the folder is not taken as new app work.
+While it exists, a leftover zip, or a leftover downloaded folder whose name starts with `growth-engine ` (such as `growth-engine 2`), is not taken as new app work.
 
 ## drafts/
 

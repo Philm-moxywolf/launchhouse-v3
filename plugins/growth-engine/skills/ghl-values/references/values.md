@@ -1,6 +1,6 @@
 # Every custom value, by pack
 
-A founder fills the **Essentials** list for their track, and the list for **every pack** in their track's snapshot. The Hybrid snapshot has one Essentials list and all six packs. Nothing else. The pack named in `ops-workflow.md` is written first. A file made in the app calls that pack a snapshot, and `Comment-to-DM capture` there is the `Comment to DM` pack here.
+A founder fills the **Essentials** list for their snapshot, and the list for **every pack** in it. The B2B snapshot uses B2B Essentials. The B2C and Hybrid snapshots use B2C Essentials, so a Hybrid founder writes `Customer Welcome Subject` and `Customer Welcome Body`, never the Client pair, even on the B2B track. The Hybrid snapshot has that one Essentials list and all six packs. Nothing else. The pack named in `ops-workflow.md` is written first. A file made in the app calls that pack a snapshot, and `Comment-to-DM capture` there is the `Comment to DM` pack here.
 
 The key is what the workflow step uses, written `{{custom_values.<key>}}`. GoHighLevel builds the key from the name when the value is created, so a value must never be renamed afterwards: every step that uses it would go blank.
 
@@ -45,7 +45,7 @@ Values whose names appear in both Essentials packs are one value in an account. 
 
 | Value | Key | What goes in it |
 |---|---|---|
-| Call Booking Link | `call_booking_link` | Not words, and the one value you cannot prepare in advance. At the clinic, open your own `Discovery call` calendar, click `Share`, then `Copy Link`, and paste the link and nothing else. |
+| Call Booking Link | `call_booking_link` | Not words, and a value you cannot prepare in advance. At the clinic, open your own `Discovery call` calendar, click `Share`, then `Copy Link`, and paste the link and nothing else. |
 | Call Link Email Subject | `call_link_email_subject` | The subject line of the email that sends your booking link. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
 | Call Link Email Body | `call_link_email_body` | The body of that email, with the booking link taken out, because the step puts the link on its own line underneath. Two to four short sentences: why a short call is worth their time, and an ask to pick a time from the link below. |
 | Call Nudge Subject | `call_nudge_subject` | The subject line of the nudge sent 2 days after the booking link email to someone who has not booked or replied. Copy it from `ops-workflow.md` in your growth-engine folder if it is already written there. |
@@ -117,12 +117,12 @@ If `ops-workflow.md` names a different pack, it holds no Proposal chase emails. 
 | DM Question 2 Button 1 | `dm_question_2_button_1` | The first answer option under question two. One to three words, 20 characters or fewer including spaces. |
 | DM Question 2 Button 2 | `dm_question_2_button_2` | The second answer option under question two. One to three words, 20 characters or fewer including spaces. |
 | DM Route Message | `dm_route_message` | The routing message from the same part of the file, without the link. One or two short sentences saying what the link is and what to do next. |
-| DM Booking Link | `dm_booking_link` | The full link your routing message points to, starting https://, and nothing else. It is your booking page or your free thing. |
+| DM Booking Link | `dm_booking_link` | The full link your routing message points to, starting https://, and nothing else. It is your booking page or your free thing. If it will be a GoHighLevel calendar you have not made yet, leave it blank and paste its link on the day, like `Call Booking Link`. |
 | DM Nudge | `dm_nudge` | The single follow-up from the same part of the file. One or two short sentences. |
 
 ## B2C Review request (0)
 
-No custom values. This snapshot's words live in two review templates, not in the custom values list. Go to `Reputation`, the `Settings` tab, then the email request settings, and open `Set Email Templates`. Write `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding PLACEHOLDER text, neither carries a merge field, and your business name and postal address are typed in rather than merged.
+No custom values. This pack's words live in two review templates, not in the custom values list. The values step still writes both, under `## Review request templates` in `ghl-values.md`, so they are ready to paste. Go to `Reputation`, the `Settings` tab, then the email request settings, and open `Set Email Templates`. Write `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding PLACEHOLDER text, neither carries a merge field, and your business name and postal address are typed into the template's own lines rather than merged, never into the words.
 
 **Contact fields this pack brings.** Not copy: they hold information about one person, and the workflow merges them into the message.
 

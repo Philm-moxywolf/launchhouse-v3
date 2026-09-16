@@ -5,7 +5,7 @@ description: Write every GoHighLevel custom value their snapshot will arrive wit
 
 # GoHighLevel values
 
-A snapshot arrives with every workflow built and every message empty. Only the names of the slots travel, never the words in them. Until the words are in, the workflows send blank emails to real people.
+A snapshot arrives with every workflow built. The names of the message slots arrive, not the words. Each slot arrives empty or holding the word PLACEHOLDER, and either way it sends exactly as it is until the founder's words are pasted in. A workflow published before then sends that to real people.
 
 So the words are written first, at home, and pasted in after the snapshot loads.
 
@@ -15,7 +15,7 @@ This turns the copy the founder already wrote into the exact list their account 
 
 **Who is reading.** A founder who does not use a terminal. Never ask them to run a command.
 
-**Order matters, and the writing comes first.** The words are written before the clinic, usually the evening after Session 3, from the Brain and the ops file. Nothing here needs the snapshot to exist, so never tell a founder they are early. The snapshot is loaded at the clinic on 23 September, which brings the empty slots, and the words written earlier are pasted in then. Publishing comes after that.
+**Order matters, and the writing comes first.** The words are written before the clinic, usually the evening after Session 3, from the Brain and the ops file. Nothing here needs the snapshot to exist, so never tell a founder they are early. The snapshot is loaded at the clinic on Wednesday 23 September, which brings the slots but not the words, and the words written earlier are pasted in then. Publishing comes after that.
 
 If the snapshot is already loaded, nothing changes except that the pasting can follow straight on.
 
@@ -32,23 +32,28 @@ If the snapshot is already loaded, nothing changes except that the pasting can f
 
 ## Step 1: name their lists
 
-Their track decides their snapshot, and the snapshot decides the lists. Nobody chooses anything here. The full lists, with every name, key and what belongs in it, are in `references/values.md`.
+Their track and hybrid flag decide their snapshot, and the snapshot decides the lists. Nobody chooses anything here. The full lists, with every name, key and what belongs in it, are in `references/values.md`.
 
 | Snapshot | The lists in it | Values |
 |---|---|---|
 | **B2B** | Essentials 11, Lead follow-up 6, Discovery booking 11, Proposal chase 6 | 34 |
 | **B2C** | Essentials 11, Comment to DM 7, DM qualify and book 10, Review request 0 | 28 |
-| **Hybrid** | One Essentials 11, plus all six packs, on one board of its own | 51 |
+| **Hybrid** | B2C Essentials 11 (on either track), plus all six packs, on one board of its own | 51 |
 
-**Write them all.** Every pack arrives as drafts, and a founder publishes the packs they filled. Words written now are what lets them switch a second pack on in October without coming back to this.
+**Write them all.** Every pack arrives as drafts, and a founder publishes only the packs whose words they wrote, Essentials among them. Words written now are what lets them switch a second pack on in October without coming back to this.
 
 **Write the pack `ops-workflow.md` names first,** then Essentials, then the rest. That is the pack that answers their bottleneck. If they run short of time, stop after any pack and say plainly which ones you have left, so nothing is published thinking it is finished.
 
-In each `Essentials` list, 9 of the 11 must be filled before anything is published: the two client or customer welcome values are only needed if they switch that pair of workflows on.
+In each `Essentials` list, 9 of the 11 must be filled before anything is published: the two client or customer welcome values are only needed if they switch that pair of workflows on. On Hybrid that pair is the customer welcome values, never the client ones.
 
-`Review request` has no custom values at all. Its two emails live in the review templates at `Reputation`, then the `Settings` tab, then the email request settings, then `Set Email Templates`. Send them there and say why, or they will hunt for values that do not exist.
+`Review request` has no custom values. Its two emails go into review templates instead, at `Reputation`, then the `Settings` tab, then the email request settings, then `Set Email Templates`: `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Still write both, on B2C and Hybrid, because no other step does unless `ops-workflow.md` names Review request.
+- **Where.** In `ghl-values.md`, under a `## Review request templates` heading. Take them from `ops-workflow.md` when it has them, and write them fresh from the Brain when it does not.
+- **Review Ask Email.** A subject of a few plain words, and 2 to 4 short sentences that thank them, name the kind of work the founder does rather than one customer's own job, and ask for an honest review at the link below.
+- **Review Reminder Email.** A subject, and 1 or 2 sentences, shorter than the ask, saying it is the only reminder.
+- **Neither holds** a name, number, result or customer the Brain does not record, a bracket, a merge field, a star rating or a reward, and neither tells the customer what to write. Leave out the business name and postal address, because the template has its own lines for them.
+- **Say where they go.** At the clinic they are always pasted over the PLACEHOLDER words in those two templates, keeping the `Review Link` element below their words, whether or not `Review request` is published. They never go into custom values. Say so, or they will hunt for values that do not exist.
 
-Confirm in one line before writing: "Your Brain says B2C, so you have the B2C snapshot: Essentials plus Comment to DM, DM qualify and book and Review request. That is 28 values. Right?"
+Confirm in one line before writing: "Your Brain says B2C, so you have the B2C snapshot: Essentials plus Comment to DM, DM qualify and book and Review request. That is 28 values and the two review emails. Right?"
 
 ## Step 2: use what they already wrote
 
@@ -61,7 +66,7 @@ Their voice is on paper already. Take it from there rather than inventing a seco
 | `outreach-sequence.md` | B2B: the subject lines and angles they already send |
 | `hook-bank.md` | B2C: hooks worth reworking into subject lines |
 | `dm-openers.md` | B2C: how they open a conversation |
-| `inbound-scripts.md` | B2C: their comment and DM wording, for the two Instagram snapshots |
+| `inbound-scripts.md` | B2C: their comment and DM wording, for the two Instagram packs |
 | `90-day-plan.md` | What they are pushing this quarter, so the ask matches |
 
 Two rules when files disagree. **The Brain wins on voice and on what may be claimed.** A post naming a number the Brain does not record does not license that number here. **The list in `references/values.md` decides what exists.** Copy written in the app, or before the packs were settled, can hold a message with nowhere to go, such as a text message or a note to the founder. Leave those out and say plainly which ones, and why. That is a gap in the list, not a fault in their file.
@@ -73,7 +78,7 @@ Never ask for something the Brain or their files already say. After reading ever
 1. The one word every email opens with: Hi, Hey, Hello or Good morning.
 2. What actually happens after someone enquires, and how fast. The welcome email promises this, so it has to be true.
 3. How they sign off, and the name they sign with.
-4. `Discovery booking` only: what a call with them is like. Their booking link is copied out of their own `Discovery call` calendar with `Share`, then `Copy Link`, so if the snapshot is not loaded yet, do not ask for it. Leave that one value blank and say plainly that it is the one they paste on the day.
+4. `Discovery booking` only: what a call with them is like. Their booking link is copied out of their own `Discovery call` calendar with `Share`, then `Copy Link`, so if the snapshot is not loaded yet, do not ask for it. Leave that value blank and say plainly that they paste it on the day. `DM qualify and book` only: where the routing message sends people, unless their files already say. If it is a GoHighLevel calendar they have not made yet, leave `DM Booking Link` blank and say plainly that they paste it on the day, once the calendar exists.
 
 ## Step 4: write the words
 
@@ -105,6 +110,8 @@ Everything longer than one line, which is every email body and any longer Instag
 <the words, with their blank lines, exactly as they go into the value>
 ```
 
+On B2C and Hybrid, the `## Review request templates` section comes after the packs. `Review Ask Email` and `Review Reminder Email` each get their own `###` heading, with a `Subject:` line and then the body, so each can be copied straight out.
+
 Then two short sections:
 
 - **The contact fields**, which are not copy and are never pasted. `Enquiry message` holds what the person typed on the form. `Personal line` holds a sentence or two written for one person, which the founder or Claude fills later on that contact. `Work done` arrives with `Review request` only, and the founder types it once a job is finished.
@@ -122,7 +129,9 @@ First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-
 
 **Their GoHighLevel connector cannot do this part.** It reads an account and posts content. It has no custom values tool at all, so do not send them round that loop looking for one.
 
-**By hand, which is the normal way.** In their sub-account, open `Settings`, then `Custom Values`. Every name is already there, waiting, because the snapshot brought it. They open each one, paste the words from `ghl-values.md`, and save. Around fifteen minutes for twenty values. Read the names out one at a time if that helps, and keep their place.
+**First, everything back to draft.** Straight after the load, they go to `Automation`, then `Workflows`, select the published ones and set them to draft under `Bulk Actions`, page by page, so nothing fires while they paste.
+
+**By hand, which is the normal way.** In their sub-account, open `Settings`, then `Custom Values`. Every name is already there, waiting, because the snapshot brought it. They open each one, paste the words from `ghl-values.md`, and save. Around fifteen minutes for the whole list. Read the names out one at a time if that helps, and keep their place.
 
 **Change the words only, never the name.** GoHighLevel builds the key from the name when the value is made. Rename one later and every step using it goes blank.
 
@@ -137,18 +146,26 @@ If they choose it:
 - The endpoint is `https://services.leadconnectorhq.com/locations/<id>/customValues`, with a `Version: 2021-07-28` header.
 - **Delete the token with them before you close the job, whether it worked or not.** If they stop part way, a write fails, or they change their mind after making it, delete it then. Send them to `Settings`, then `Private Integrations`, and wait until they say it is gone. Then delete the file they put it in, and say so.
 
+**Then, on B2C and Hybrid, the two review emails, every time.** They go in whether or not `Review request` is published, because a review request sent by hand uses the same templates and would otherwise send the word PLACEHOLDER. This part is always done by hand, even when the values went in over the API.
+- Open `Reputation`, then the `Settings` tab, then the email request settings, then `Set Email Templates`.
+- Paste `Review Ask Email` over the PLACEHOLDER words in the `Live` slot, and `Review Reminder Email` over the PLACEHOLDER words in the `Retry` slot. The subject and body of each come from `## Review request templates` in `ghl-values.md`.
+- Keep the `Review Link` element below their words. It is what carries the link.
+- Type their business name and postal address over the last two PLACEHOLDER lines in each template. The words in `ghl-values.md` leave them out on purpose.
+- Only if they are publishing `Review request` do they also go to `Review Link` on the same tab, choose `Custom Link`, and paste their own review link over the example one.
+
 ## Step 8: prove it landed
 
-Show them all four:
+Show them all five:
 
 1. Every value they wrote exists in the account.
 2. None is empty.
 3. None still says PLACEHOLDER, and none holds a square or curly bracket.
 4. The name of each value is unchanged, so the key the steps use still matches.
+5. On B2C and Hybrid, both review templates hold their words, with no PLACEHOLDER left and the `Review Link` element still in place. This one is always checked by eye on screen, even when the values went in over the API.
 
-Then one live test: send themselves the real trigger, from their own second email address, and read what arrives. A blank where words should be means that value is still empty. Curly brackets in an email mean a value was renamed.
+Then one live test: send themselves the real trigger, from their own second email address, and read what arrives. A blank where words should be means that value is still empty, and the word PLACEHOLDER means it was never replaced. Curly brackets in an email mean a value was renamed.
 
-**Publishing comes after this, not before.** Drafts never run, so the test only proves anything once the pack is published, and a published pack with empty values sends blanks to real people. Fill first, publish, then test.
+**Publishing comes after this, not before.** Drafts never run, so the test only proves anything once the pack is published, and a published pack with empty values sends blanks to real people. Fill first, publish, then test. Publish only the packs whose words were written, Essentials among them, and leave the other packs and the optional workflows as drafts. Their snapshot page gives the order: the card movers first, then the automations, then the event workflows, then the entry workflows, one group at a time. Before publishing, they re-pick anything the load left blank inside the steps: the pipeline and stage on each card mover, the `Form Is` choice on each form trigger, and the tag under each tag trigger. After publishing, and before the live test, they re-pick every choice that names another workflow, because a draft may not show in that list. Their snapshot page lists each one, and all of it is done by eye, because Claude cannot see inside the account.
 
 ## Gate
 
@@ -157,8 +174,10 @@ Two stopping points, because this runs twice.
 **Writing, before the clinic:**
 - the snapshot named from the Brain, and its lists confirmed with them
 - every value written in their voice, none holding a bracket or a greeting, and any left for later named plainly
+- on B2C and Hybrid, both review emails written under `## Review request templates`
 - `ghl-values.md` saved, and read back to them
 - any value that waits for the day named plainly, and left blank
 
 **Pasting, once the snapshot is loaded:**
-- the account filled, checked on all four counts, and one live test read back
+- the account filled, checked on all five counts, and one live test read back
+- on B2C and Hybrid, both review templates pasted, whether or not `Review request` is published

@@ -24,7 +24,7 @@ Do this:
    - "<n> days to Atlanta" (Atlanta starts Friday 25 September 2026).
    - Not done yet, gate by gate, for this founder's track only: Gate A the Brain, Gate B content with 30 approved, Gate C engine 2 and the operations workflow. Name what is missing in a few words each. dm-openers.md and outreach-firstlines.csv are never on GitHub either, so take their state from the index. The 25 B2C messages go out at the event, so never list them as missing.
    - Connections: GoHighLevel, and for B2B Apollo and a sending mailbox, from setup.md.
-   - Before the clinic on Wednesday 23 September: the operations file ready to load.
+   - Before the clinic on Wednesday 23 September: ops-workflow.md built, and ghl-values.md written with the words the snapshot arrives without, ready to paste once it loads. Take both from the index.
    - The two time-critical items: for B2B the domain with SPF, DKIM and DMARC; for B2C Instagram as Business or Creator linked to a Facebook Page. Say what the files or answers show.
    - One line at the end: the single most important thing to do today.
 4. Commit only that file with the message "Countdown to Atlanta" and push.

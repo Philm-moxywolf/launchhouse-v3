@@ -1,8 +1,8 @@
 # After your engines: making your GoHighLevel snapshot send
 
-Your engines wrote your copy. This page is what happens next, and it covers two days rather than one: the week when Claude writes all your GoHighLevel words, and the clinic itself, when you load your snapshot and paste them in. It ends with a real email arriving in your own inbox.
+Your engines wrote your copy. This page is what happens next, and it covers two days rather than one: the evening after Session 3, when Claude writes all your GoHighLevel words, and the clinic itself, when you load your snapshot and paste them in. It ends with a real email arriving in your own inbox.
 
-Read it once before the clinic on Wednesday 23 September. The writing takes about half an hour, the evening before. The clinic takes about half an hour, and fifteen minutes of that is pasting.
+Read it once before the clinic on Wednesday 23 September. The writing takes about half an hour, the evening after Session 3. The clinic takes about half an hour, and fifteen minutes of that is pasting.
 
 ## First, update the plugin
 
@@ -10,14 +10,14 @@ Your copy of the plugin is the version you installed. Updates are not automatic,
 
 1. Open the Claude desktop app on your Launchhouse folder.
 2. Press the **+** button next to the message box and open **Plugins**.
-3. Find **growth-engine** and update it.
+3. Find **growth-engine** and update it. You want version **0.9.5** or later.
 4. If it still shows the old version, quit the app and open it again.
 
 **This never touches your work.** Your Brain, your posts and your files live in your own folder on your computer, not inside the plugin. Updating cannot lose them.
 
-If you have not installed the plugin at all: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**.
+If you have not installed the plugin at all: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**. You want version **0.9.5** or later.
 
-**Check it worked.** Say **"fill my custom values"**. If Claude knows what you mean, you are on the new version. If it says it does not have that, the update has not landed yet, so quit and reopen the app and try once more.
+**Check it worked.** Open **Plugins** again: **growth-engine** should show version **0.9.5** or later. If it shows an older one, the update has not landed yet, so quit and reopen the app and look again.
 
 ## What you should already have
 
@@ -34,21 +34,21 @@ If `ops-workflow.md` is missing, say **"build my ops engine"** first. Everything
 
 **This is the job.** About half an hour, at home, and it does not need your snapshot. Doing it now is the difference between a clinic that is a paste and a clinic that is an hour of writing.
 
-**It is a short gap.** Session 3 is Monday 21 or Tuesday 22 September, and you load your snapshot the day after, so do this the same evening if you can.
+**It is a short gap.** Session 3 is Monday 21 or Tuesday 22 September, and you load your snapshot at the clinic on Wednesday 23 September, so do this the same evening as your session if you can.
 
-A custom value is a named slot in your account. Your workflows are built to drop your words into those slots, so one welcome email is written once and used everywhere. Your snapshot brings the empty slots on the day. The words are written before that.
+A custom value is a named slot in your account. Your workflows are built to drop your words into those slots, so one welcome email is written once and used everywhere. Your snapshot brings the slots on the day, but not the words in them. The words are written before that.
 
 Say **"fill my custom values"**, or type `/growth-engine:values`.
 
 Claude reads your Brain and your engine files, asks you the few things nothing else answers, writes every message in your voice, and saves them to `ghl-values.md` in your folder.
 
-Your track decides your snapshot, so there is nothing to choose. It brings **Essentials**, which everybody gets, and its packs. Each workflow's name starts with the pack it belongs to.
+Your track decides your snapshot, so there is nothing to choose. It brings **Essentials**, which everybody gets, and its packs. Each workflow's name starts with the pack it belongs to, and on Hybrid with the word Hybrid before that, as in `Hybrid Essentials 2`.
 
 | Your snapshot | What is in it | Words to write |
 |---|---|---|
 | **B2B** | Essentials, Lead follow-up, Discovery booking, Proposal chase | 34 |
 | **B2C** | Essentials, Comment to DM, DM qualify and book, Review request | 28 |
-| **Hybrid** | One Essentials, plus all six packs, on one board of its own | 51 |
+| **Hybrid** | B2C Essentials (on either track), plus all six packs, on one board of its own | 51 |
 
 **Every pack arrives switched off.** You publish the packs you have filled, and the rest sit there as drafts until you want them. Nothing in a draft ever runs.
 
@@ -58,9 +58,9 @@ Nine of the eleven Essentials values are needed before you publish. The two that
 
 **Read them back.** They are your words going to real people. Change anything that does not sound like you. Changing a word now costs nothing. Changing it at the clinic costs your place in the queue.
 
-**One value waits for the day.** On B2B and Hybrid, `Call Booking Link`, in `Discovery booking`, is a link copied out of your own account rather than words, so Claude leaves it blank and you paste it in at the clinic.
+**Up to two values wait for the day.** On B2B and Hybrid, `Call Booking Link`, in `Discovery booking`, is a link copied out of your own account rather than words, so Claude leaves it blank and you paste it in at the clinic. On B2C and Hybrid, `DM Booking Link`, in `DM qualify and book`, is where your DMs send people. If that will be a booking calendar you have not made in GoHighLevel yet, Claude leaves it blank too, and you paste its link once the calendar exists.
 
-**On B2C and Hybrid, `Review request` has no custom values at all.** Its two emails live in your review templates instead. Write both now with Claude, into the same file. They go in at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`: `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding the word PLACEHOLDER and send exactly as they are, so they must be replaced before you publish.
+**On B2C and Hybrid, `Review request` has no custom values at all.** Its two emails live in your review templates instead. Claude writes both now, in their own section of `ghl-values.md`, headed `Review request templates`. They go in at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`: `Review Ask Email` in the `Live` slot and `Review Reminder Email` in the `Retry` slot. Both arrive holding the word PLACEHOLDER and send exactly as they are, and a review request you send by hand uses them too. So you paste both in at the clinic, even if `Review request` stays a draft.
 
 ## Also worth doing before the day
 
@@ -82,13 +82,13 @@ Your snapshot page, the printed pack you are given at the clinic, carries the li
 
 A snapshot is a set of ready-built workflows. Yours is the one your track decides: B2B, B2C or Hybrid. It arrives as a set of workflows, not as a single one.
 
-We give you the share link on the day. Open it, choose your sub-account, and wait. It takes a few minutes. If it asks about conflicts, leave every item unticked.
+We give you the share link on the day. Signed in to your agency view, open it and click `Import Now`, then wait until it stops showing as processing. Do not import it twice. Then go to `Sub-Accounts`, open your sub-account's menu, and choose `Manage Client`, then `Actions`, then `Load Snapshot`. Pick your snapshot and wait. It takes a few minutes. On the conflict step, leave every item unticked.
 
-If you did not add yourself as a user in the week before, do that first, at `Switch to Agency View`, then `Settings`, then `Team`.
+If you did not add yourself as a user before the day, do that first, at `Switch to Agency View`, then `Settings`, then `Team`.
 
 **What arrives:** every workflow, every tag, your pipelines, your forms, and the name of every message slot.
 
-**What does not arrive: your words.** Custom value contents never travel in a snapshot, and neither do users. Every email arrives built, with empty slots where your words go, and an empty slot sends as a blank space to a real person.
+**What does not arrive: your words.** The names of the message slots arrive, not the words, and users never travel in a snapshot. Every email arrives built. Each slot arrives empty or holding the word PLACEHOLDER, and either way it sends exactly as it is until your words are pasted in.
 
 ### 2. Put everything back to draft
 
@@ -106,13 +106,17 @@ Open `ghl-values.md` next to your browser. Switch back to your sub-account if yo
 
 Your GoHighLevel connector cannot do this part. It reads your account and posts content, and it has no custom values tool, so do not go looking for one.
 
-### 4. The two that are not words
+### 4. The links, and the review emails
 
-**If you are publishing `Discovery booking`:** open your `Discovery call` calendar, click `Share`, then `Copy Link`, and paste that link into `Call Booking Link`. This is the value Claude left blank.
+**If you are publishing `Discovery booking`:** open your `Discovery call` calendar, click `Share`, then `Copy Link`, and paste that link into `Call Booking Link`. This is a value Claude left blank.
 
-**If you are publishing `Review request`:** paste your two review emails into the templates at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`.
+**If you are publishing `DM qualify and book` and `DM Booking Link` was left blank:** make your booking calendar first. Then copy its link the same way and paste it into `DM Booking Link`.
 
-### 5. Check four things
+**On B2C and Hybrid, even if `Review request` stays a draft:** paste your two review emails, from their own section of `ghl-values.md`, into the templates at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`. `Review Ask Email` goes in the `Live` slot and `Review Reminder Email` in the `Retry` slot, over the PLACEHOLDER words, subject included. Keep the `Review Link` element below your words. Then type your business name and postal address over the last two PLACEHOLDER lines. A review request you send by hand uses these templates too, so this is what stops one ever going out holding PLACEHOLDER.
+
+**If you are publishing `Review request`:** on the same tab, under `Review Link`, choose `Custom Link` and paste your own review link over the example one.
+
+### 5. Check five things
 
 Tell Claude you have finished pasting. If you pasted by hand, Claude cannot see inside your account, so it reads your list back to you one at a time and you check each one on screen:
 
@@ -120,8 +124,9 @@ Tell Claude you have finished pasting. If you pasted by hand, Claude cannot see 
 2. None is empty.
 3. None still says PLACEHOLDER, and none has a square or curly bracket in it.
 4. No name was changed, so the keys your workflows use still match.
+5. On B2C and Hybrid, both review templates hold your words, with no PLACEHOLDER left and the `Review Link` element still in place.
 
-If Claude filled them over the API, it reads all four back out of the account itself.
+If Claude filled them over the API, it reads the first four back out of the account itself. The fifth is always checked by eye.
 
 ### 6. Re-pick anything blank
 
@@ -131,11 +136,11 @@ Claude cannot see inside your account, so this one is done by eye. Your `ops-wor
 
 ### 7. Publish, in the order on your snapshot page
 
-Publish every workflow that is not optional, in the order your snapshot page gives: **the card movers first, then the automations, then the event workflows, then the entry workflows.** Publish one group, check every workflow in it shows as published, then start the next.
+Publish only the packs whose words you have written, Essentials among them. Leave every other pack as drafts, and the optional workflows too until you want them. Keep the order your snapshot page gives: **the card movers first, then the automations, then the event workflows, then the entry workflows.** Publish one group, check every workflow in it shows as published, then start the next.
 
 Order matters here. A card mover that is still a draft when an automation starts leaves cards sitting in the wrong place.
 
-**Leave `Essentials 13` and `Essentials 14` as drafts** unless you filled the two welcome values. They are optional on both tracks.
+**Leave the optional workflows your snapshot page lists as drafts** until you want them. Its notes say when each one is worth switching on. `Essentials 13` and `Essentials 14` (`Hybrid Essentials 13` and `Hybrid Essentials 14` on Hybrid) also need the two welcome values filled first.
 
 **Drafts never run**, so a test before publishing proves nothing, and a published workflow with empty values sends blanks to real people. That is why the words go in first.
 
@@ -143,9 +148,9 @@ Order matters here. A card mover that is still a draft when an automation starts
 
 These waited until now because a workflow that is still a draft may not appear in the list to pick from. Your snapshot page names each one. Open them, re-pick anything blank, and save.
 
-Then fire your trigger yourself, the way a real person would. Your `ops-workflow.md` names it. For most people it is their own `Enquiry form`: open it, fill it in using a second email address you can read, and send it. Within about three minutes the welcome email arrives, opening with your greeting word and your first name, then your words, then your business name and address at the bottom. Read all of it.
+Then test it the way a real person would. Everyone starts with their own `Enquiry form`: open it, fill it in using a second email address you can read, and send it. Within about three minutes the welcome email arrives, opening with your greeting word and your first name, then your words, then your business name and address at the bottom. Read all of it.
 
-On the two Instagram snapshots the trigger is a comment on one of your posts, or a DM, so use a second Instagram account or ask a friend.
+Then run the live tests your snapshot page gives for each pack you published. For Comment to DM and DM qualify and book, the trigger is a comment on one of your posts, or a DM, so use a second Instagram account or ask a friend.
 
 - A blank where words should be: that value is still empty.
 - Curly brackets in the email: a value was renamed after it was made.
@@ -167,7 +172,7 @@ A short list, and none of it is urgent on the day:
 
 **Blank emails.** A value is empty. Fill it and send another test.
 
-**The word PLACEHOLDER arriving at a real person.** A workflow was published before its values were filled. Put that workflow back to draft, fix the value, publish again.
+**The word PLACEHOLDER arriving at a real person.** A workflow was published before its values were filled. Put that workflow back to draft, fix the value, publish again. If it was a review email, paste your words over that review template, keeping the `Review Link` element.
 
 **Curly brackets in an email.** A value was renamed. Its key no longer matches the step. Tell Claude and it will find which one.
 
