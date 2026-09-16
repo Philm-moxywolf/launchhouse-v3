@@ -46,7 +46,7 @@ Plain words work for everything. The commands below are there if you prefer them
 | add my writing samples | `/growth-engine:add-files` | Adds old posts, documents, decks and photos, so the engines can read them |
 | build my content engine | `/growth-engine:content` | Four pillars and 30 pieces in your voice. Also refills monthly, and records what you approve |
 | build my outreach or audience engine | `/growth-engine:engine2` | B2B: sequence, list and 25 first lines. B2C: 25 openers, hooks and inbound scripts |
-| build my ops engine | `/growth-engine:ops` | One GoHighLevel workflow and all its copy, ready for the clinic |
+| build my ops engine | `/growth-engine:ops` | Your bottleneck, the pack of your snapshot to publish first, and its copy, ready for the clinic |
 | fill my custom values | `/growth-engine:values` | Writes every message your snapshot will arrive without. Run it before the snapshot loads, then paste the words in |
 | connect my tools | `/growth-engine:connect` | Checks GoHighLevel, and Apollo for B2B, by reading your own account back |
 | publish my posts | `/growth-engine:publish` | Puts approved pieces into GoHighLevel, after showing you exactly what and when |
