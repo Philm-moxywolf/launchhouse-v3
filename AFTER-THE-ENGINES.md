@@ -2,7 +2,7 @@
 
 Your engines wrote the words. This page is what happens next, in order, and it ends with a real email arriving in your own inbox.
 
-Read it once before the clinic on Wednesday 23 September. It takes about half an hour on the day.
+Read it once before the clinic on Wednesday 23 September. It takes about an hour on the day, and fifteen minutes of that is pasting.
 
 ## First, update the plugin
 
@@ -32,21 +32,33 @@ If `ops-workflow.md` is missing, say **"build my ops engine"** first. Everything
 
 ## The order, and why it is this order
 
+Ten steps, and the order is the whole point. Your snapshot page, the printed pack you are given at the clinic, carries the lists for your own snapshot. This is the spine that every founder follows.
+
 ### 1. Load the snapshot
 
-A snapshot is a pack of ready-built workflows, the one you chose in your ops engine. It arrives as a set of workflows, not as a single one.
+**Add yourself as a user first, before you load anything.** Go to `Switch to Agency View`, then `Settings`, then `Team`. Open your own user, go to `Roles & Permissions`, and add your business sub-account. Users never travel in a snapshot, and the alerts inside yours go to the users of the account, so if you are not one you get none of them.
 
-You do this at the clinic, on Wednesday 23 September. We give you the share link on the day.
-
-**Add yourself as a user first, before you load anything.** Go to `Switch to Agency View`, then `Settings`, then `Team`. Open your own user, go to `Roles & Permissions`, and add your business sub-account. Do this first: users never travel in a snapshot, and the alerts inside yours go to the users of the account, so if you are not one you get none of them.
-
-Then open the share link, choose your sub-account, and wait for it to finish processing. It takes a few minutes.
+Then open the share link we give you on the day, choose your sub-account, and wait. It takes a few minutes. If it asks about conflicts, leave every item unticked.
 
 **What arrives:** every workflow, every tag, your pipelines, your forms, and the name of every message slot.
 
 **What does not arrive: your words.** Custom value contents never travel in a snapshot, and neither do users. Every email arrives built, with empty slots where your words go, and an empty slot sends as a blank space to a real person.
 
-### 2. Fill the values
+### 2. Put everything back to draft
+
+Nobody has documented what state workflows arrive in, so make it certain. Go to `Automation`, then `Workflows`. Show the published ones, select them, and set them to draft under `Bulk Actions`. Selecting only covers the page you can see, so check every page.
+
+Nothing can fire at a real person while you work.
+
+### 3. Business profile and wallet
+
+Two settings, and email does not work properly without either.
+
+**Business Profile:** your business name, your `Business Physical Address`, and a `Business Email` on your own domain, never gmail, yahoo or outlook. Every email you send ends with these. Leave the unsubscribe box ticked.
+
+**Wallet:** in `Agency View`, `Settings`, `Billing`, then `Wallet & Transactions`, add a card and set auto recharge. Every email costs a little, your own alerts included, and sending stops when the wallet runs dry.
+
+### 4. Fill the values
 
 A custom value is a named slot in your account. Your workflows are built to drop your words into those slots, so one welcome email is written once and used everywhere. The snapshot brings you the empty slots, and this is where the words go in.
 
@@ -54,11 +66,11 @@ Say **"fill my custom values"**, or type `/growth-engine:values`.
 
 Claude reads your Brain and your engine files, asks you the few things nothing else answers, writes every message in your voice, and saves them to `ghl-values.md` in your folder.
 
-Both lists come out of the one snapshot you loaded, because every snapshot carries **Essentials** inside it. So you fill **Essentials**, which is 11 values, and the list for the snapshot you chose. Nothing else. That is between 11 and 22 values in total. Nine of the eleven Essentials values are needed before you publish; the two about welcoming a new client or customer are only needed if you switch that pair of workflows on.
+Both lists come out of the one snapshot you loaded, because every snapshot carries **Essentials** inside it. So you fill **Essentials**, which is 11 values, and the list for the snapshot you chose. Nothing else. That is between 11 and 22 values in total. Nine of the eleven Essentials values are needed before you publish; the two that welcome a new client or customer are only needed if you switch that pair of workflows on.
 
-If you loaded **Review request**, it has no custom values at all. Its two emails live in your review templates, at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`. Claude will point you there. Both templates arrive holding the word PLACEHOLDER and send exactly as they are, so rewrite both before you publish: `Review Ask Email` goes in the `Live` slot and `Review Reminder Email` in the `Retry` slot.
+If you loaded **Review request**, it has no custom values at all. Its two emails live in your review templates, at `Reputation`, the `Settings` tab, then the email request settings, then `Set Email Templates`. Both arrive holding the word PLACEHOLDER and send exactly as they are, so rewrite both before you publish: `Review Ask Email` goes in the `Live` slot and `Review Reminder Email` in the `Retry` slot.
 
-### 3. Put them into your account
+### 5. Put them into your account
 
 **By hand, which is how most people do it.** Switch back to your sub-account first if you are still in Agency View. Open `Settings`, then `Custom Values`. Every name is already sitting there. Open each one, paste the words, save. Around fifteen minutes.
 
@@ -70,7 +82,7 @@ That token is a password for your whole account, and it keeps working for 90 day
 
 Your GoHighLevel connector cannot do this part. It reads your account and posts content, and it has no custom values tool, so do not go looking for one.
 
-### 4. Check four things
+### 6. Check four things
 
 When the words are in, tell Claude you have finished pasting. If you filled them by hand, Claude cannot see inside your account, so it reads your list back to you one at a time and you check each one on screen:
 
@@ -81,23 +93,39 @@ When the words are in, tell Claude you have finished pasting. If you filled them
 
 If you used the API route, Claude reads all four back out of the account itself.
 
-### 5. Re-pick anything blank
+### 7. Re-pick anything blank
 
-A load can leave a choice inside a workflow step empty, most often a pipeline stage. Open each workflow, look for a picker showing nothing, and choose the right one. Claude cannot see inside your account, so this one is done by eye. Your `ops-workflow.md` names the pipeline your snapshot uses, so ask Claude which stage a step should point at if you are unsure.
+A load can leave a choice inside a step empty. Your snapshot page lists every step to open. Check the pipeline and stage on each card mover, the `Form Is` choice on each form trigger, and the tag under every tag trigger.
 
-### 6. Publish, then test
+Claude cannot see inside your account, so this one is done by eye. Your `ops-workflow.md` names the pipeline your snapshot uses, so ask Claude which stage a step should point at if you are unsure.
 
-Open `Automation`, then `Workflows`. Your workflows sit in folders and are numbered, `Essentials 1`, `Essentials 2`, and so on. Publish the Essentials folder first, in number order, then your snapshot's folder in number order, by opening each one and moving the switch at the top right from `Draft` to `Publish`. Leave the welcome workflows as drafts unless you filled the two welcome values: that is `Essentials 13`, and on B2B `Essentials 14` as well.
+### 8. Publish, in the order on your snapshot page
+
+Publish every workflow that is not optional, in the order your snapshot page gives: **the card movers first, then the automations, then the event workflows, then the entry workflows.** Publish one group, check every workflow in it shows as published, then start the next.
+
+Order matters here. A card mover that is still a draft when an automation starts leaves cards sitting in the wrong place.
+
+**Leave `Essentials 13` and `Essentials 14` as drafts** unless you filled the two welcome values. They are optional on both tracks.
 
 **Drafts never run**, so a test before publishing proves nothing, and a published workflow with empty values sends blanks to real people. That is why filling comes first.
 
-Then fire it yourself, the way a real person would. Your `ops-workflow.md` names your trigger. For most people it is their own `Enquiry form`: open it, fill it in using a second email address you can read, and send it. On the two Instagram snapshots the trigger is a comment on one of your posts, or a DM, so use a second Instagram account or ask a friend. Then read what arrives, in full, subject line included.
+### 9. Re-pick what points at another workflow
+
+These wait until now, because a workflow that is still a draft may not appear in the list to pick from. Your snapshot page names each one. Open them, re-pick anything blank, and save.
+
+### 10. One live test
+
+From a second email address of your own, not the one your account sends from. Open your `Enquiry form` link, fill it in with just your first name and that address, and send it.
+
+Within about three minutes the welcome email arrives, opening with your greeting word and your first name, then your words, then your business name and address at the bottom. Read all of it.
+
+On the two Instagram snapshots the trigger is a comment on one of your posts, or a DM, so use a second Instagram account or ask a friend.
 
 - A blank where words should be: that value is still empty.
 - Curly brackets in the email: a value was renamed after it was made.
 - Nothing at all: the workflow is still a draft.
 
-If something is wrong, put that workflow back to draft, fix it, and test again.
+If something is wrong, put that workflow back to draft, fix it, and test again. Then run the live tests on your own snapshot page: they carry on from this one.
 
 ## Before Friday 25 September
 

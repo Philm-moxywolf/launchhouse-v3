@@ -94,7 +94,7 @@ grep -n 'shell: *true\|eval ' $P/scripts/*.sh >/dev/null 2>&1 && err "a hook scr
 # ---------------------------------------------------------------- founder-facing prose
 # Everything a founder or Claude reads as instructions. rules.awk and the corpus
 # spell out the banned shapes on purpose, so they are exempt from those checks.
-prose=$(find README.md AFTER-THE-ENGINES.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
+prose=$(find README.md AFTER-THE-ENGINES.md ROAD-TO-ATLANTA.md UPDATE-YOUR-SETUP.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
 msgs=$(find $P/scripts -name '*.sh' 2>/dev/null)
 
 for f in $prose $msgs; do

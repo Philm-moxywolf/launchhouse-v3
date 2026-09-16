@@ -26,7 +26,11 @@ The full guide, with what you will see at each step, is `START-HERE.md` in your 
 7. **Connect your tools.** In **Settings**, then **Connectors**, connect HighLevel, and Apollo if you sell to businesses. Then say **"connect my tools"**.
 8. **Check.** Say **"where am I up to"**.
 
-Once your engines are built, [AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the rest of it: updating the plugin, loading your snapshot, filling the words it arrives without, and the first live test.
+[ROAD-TO-ATLANTA.md](ROAD-TO-ATLANTA.md) is the whole arc on one page: where you are, what is left, and what has to be true before you travel.
+
+[UPDATE-YOUR-SETUP.md](UPDATE-YOUR-SETUP.md) is how to take the newest plugin without touching your work.
+
+Once your engines are built, [AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the rest of it: loading your snapshot, filling the words it arrives without, publishing, and the first live test.
 
 Plain words work for everything. The commands below are there if you prefer them.
 
