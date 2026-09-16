@@ -15,10 +15,11 @@ The shapes of every file this writes are in `../../references/contract.md`, rela
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
 2. **Read the Brain.** Read `./growth-engine/founder-brain.md`.
-   - If it genuinely does not exist, stop. Tell the founder the Founder Brain comes first, and offer `/growth-engine:brain` or "build my founder brain". Do not guess at their business or voice.
-3. **Read the track.** Read the `Track` line. Everything below branches on it. If there is no track, stop and send them to the Founder Brain to finish it.
-4. **Check the voice.** If `## Voice` in the Brain is missing or nearly empty, stop. Thirty pieces without a voice read like anybody's. Offer to capture the voice first with the Founder Brain, in update mode.
-5. **Check for writing samples.** If `growth-engine/voice-samples/` has files, read them. They are the founder's own writing and the best guide to how they sound.
+   - If it genuinely does not exist, do not guess at their business or voice, and do not leave them stuck. Say in one plain sentence that the thirty pieces are written from their Founder Brain, and offer to build it with them now. If they say yes, follow the `founder-brain` skill, then come back here. If not now, give them the one next step for when they are ready: `/growth-engine:brain`, or say "build my founder brain".
+3. **Read the track.** Read the `Track` line. Everything below branches on it. If there is no track, do not pick one for them. Offer to finish the Brain with them now, which asks the one question that decides it, then come back here.
+4. **Check the voice.** If `## Voice` in the Brain is missing or nearly empty, do not write the thirty yet, because thirty pieces without a voice read like anybody's. Offer three ways to give it, and let them pick: paste a few things they have written, add old posts or emails with `/growth-engine:add-files`, or answer a few short questions with the Founder Brain, in update mode. Then carry on here.
+5. **When the Brain is not enough.** If something this engine needs is missing or thin, do not guess and do not stop. Ask for it, one question at a time, and say in a few words why you are asking. Make it easy to answer: a sentence in their own words, a pick from two or three options you suggest, something they already wrote pasted in, a file added with `/growth-engine:add-files`, or "not sure yet", which you note as a gap and work around. Never suggest a number, a result or a customer: those only ever come from them. If what they tell you belongs in the Brain, say so, and that "update my brain" puts it there.
+6. **Check for writing samples.** If `growth-engine/voice-samples/` has files, read them. They are the founder's own writing and the best guide to how they sound.
    - If it is empty and the Brain's voice came from an interview, carry on.
    - If they mention they have old posts or emails, suggest adding them first (`/growth-engine:add-files`), because it takes five minutes and makes all 30 sound more like them.
 

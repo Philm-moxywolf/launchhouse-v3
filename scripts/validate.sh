@@ -114,6 +114,18 @@ for f in $prose; do
   grep -Eio 'automat[a-z]* (cold )?dms?|dm automation' "$f" >/dev/null 2>&1 && warn "$f mentions DM automation. Read it: it must refuse, never offer"
 done
 
+# No dead ends. An engine that is missing something offers the way forward, or
+# asks for what it needs, and never just ends. Safety stops, such as the wrong
+# folder or the wrong track, still say where to go.
+for f in $(find $P/skills -name SKILL.md); do
+  grep -niE 'do not proceed|stop and tell the founder to run' "$f" >/dev/null 2>&1 \
+    && err "$f ends at a dead end: $(grep -niE 'do not proceed|stop and tell the founder to run' "$f" | head -1 | cut -c1-80)"
+done
+for sk in content-engine outreach-b2b audience-b2c ghl-workflows growth-plan ghl-values apollo-sequence; do
+  grep -q 'When the Brain is not enough\|When something is missing or thin' "$P/skills/$sk/SKILL.md" \
+    || err "$sk does not say what to ask when the Brain is not enough"
+done
+
 # Commands: always namespaced, and every one must exist.
 names="start|brain|import|add-files|content|engine2|outreach|audience|ops|values|plan|playbook|status|gate|connect|publish|sequence|routines|save|help|doctor|setup|founder-brain|import-from-app"
 for f in $prose README.md $msgs; do

@@ -16,9 +16,10 @@ Takes the founder's outreach engine into their own Apollo account.
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
 2. **Check the track.** Read the Brain. If `Track` is not `b2b`, stop. Apollo is not part of the B2C track. Send them to `/growth-engine:audience`.
 3. **Check the sequence exists.** Read `growth-engine/outreach-sequence.md`.
-   - If it does not exist, the sequence and criteria come first: `/growth-engine:outreach`.
+   - If it does not exist, the sequence and criteria come first, because this step loads the founder's own words and never writes a sequence of its own. Offer to build them with the outreach engine now (`/growth-engine:outreach`), then come back here.
    - If it records the manual route (Microsoft 365 or other), stop. Their route is by hand, and `outreach-firstlines.csv` is their checklist. Offer to switch routes only if their work email has changed to Google.
-4. **Check Apollo is connected.** You need tools whose names end in `apollo_mixed_people_api_search` and `apollo_sequences_create`. If not, run `/growth-engine:connect`.
+4. **When something is missing or thin.** If something this step needs is missing or thin, do not guess and do not stop. Ask for it, one question at a time, and say in a few words why you are asking. Make it easy to answer: a sentence in their own words, a pick from two or three options you suggest, something they already wrote pasted in, a file added with `/growth-engine:add-files`, or "not sure yet", which you note as a gap and work around. Never suggest a number, a result or a customer: those only ever come from them. If what they tell you belongs in the Brain, say so, and that "update my brain" puts it there.
+5. **Check Apollo is connected.** You need tools whose names end in `apollo_mixed_people_api_search` and `apollo_sequences_create`. If not, run `/growth-engine:connect`.
 
 **Credits.** Whenever a tool's response includes an `mcp_credits` block, tell the founder the estimated cost before the spend, and the credits used and balance after. Always, unprompted.
 

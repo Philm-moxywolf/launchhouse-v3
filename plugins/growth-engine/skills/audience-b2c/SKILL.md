@@ -49,11 +49,12 @@ Then go straight to Step 5 and build it with them. A founder who gets a no and n
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
 2. **Read the Brain.** Read `./growth-engine/founder-brain.md`.
-   - If it genuinely does not exist, stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`, or "build my founder brain"), and do not proceed.
+   - If it genuinely does not exist, do not leave them stuck. Say in one plain sentence that this engine writes from their Founder Brain, about an hour of their own answers that every engine reads, and offer to build it with them now. If they say yes, follow the `founder-brain` skill, then come back here. If not now, give them the one next step for when they are ready: `/growth-engine:brain`, or say "build my founder brain".
    - Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice.
 3. **Check the track.** If `Track` is not `b2c`, stop and route the founder to the outreach engine (`/growth-engine:outreach`).
 4. **Check the Instagram account type.** Look in `growth-engine/.state/setup.md` first, then the Brain's Channels section and Flags. If it is still a personal account, tell them to convert to Business or Creator and link a Facebook Page before anything else works. It takes two minutes.
-5. **Check what exists.** If the files already exist, ask whether they want more openers, to change the hooks or scripts, or to record sends. Go straight to that step.
+5. **When the Brain is not enough.** If something this engine needs is missing or thin, do not guess and do not stop. Ask for it, one question at a time, and say in a few words why you are asking. Make it easy to answer: a sentence in their own words, a pick from two or three options you suggest, something they already wrote pasted in, a file added with `/growth-engine:add-files`, or "not sure yet", which you note as a gap and work around. Never suggest a number, a result or a customer: those only ever come from them. If what they tell you belongs in the Brain, say so, and that "update my brain" puts it there.
+6. **Check what exists.** If the files already exist, ask whether they want more openers, to change the hooks or scripts, or to record sends. Go straight to that step.
 
 ## Step 1: targeting
 

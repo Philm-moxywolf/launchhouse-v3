@@ -20,9 +20,10 @@ The Sunday deliverable. It sequences everything built over the weekend into one 
    - `./growth-engine/ops-workflow.md`
    - the What worked and What did not blocks in `./growth-engine/memory.md`, and the last two weeks of `./growth-engine/ops-log.md`
    - `./growth-engine/.state/setup.md`, which says what is actually connected
-3. **If the Brain is missing,** stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`). There is no plan to build without it.
-4. **If the Brain exists but engine files are missing,** build the plan from what exists and note the gaps honestly. Do not pretend an engine is running when it is not.
-5. **Read the track.**
+3. **If the Brain is missing,** say plainly that the plan is built on the Founder Brain, and offer to build it with them now. If they say yes, follow the `founder-brain` skill, then come back here. If not now, give them the one next step for when they are ready: `/growth-engine:brain`, or say "build my founder brain".
+4. **If the Brain exists but engine files are missing,** build the plan from what exists and note the gaps honestly. Do not pretend an engine is running when it is not. Name the engine that fills each gap, so the plan says what to do about it.
+5. **When the Brain is not enough.** If something this engine needs is missing or thin, do not guess and do not stop. Ask for it, one question at a time, and say in a few words why you are asking. Make it easy to answer: a sentence in their own words, a pick from two or three options you suggest, something they already wrote pasted in, a file added with `/growth-engine:add-files`, or "not sure yet", which you note as a gap and work around. Never suggest a number, a result or a customer: those only ever come from them. If what they tell you belongs in the Brain, say so, and that "update my brain" puts it there.
+6. **Read the track.**
    - A B2B plan sequences the sequence, the list and the sending.
    - A B2C plan sequences the DMs, the hooks and the inbound machine.
    - Never put the other track's work in a founder's plan.

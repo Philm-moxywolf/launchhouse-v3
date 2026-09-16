@@ -15,10 +15,11 @@ File shapes are in `../../references/contract.md`. Gate C for B2B is in `../../r
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
 2. **Read the Brain.** Read `./growth-engine/founder-brain.md`.
-   - If it genuinely does not exist, stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`, or "build my founder brain"), and do not proceed.
+   - If it genuinely does not exist, do not leave them stuck. Say in one plain sentence that this engine writes from their Founder Brain, about an hour of their own answers that every engine reads, and offer to build it with them now. If they say yes, follow the `founder-brain` skill, then come back here. If not now, give them the one next step for when they are ready: `/growth-engine:brain`, or say "build my founder brain".
    - Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice. Everything this skill produces is only as good as the Brain behind it.
 3. **Check the track.** If `Track` is not `b2b`, stop and route the founder to the audience engine (`/growth-engine:audience`). Do not run a B2B sequence for a B2C founder.
-4. **Check what exists.** If `outreach-sequence.md` already exists, ask whether they want to change the sequence, add to the list, write more first lines, or record sends. Go straight to that step.
+4. **When the Brain is not enough.** If something this engine needs is missing or thin, do not guess and do not stop. Ask for it, one question at a time, and say in a few words why you are asking. Make it easy to answer: a sentence in their own words, a pick from two or three options you suggest, something they already wrote pasted in, a file added with `/growth-engine:add-files`, or "not sure yet", which you note as a gap and work around. Never suggest a number, a result or a customer: those only ever come from them. If what they tell you belongs in the Brain, say so, and that "update my brain" puts it there.
+5. **Check what exists.** If `outreach-sequence.md` already exists, ask whether they want to change the sequence, add to the list, write more first lines, or record sends. Go straight to that step.
 
 ## Step 0: what is going to send this
 

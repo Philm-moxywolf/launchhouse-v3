@@ -13,9 +13,9 @@ Produces the four to six page personalised insert that goes with the printed gen
 
 1. **Check the folder.** Read the session context. If it says this is not the founder folder, stop and tell them which folder to open.
 2. **Read every file in `./growth-engine/`,** except `people/`, `uploads/`, `.state/`, `outreach-firstlines.csv` and `dm-openers.md`. Those last ones hold real people's details, and none of them belongs in the insert.
-3. **If `founder-brain.md` does not exist,** stop. Tell the founder the Founder Brain comes first (`/growth-engine:brain`). There is nothing to compile.
+3. **If `founder-brain.md` does not exist,** there is nothing to compile yet. Say so plainly, and offer to build the Brain with them now. If they say yes, follow the `founder-brain` skill, then come back here. If not now, give them the one next step for when they are ready: `/growth-engine:brain`, or say "build my founder brain".
 
-**This is a compilation task, not a generation task.** Do not invent content that is not already in the founder's own files. If a section has no source file, leave it out and say so, rather than writing filler.
+**This is a compilation task, not a generation task.** Do not invent content that is not already in the founder's own files. If a section has no source file, leave it out and say so, rather than writing filler, and name the engine that would fill it.
 
 ## Contents
 
