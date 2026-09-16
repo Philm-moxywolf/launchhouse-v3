@@ -41,7 +41,7 @@ Five things, and it is a short gap: Session 3 is the Monday or Tuesday and the c
 
 ### The clinic, Wednesday 23 September
 
-About half an hour, and most of it is pasting. You load your snapshot, paste in the words you wrote the week before, publish, and send yourself one real test.
+About half an hour, and most of it is pasting. You load your snapshot, paste in the words you wrote the evening before, publish, and send yourself one real test.
 
 Both things have to be true before you travel: your snapshot loaded and sending, and your Brain proved to be read by Claude on your own machine.
 
