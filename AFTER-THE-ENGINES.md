@@ -2,7 +2,7 @@
 
 Your engines wrote your copy. This page is what happens next, and it covers two days rather than one: the week when Claude writes all your GoHighLevel words, and the clinic itself, when you load your snapshot and paste them in. It ends with a real email arriving in your own inbox.
 
-Read it once before the clinic on Wednesday 23 September. The writing takes about half an hour, in the week before. The clinic takes about half an hour, and fifteen minutes of that is pasting.
+Read it once before the clinic on Wednesday 23 September. The writing takes about half an hour, the evening before. The clinic takes about half an hour, and fifteen minutes of that is pasting.
 
 ## First, update the plugin
 
@@ -33,6 +33,8 @@ If `ops-workflow.md` is missing, say **"build my ops engine"** first. Everything
 ## Write your words first
 
 **This is the job.** About half an hour, at home, and it does not need your snapshot. Doing it now is the difference between a clinic that is a paste and a clinic that is an hour of writing.
+
+**It is a short gap.** Session 3 is Monday 21 or Tuesday 22 September, and you load your snapshot the day after, so do this the same evening if you can.
 
 A custom value is a named slot in your account. Your workflows are built to drop your words into those slots, so one welcome email is written once and used everywhere. Your snapshot brings the empty slots on the day. The words are written before that.
 
