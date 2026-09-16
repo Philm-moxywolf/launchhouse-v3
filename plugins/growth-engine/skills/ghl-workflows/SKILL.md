@@ -1,6 +1,6 @@
 ---
 name: ghl-workflows
-description: Build the operations engine. Runs a bottleneck diagnostic, picks one GoHighLevel snapshot from the library of six, and writes all the copy that goes inside it, ready to load at the clinic. Both tracks. Trigger on "build my ops engine", "which workflow should I automate", "my bottleneck", "pick a snapshot", "operations engine".
+description: Build the operations engine. Runs a bottleneck diagnostic, names the GoHighLevel snapshot the founder's track decides, and writes all the copy that goes inside it, ready to load at the clinic. Both tracks. Trigger on "build my ops engine", "which workflow should I automate", "my bottleneck", "pick a snapshot", "operations engine".
 ---
 
 # Operations Engine
@@ -33,36 +33,44 @@ Find the one repetitive task that costs the most time or leaks the most revenue.
 
 Then name the bottleneck in one sentence, in their words. Confirm it with them before moving on. Getting this wrong means automating the wrong thing.
 
-## Step 2: pick the snapshot
+## Step 2: name their snapshot, then order the packs
 
-One only. Two half-finished workflows are worse than one running.
+**The founder does not choose a snapshot.** Their Brain does. Read the `Track` line and the hybrid flag, say which one they have, and move on.
 
-### B2B library
+| In the Brain | Snapshot | What is in it |
+|---|---|---|
+| B2B | **B2B** | Essentials B2B, Lead follow-up, Discovery booking, Proposal chase |
+| B2C | **B2C** | Essentials B2C, Comment to DM, DM qualify and book, Review request |
+| Either, hybrid | **Hybrid** | One Essentials, plus packs from both sides |
 
-| Snapshot | Runs on | Use when |
+Every pack arrives as drafts, in its own workflow folder. Nothing runs until the founder publishes it, so what the bottleneck decides is **which folder they publish first, and whose words get written first.**
+
+### B2B packs
+
+| Pack | Runs on | Publish this one first when |
 |---|---|---|
 | Lead follow-up | Email | Inbound leads are not chased consistently |
 | Discovery booking | Email | Booking a call takes too many messages |
 | Proposal chase | Email | Proposals go quiet and nobody follows up |
 
-### B2C library
+### B2C packs
 
-| Snapshot | Runs on | Use when |
+| Pack | Runs on | Publish this one first when |
 |---|---|---|
 | Comment to DM | Instagram | Content gets engagement but no conversation |
 | DM qualify and book | Instagram | DMs arrive but conversion is manual and slow |
 | Review request | Email | Reviews are never asked for |
 
-**The library is deliberately small.** If the founder's bottleneck falls outside these six (onboarding, reactivation, abandoned checkout, win-back):
-- pick the nearest snapshot and adapt the message copy to it
+**The list is deliberately small.** If the founder's bottleneck falls outside these six (onboarding, reactivation, abandoned checkout, win-back):
+- name the nearest pack and adapt the message copy to it
 - note the gap in the output file, so a mentor can help individually
-- do not invent a snapshot that does not exist, and do not attempt a bespoke build
+- do not invent a pack that does not exist, and do not attempt a bespoke build
 
-**Name the platform from the table, never from memory.** A B2C snapshot runs on Instagram, or email and SMS. Saying one runs on LinkedIn puts the other track's platform in front of a founder who is not on it, and it sends them to the wrong place on the day.
+**Name the platform from the table, never from memory.** A B2C pack runs on Instagram, or on email. Saying one runs on LinkedIn puts the other track's platform in front of a founder who is not on it, and it sends them to the wrong place on the day.
 
-A B2C founder with `Model: ecommerce` usually fits review request or comment-to-DM capture. With `Model: service`, DM qualify and book is usually the one. Recommend, never force.
+A B2C founder with `Model: ecommerce` usually publishes review request or comment to DM first. With `Model: service`, DM qualify and book is usually the one. Recommend, never force.
 
-Recommend one and explain why against their stated bottleneck. Let them override.
+Name the pack that answers their bottleneck, say why, and let them override. The rest of their snapshot stays as drafts until they want it.
 
 ## Step 3: write the copy
 

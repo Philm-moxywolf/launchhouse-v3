@@ -26,7 +26,7 @@ Say **"where am I up to"** and read the answer before you go further. Inside you
 - `founder-brain.md`, locked
 - `content-30.md`, with your 30 approved
 - your second engine: `outreach-sequence.md` for B2B, or `hook-bank.md`, `dm-openers.md` and `inbound-scripts.md` for B2C
-- `ops-workflow.md`, which names the one snapshot you chose and holds its copy
+- `ops-workflow.md`, which names your snapshot, the pack to publish first, and holds the copy
 
 If `ops-workflow.md` is missing, say **"build my ops engine"** first. Everything below reads it.
 
@@ -42,7 +42,19 @@ Say **"fill my custom values"**, or type `/growth-engine:values`.
 
 Claude reads your Brain and your engine files, asks you the few things nothing else answers, writes every message in your voice, and saves them to `ghl-values.md` in your folder.
 
-Both lists come out of the one snapshot you chose in `ops-workflow.md`, because every snapshot carries **Essentials** inside it. So you write **Essentials**, which is 11 values, and the list for the snapshot you chose. Nothing else. That is between 11 and 22 values in total. Nine of the eleven Essentials values are needed before you publish; the two that welcome a new client or customer are only needed if you switch that pair of workflows on.
+Your track decides your snapshot, so there is nothing to choose. It arrives carrying four folders: **Essentials**, which everybody gets, and three packs.
+
+| Your snapshot | What is in it | Words to write |
+|---|---|---|
+| **B2B** | Essentials, Lead follow-up, Discovery booking, Proposal chase | 34 |
+| **B2C** | Essentials, Comment to DM, DM qualify and book, Review request | 28 |
+| **Hybrid** | One Essentials, plus packs from both sides | up to 51 |
+
+**Every folder arrives switched off.** You publish the ones you have filled, and the rest sit there as drafts until you want them. Nothing in a draft ever runs.
+
+Writing them all now is what lets you switch a second folder on in October without doing this again. If you are short of time, Claude writes the pack that answers your bottleneck first, then Essentials, then the rest, and tells you plainly what it left.
+
+Nine of the eleven Essentials values are needed before you publish. The two that welcome a new client or customer are only needed if you switch that pair on.
 
 **Read them back.** They are your words going to real people. Change anything that does not sound like you. Changing a word now costs nothing. Changing it at the clinic costs your place in the queue.
 
@@ -104,7 +116,7 @@ Your GoHighLevel connector cannot do this part. It reads your account and posts 
 
 Tell Claude you have finished pasting. If you pasted by hand, Claude cannot see inside your account, so it reads your list back to you one at a time and you check each one on screen:
 
-1. Every value on your two lists is there.
+1. Every value you wrote is there.
 2. None is empty.
 3. None still says PLACEHOLDER, and none has a square or curly bracket in it.
 4. No name was changed, so the keys your workflows use still match.

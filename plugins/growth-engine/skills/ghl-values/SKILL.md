@@ -1,6 +1,6 @@
 ---
 name: ghl-values
-description: Write every GoHighLevel custom value a snapshot will arrive without, in the founder's own voice, from their Brain and the copy their engines already wrote, before the snapshot is loaded, then put them into the account once it is. Both tracks. Trigger on "fill my custom values", "my snapshot emails are blank", "write my GoHighLevel copy", "finish setting up my snapshot", "what goes in custom values", or "my workflow sent a blank email".
+description: Write every GoHighLevel custom value their snapshot will arrive without, in the founder's own voice, from their Brain and the copy their engines already wrote, before the snapshot is loaded, then put them into the account once it is. Both tracks. Trigger on "fill my custom values", "my snapshot emails are blank", "write my GoHighLevel copy", "finish setting up my snapshot", "what goes in custom values", or "my workflow sent a blank email".
 ---
 
 # GoHighLevel values
@@ -29,20 +29,25 @@ If the snapshot is already loaded, nothing changes except that the pasting can f
    - If it does not exist, build the operations engine first (`/growth-engine:ops`, or "build my ops engine"). The snapshot choice lives there.
 4. **Check for existing values.** If `ghl-values.md` already exists, ask whether they want to change the words or start again, and go straight there.
 
-## Step 1: name the two lists
+## Step 1: name their lists
 
-A founder fills the `Essentials` list for their track, plus the list for the **one snapshot** they loaded. Nothing else. The full lists, with every name, key and what belongs in it, are in `references/values.md`.
+Their track decides their snapshot, and the snapshot decides the lists. Nobody chooses anything here. The full lists, with every name, key and what belongs in it, are in `references/values.md`.
 
-| Track | Always | Plus one of |
+| Snapshot | The lists in it | Values |
 |---|---|---|
-| B2B | `Essentials`, 11 values | `Lead follow-up` 6, `Discovery booking` 11, `Proposal chase` 6 |
-| B2C | `Essentials`, 11 values | `Comment to DM` 7, `DM qualify and book` 10, `Review request` 0 |
+| **B2B** | Essentials 11, Lead follow-up 6, Discovery booking 11, Proposal chase 6 | 34 |
+| **B2C** | Essentials 11, Comment to DM 7, DM qualify and book 10, Review request 0 | 28 |
+| **Hybrid** | One Essentials 11, plus the packs from both sides | up to 51 |
 
-So a founder has between 11 and 22 values. In each `Essentials` list, 9 of the 11 must be filled before anything is published: the two client or customer welcome values are only needed if they switch that pair of workflows on.
+**Write them all.** Every pack arrives as drafts, and a founder publishes the folders they filled. Words written now are what lets them switch a second folder on in October without coming back to this.
+
+**If they are short of time,** write the pack that answers their bottleneck first, then Essentials, then the rest. `ops-workflow.md` names that pack. Say plainly which ones you have left, so nothing is published thinking it is finished.
+
+In each `Essentials` list, 9 of the 11 must be filled before anything is published: the two client or customer welcome values are only needed if they switch that pair of workflows on.
 
 `Review request` has no custom values at all. Its two emails live in the review templates at `Reputation`, then the `Settings` tab, then the email request settings, then `Set Email Templates`. Send them there and say why, or they will hunt for values that do not exist.
 
-Confirm the pair in one line before writing: "You loaded Essentials plus Discovery booking, so that is 11 plus 11. Right?" If they do not know which snapshot they have, `ops-workflow.md` names it, and `Automation`, then `Workflows` shows the folder names.
+Confirm in one line before writing: "Your Brain says B2C, so you have the B2C snapshot: Essentials plus Comment to DM, DM qualify and book and Review request. That is 28 values. Right?"
 
 ## Step 2: use what they already wrote
 
@@ -126,7 +131,7 @@ If they choose it:
 - **How the token reaches you.** Ask them to put it in a plain text file outside their Launchhouse folder, their Documents folder is fine, and to tell you where it is. Check the path really is outside that folder before using it: a save runs `git add -A`, so a token left inside would reach GitHub. The command reads that file itself, so you write the path and never the token, building the header as `"Authorization: Bearer $(cat <path>)"`. Never open or print that file yourself, because anything you read lands in this conversation. Never ask them to type or paste the token into the chat, and never repeat it back.
 - **Never write it down and never print it.** Not in any file in their folder, not in `ghl-values.md`, `memory.md` or `ops-log.md`, not in a command you write out, and not in anything that reaches GitHub.
 - **Read what is in the account first, then ask.** Their sub-account id is in the address bar after `/location/`. Show the whole list before anything is written: every value you are about to create, every one you are about to change, what each of those holds now, and which of them already hold words they did not write. Wait for a yes. That one yes covers every create and change on the list you showed, and nothing else.
-- **Only the two lists.** Never touch a value that is not on them, never delete one, and never write to a contact, a workflow, a tag or anything else in their account.
+- **Only their own snapshot's lists.** Never touch a value that is not on them, never delete one, and never write to a contact, a workflow, a tag or anything else in their account.
 - Create the ones that are missing and update the ones that are there. Creating a name twice fails rather than replacing it.
 - The endpoint is `https://services.leadconnectorhq.com/locations/<id>/customValues`, with a `Version: 2021-07-28` header.
 - **Delete the token with them before you close the job, whether it worked or not.** If they stop part way, a write fails, or they change their mind after making it, delete it then. Send them to `Settings`, then `Private Integrations`, and wait until they say it is gone. Then delete the file they put it in, and say so.
@@ -135,7 +140,7 @@ If they choose it:
 
 Show them all four:
 
-1. Every value on their two lists exists in the account.
+1. Every value they wrote exists in the account.
 2. None is empty.
 3. None still says PLACEHOLDER, and none holds a square or curly bracket.
 4. The name of each value is unchanged, so the key the steps use still matches.
@@ -149,8 +154,8 @@ Then one live test: send themselves the real trigger, from their own second emai
 Two stopping points, because this runs twice.
 
 **Writing, in the week before:**
-- the two lists named, and confirmed with them
-- every value on those lists written in their voice, none holding a bracket or a greeting
+- the snapshot named from the Brain, and its lists confirmed with them
+- every value written in their voice, none holding a bracket or a greeting, and any left for later named plainly
 - `ghl-values.md` saved, and read back to them
 - any value that waits for the day named plainly, and left blank
 
