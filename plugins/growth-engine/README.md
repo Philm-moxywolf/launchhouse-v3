@@ -28,6 +28,7 @@ Founders reach every skill by plain words, or by the short command where one exi
 | `outreach-b2b` | `/growth-engine:outreach` | Send route, criteria, sequence, the list of 25, first lines. B2B only | `outreach-sequence.md`, `outreach-firstlines.csv`, `people/` |
 | `audience-b2c` | `/growth-engine:audience` | 25 targets and openers, hook bank, inbound scripts, sends. B2C only | `dm-openers.md`, `hook-bank.md`, `inbound-scripts.md`, `people/` |
 | `ghl-workflows` | `/growth-engine:ops` | Bottleneck, one snapshot of six, every message in it | `ops-workflow.md` |
+| `ghl-values` | `/growth-engine:values` | The words the loaded snapshot is waiting for, written and then put into the account | `ghl-values.md` |
 | `growth-plan` | `/growth-engine:plan` | The 90 day plan, built in Atlanta on the Sunday | `90-day-plan.md` |
 | `playbook-export` | `/growth-engine:playbook` | Compiles the personalised playbook insert | `playbook-insert.md` |
 

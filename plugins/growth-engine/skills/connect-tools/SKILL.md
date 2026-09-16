@@ -34,7 +34,9 @@ Ask: "Can you log in to GoHighLevel?" The programme buys the Starter plan in Ses
 
 Look at the tools available to you. A GoHighLevel connection gives tools whose names end in things like `social-media-posting_get-account`, `locations_get-location` and `contacts_get-contacts`.
 
-**If there are none,** walk them through connecting it. GoHighLevel is a connector on their Claude account: they sign in, and there is nothing to paste.
+**If there are none,** walk them through connecting it. GoHighLevel is a connector on their Claude account: they sign in, and the connection itself needs nothing pasted.
+
+One later step sits outside the connector. Filling the snapshot's custom values has no connector tool, so it is done by hand in GoHighLevel, or optionally with a key the founder makes and deletes themselves. That is `/growth-engine:values`, after the clinic load, and it changes nothing here.
 
 1. In the Claude desktop app, open **Settings**, then **Connectors**.
 2. Find **HighLevel** and connect it. It opens GoHighLevel's sign-in.

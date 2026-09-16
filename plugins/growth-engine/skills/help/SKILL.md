@@ -82,7 +82,7 @@ Updates are not automatic.
 
 Updating never touches the founder's `growth-engine/` folder. Their work lives in their own folder, not inside the plugin. Say this if they hesitate.
 
-If a founder reports behaviour that does not match what they were told in a session, updating is the first thing to try.
+If a founder reports behaviour that does not match what they were told in a session, updating is the first thing to try. The same goes for a command they were told about that their app does not offer, such as `/growth-engine:values`: it arrived in a later version, so update, then quit and reopen the app.
 
 ## Common problems
 

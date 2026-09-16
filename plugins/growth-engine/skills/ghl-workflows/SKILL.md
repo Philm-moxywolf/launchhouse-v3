@@ -72,7 +72,7 @@ For the chosen snapshot, write every message it sends: emails with subject lines
 
 **Reuse what exists.** For the two DM snapshots, if `inbound-scripts.md` already holds the comment-to-DM or qualify-and-book copy, use that copy, fitted to the snapshot's steps, rather than writing a second version. Say so in the file.
 
-**Placeholders in plain words.** The snapshot brings its own trigger, stages, tags and fields, and their exact names are only known once it loads at the clinic. Write personal details as plain placeholders, `[first name]`, `[business name]`, `[booking link]`, never merge-field code, and describe tags and stages in plain words. They are matched to the snapshot's own fields when it is loaded.
+**Placeholders in plain words.** The snapshot brings its own trigger, stages, tags and fields, and their exact names are only known once it loads at the clinic. Write personal details as plain placeholders, `[first name]`, `[business name]`, `[booking link]`, never merge-field code, and describe tags and stages in plain words. They are matched to the snapshot's own fields when it is loaded, and the values step takes the placeholders out, because the workflow step writes the greeting and the first name itself.
 
 Also specify:
 - the trigger
@@ -111,12 +111,13 @@ First add one line to the Decisions block of `growth-engine/memory.md`: `- YYYY-
 
 ## At the clinic
 
-The founder brings this file to the clinic on 23 September, loads the snapshot, pastes the copy in, and sends themselves one test through the real trigger.
+The founder brings this file to the clinic on 23 September and loads the snapshot. Loading brings every workflow and the empty name of every message slot, and none of the words.
 
-**If GoHighLevel is connected** (`.state/setup.md`, or GoHighLevel tools are available to you), you can offer one shortcut: create each email in the workflow as an email template in their account, so pasting is quicker.
-- Use the tool whose name ends `emails_create-template`, one email at a time.
-- Show the subject and body first, and create each one only after they say yes.
-- Never create, change or switch on a workflow. The snapshot does that.
+The words go in next, as custom values, with `/growth-engine:values`, or by saying "fill my custom values". That is where this copy is turned into the list their account is waiting for. Publishing and the first live test come after that, because a published pack with empty values sends blank emails to real people.
+
+**Do not put this copy into their account yet, anywhere.** The snapshot brings the empty slots, and the values step fills them. An email template made now is a second copy that no workflow reads, and the founder ends up typing the same words twice.
+
+Never create, change or switch on a workflow. The snapshot does that.
 
 ## Gate
 

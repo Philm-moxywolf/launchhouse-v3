@@ -29,6 +29,7 @@ Tells the founder exactly where they stand and what to do next.
 | Engine 2, B2B | Route, sequence with opt-outs, criteria, 25 on the list, 25 first lines | After Session 2 | Gate C, Session 3 |
 | Engine 2, B2C | 25 targets, 25 openers, hook bank with offer tests, inbound scripts | After Session 2 | Gate C, Session 3 |
 | Operations | Bottleneck, snapshot, all copy | After Session 2 | Gate C, Session 3, then loaded at the clinic on 23 September |
+| GoHighLevel values | Every value the loaded snapshot is waiting for, written and in the account | After the operations engine | Filled at the clinic, before anything is published |
 | Connections | GoHighLevel connected, plus Apollo and a mailbox for B2B | Session 2 | Before the clinic |
 | 90 day plan | The number, Monday's three actions, kill criteria | Atlanta, Sunday | |
 | Playbook insert | Brain, content, engine 2, ops and plan in one document | After Session 3 | |
@@ -80,6 +81,7 @@ Say what is missing and what to do next. Give one clear next action, not a list 
 | Content not approved | read and approve pieces, "approve 1 to 10" |
 | No engine 2 | `/growth-engine:engine2` |
 | No operations workflow | `/growth-engine:ops` |
+| Operations workflow built, no GoHighLevel values | `/growth-engine:values` |
 | Nothing connected | `/growth-engine:connect` |
 | Approved pieces not published | `/growth-engine:publish` |
 | B2B Apollo route, sequence not built | `/growth-engine:sequence` |

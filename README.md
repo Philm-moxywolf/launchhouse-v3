@@ -4,7 +4,7 @@ The engines for Launchhouse Atlanta founders, run from the Claude desktop app in
 
 Claude asks the founder the questions, writes their Founder Brain and everything built on it, and saves it as it goes. It puts posts into GoHighLevel and builds an Apollo sequence when the founder says yes. It holds back anything that offers to automate cold DMs, says replies are certain, or uses the other track's material. A reviewer checks every figure before the work is called done.
 
-There is no app to host, no key to paste, no database and no terminal. Founders need the Claude desktop app, GitHub Desktop, and their own copy of the founder folder.
+There is no app to host, no database and no terminal. Tools are connected by signing in. Founders need the Claude desktop app, GitHub Desktop, and their own copy of the founder folder.
 
 This repository is the plugin marketplace `launchhouse-v3`, holding one plugin, `growth-engine`. The folder founders work in is a separate template: [Philm-moxywolf/launchhouse-founder-template](https://github.com/Philm-moxywolf/launchhouse-founder-template).
 
@@ -26,6 +26,8 @@ The full guide, with what you will see at each step, is `START-HERE.md` in your 
 7. **Connect your tools.** In **Settings**, then **Connectors**, connect HighLevel, and Apollo if you sell to businesses. Then say **"connect my tools"**.
 8. **Check.** Say **"where am I up to"**.
 
+Once your engines are built, [AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the rest of it: updating the plugin, loading your snapshot, filling the words it arrives without, and the first live test.
+
 Plain words work for everything. The commands below are there if you prefer them.
 
 ## What you can ask for
@@ -39,6 +41,7 @@ Plain words work for everything. The commands below are there if you prefer them
 | build my content engine | `/growth-engine:content` | Four pillars and 30 pieces in your voice. Also refills monthly, and records what you approve |
 | build my outreach or audience engine | `/growth-engine:engine2` | B2B: sequence, list and 25 first lines. B2C: 25 openers, hooks and inbound scripts |
 | build my ops engine | `/growth-engine:ops` | One GoHighLevel workflow and all its copy, ready for the clinic |
+| fill my custom values | `/growth-engine:values` | After the snapshot is loaded: writes every message it arrived without, and gets them into your account |
 | connect my tools | `/growth-engine:connect` | Checks GoHighLevel, and Apollo for B2B, by reading your own account back |
 | publish my posts | `/growth-engine:publish` | Puts approved pieces into GoHighLevel, after showing you exactly what and when |
 | build my Apollo sequence | `/growth-engine:sequence` | B2B: finds your 25, then builds the sequence paused, for you to start |

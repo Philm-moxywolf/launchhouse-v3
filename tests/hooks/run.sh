@@ -39,6 +39,7 @@ expect_deny "climbing out of the folder" "$(pre "$proj/growth-engine/../x/founde
 expect_quiet "a refill archive name" "$(pre "$proj/growth-engine/content-30-2026-09.md")"
 expect_quiet "a second archive in one month" "$(pre "$proj/growth-engine/content-30-2026-09-2.md")"
 expect_quiet "the playbook PDF" "$(pre "$proj/growth-engine/playbook-insert.pdf")"
+expect_quiet "the GoHighLevel values file" "$(pre "$proj/growth-engine/ghl-values.md")"
 expect_quiet "gate answers in .state" "$(pre "$proj/growth-engine/.state/gate-answers.md")"
 
 # A new file that offers DM automation: held, and removed.
@@ -48,6 +49,14 @@ printf '## Post 1\n\nSet up a bot to send the 25 cold DMs overnight while you sl
 out=$(post "$proj/growth-engine/content-30.md")
 case $out in *'"decision":"block"'*Instagram*) ok "a DM offer is held" ;; *) bad "a DM offer is held" "$out" ;; esac
 [ ! -f "$proj/growth-engine/content-30.md" ] && ok "a held new file is removed" || bad "a held new file is removed" "file still there"
+
+# The values file, holding the copy this skill really writes for a B2C founder.
+brain b2c
+pre "$proj/growth-engine/ghl-values.md" >/dev/null
+printf '# GoHighLevel custom values\n\n## Comment to DM\n\n| Value | Key | Words |\n|---|---|---|\n| Comment Private Reply | `comment_private_reply` | Thanks for commenting. Which of these did you mean? |\n\nInstagram sends the private reply for you, and only to someone who commented first.\n\n### Welcome Email Body\n`welcome_email_body`\n\nThanks for getting in touch. Your message has reached me and I will reply myself.\n' > "$proj/growth-engine/ghl-values.md"
+out=$(post "$proj/growth-engine/ghl-values.md")
+expect_quiet "real values copy is left alone" "$out"
+[ -f "$proj/growth-engine/ghl-values.md" ] && ok "the values file survives" || bad "the values file survives" "it was removed"
 
 # An existing good file edited into a reply promise: put back as it was.
 printf '## Post 1\n\nWe groomed 340 dogs last year.\n' > "$proj/growth-engine/content-30.md"

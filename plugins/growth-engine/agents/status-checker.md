@@ -74,7 +74,7 @@ Track: <b2b|b2c|missing>
 | B | Thirty approved | not done | 12 of 30 approved in ledger.md |
 | C | Messages sent | ask | no targets at sent yet |
 Flags open: <the unresolved flag bullets, or none>
-Other files: <any file at the top of growth-engine/ other than the gate files above and ledger.md, memory.md, ops-log.md, 90-day-plan.md, playbook-insert.md, playbook-insert.pdf and content-30 archives, or none>
+Other files: <any file at the top of growth-engine/ other than the gate files above and ledger.md, memory.md, ops-log.md, ghl-values.md, 90-day-plan.md, playbook-insert.md, playbook-insert.pdf and content-30 archives, or none>
 ```
 
 **State** is one of `done`, `nearly empty`, `not done`, `ask`, `not due`. **Evidence** is a short fact from the file, with a count where there is one.

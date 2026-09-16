@@ -123,7 +123,7 @@ lh_brain_label() {
 # Which track a deliverable belongs to: b2b, b2c, both, or empty if unlisted.
 lh_file_track() {
   case $1 in
-    founder-brain.md|content-30.md|content-30.csv|rss-feeds.md|ops-workflow.md|90-day-plan.md|playbook-insert.md|ledger.md|memory.md|ops-log.md|.launchhouse) printf both ;;
+    founder-brain.md|content-30.md|content-30.csv|rss-feeds.md|ops-workflow.md|ghl-values.md|90-day-plan.md|playbook-insert.md|ledger.md|memory.md|ops-log.md|.launchhouse) printf both ;;
     outreach-sequence.md|outreach-firstlines.csv) printf b2b ;;
     dm-openers.md|hook-bank.md|inbound-scripts.md) printf b2c ;;
     content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9].md|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9].md|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9].csv|content-30-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9].csv|playbook-insert.pdf) printf both ;;

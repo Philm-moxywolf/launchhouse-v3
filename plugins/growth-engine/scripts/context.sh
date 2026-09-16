@@ -62,6 +62,9 @@ case $track in
   b2c) list="$list dm-openers.md hook-bank.md inbound-scripts.md" ;;
 esac
 list="$list ops-workflow.md 90-day-plan.md"
+# Only once it exists: the words go in after the snapshot loads at the clinic, so
+# listing it as not made yet would read as a job they are late on for weeks.
+[ -f "$ge/ghl-values.md" ] && list="$list ghl-values.md"
 for f in $list; do
   if made "$f"; then present="$present $f"; else absent="$absent $f"; fi
 done
@@ -93,7 +96,7 @@ elif [ "$track" = b2c ] && ! made dm-openers.md; then
 elif ! made ops-workflow.md; then
   next="build the operations engine (/growth-engine:ops)"
 elif ! made 90-day-plan.md; then
-  next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
+  next="connect the tools if not done (/growth-engine:connect), then publish approved pieces (/growth-engine:publish). Once the snapshot is loaded at the clinic, fill the words it arrives without (/growth-engine:values). The 90 day plan (/growth-engine:plan) is built in Atlanta on the Sunday"
 else
   next="ask where they are up to, and pick up from there"
 fi

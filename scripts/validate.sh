@@ -94,7 +94,7 @@ grep -n 'shell: *true\|eval ' $P/scripts/*.sh >/dev/null 2>&1 && err "a hook scr
 # ---------------------------------------------------------------- founder-facing prose
 # Everything a founder or Claude reads as instructions. rules.awk and the corpus
 # spell out the banned shapes on purpose, so they are exempt from those checks.
-prose=$(find README.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
+prose=$(find README.md AFTER-THE-ENGINES.md $P/README.md $P/skills $P/agents $P/commands $P/references $P/routines -type f \( -name '*.md' \) 2>/dev/null)
 msgs=$(find $P/scripts -name '*.sh' 2>/dev/null)
 
 for f in $prose $msgs; do
@@ -115,7 +115,7 @@ for f in $prose; do
 done
 
 # Commands: always namespaced, and every one must exist.
-names="start|brain|import|add-files|content|engine2|outreach|audience|ops|plan|playbook|status|gate|connect|publish|sequence|routines|save|help|doctor|setup|founder-brain|import-from-app"
+names="start|brain|import|add-files|content|engine2|outreach|audience|ops|values|plan|playbook|status|gate|connect|publish|sequence|routines|save|help|doctor|setup|founder-brain|import-from-app"
 for f in $prose README.md $msgs; do
   sed -E 's#https?://[^ )>`]*##g' "$f" | grep -Eo "(^|[^:a-z./_-])/($names)([^a-z-]|\$)" >/dev/null 2>&1 && err "$f names a bare command. Write /growth-engine:<name>"
   for c in $(grep -Eo '/growth-engine:[a-z0-9-]+' "$f" 2>/dev/null | sort -u); do

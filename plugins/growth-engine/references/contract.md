@@ -16,6 +16,7 @@ Every file a founder's `growth-engine/` folder can hold, the shape each one must
 | `hook-bank.md` | B2C only | C | audience-b2c |
 | `inbound-scripts.md` | B2C only | C | audience-b2c |
 | `ops-workflow.md` | both | C | ghl-workflows |
+| `ghl-values.md` | both | none | ghl-values |
 | `90-day-plan.md` | both | none | growth-plan |
 | `playbook-insert.md` | both | none | playbook-export |
 | `content-30-YYYY-MM.md`, `content-30-YYYY-MM.csv` | both | none | content-engine, refill archive. A second archive in one month adds `-2` |

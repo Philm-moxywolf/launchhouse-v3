@@ -36,6 +36,7 @@ inbound-scripts.md|gate C" ;;
 esac
 rows="$rows
 ops-workflow.md|gate C
+ghl-values.md|-
 90-day-plan.md|-
 playbook-insert.md|-
 ledger.md|-
