@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "The Launchhouse growth engine for founders, run from Claude in your own folder.",
-    "version": "0.9.5"
+    "version": "0.9.6"
   },
   "plugins": [
     {
       "name": "growth-engine",
       "source": "./plugins/growth-engine",
       "description": "Founder Brain, content, outreach or audience, and operations engines, with the Launchhouse rules built in.",
-      "version": "0.9.5"
+      "version": "0.9.6"
     }
   ]
 }

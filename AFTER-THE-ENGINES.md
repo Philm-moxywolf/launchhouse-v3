@@ -10,14 +10,14 @@ Your copy of the plugin is the version you installed. Updates are not automatic,
 
 1. Open the Claude desktop app on your Launchhouse folder.
 2. Press the **+** button next to the message box and open **Plugins**.
-3. Find **growth-engine** and update it. You want version **0.9.5** or later.
+3. Find **growth-engine** and update it. You want version **0.9.6** or later.
 4. If it still shows the old version, quit the app and open it again.
 
 **This never touches your work.** Your Brain, your posts and your files live in your own folder on your computer, not inside the plugin. Updating cannot lose them.
 
-If you have not installed the plugin at all: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**. You want version **0.9.5** or later.
+If you have not installed the plugin at all: press **+**, then **Plugins**, add `Philm-moxywolf/launchhouse-v3`, and install **growth-engine**. You want version **0.9.6** or later.
 
-**Check it worked.** Open **Plugins** again: **growth-engine** should show version **0.9.5** or later. If it shows an older one, the update has not landed yet, so quit and reopen the app and look again.
+**Check it worked.** Open **Plugins** again: **growth-engine** should show version **0.9.6** or later. If it shows an older one, the update has not landed yet, so quit and reopen the app and look again.
 
 ## What you should already have
 

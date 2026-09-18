@@ -20,7 +20,7 @@ Updates are never automatic. You take them when we say, so that a room of 130 pe
 
 1. Open the Claude desktop app on your Launchhouse folder.
 2. Press the **+** button next to the message box and open **Plugins**.
-3. Find **growth-engine** and update it. You want version **0.9.5** or later.
+3. Find **growth-engine** and update it. You want version **0.9.6** or later.
 4. If it still shows the old version, quit the app and open it again.
 
 **In Claude Code, the terminal:**
